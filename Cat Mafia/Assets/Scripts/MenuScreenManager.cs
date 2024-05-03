@@ -5,7 +5,7 @@ using UnityEngine;
 public class MenuScreenManager : MonoBehaviour
 {
     [SerializeField] public GameObject catCharacter;
-    [SerializeField] public Vector3 targetPosition;
+    public Vector3 targetPosition;
     [SerializeField] public float speed = 5f;
 
     void Start()
