@@ -6,19 +6,21 @@ using UnityEngine.UI;
 public class MenuScreenManager : MonoBehaviour
 {
     [SerializeField] public GameObject catCharacter;
-    public Vector3 targetPosition;
-    [SerializeField] public float speed = 5f;
+    [SerializeField] private float moveSpeed = 2.0f;
+    [SerializeField] private bool moveRight = true;
+    [SerializeField] private float moveDistance = 10.0f;
 
-    public Button startButton;
-    public Button quitButton;
-    private int selectedButtonIndex = 0;
-    public Image selectionIndicator;
+    [SerializeField] public Button startButton;
+    [SerializeField] public Button quitButton;
+    [SerializeField] private int selectedButtonIndex = 0;
+    [SerializeField] public Image selectionIndicator;
+    [SerializeField] private Animator catAnimator;
 
     void Start()
     {
+        catAnimator = catCharacter.GetComponent<Animator>();
         startButton.Select();
         UpdateIndicatorPosition();
-        // FirstScene();
     }
 
     // Update is called once per frame
@@ -37,6 +39,31 @@ public class MenuScreenManager : MonoBehaviour
         else if (Input.GetKeyDown(KeyCode.Return))
         {
             ExecuteOption();
+        }
+
+        MoveCatCharacter();
+    }
+
+    void MoveCatCharacter()
+    {
+        if (moveRight)
+        {
+            catCharacter.transform.Translate(Vector3.right * moveSpeed * Time.deltaTime);
+        }
+        else
+        {
+            catCharacter.transform.Translate(Vector3.left * moveSpeed * Time.deltaTime);
+        }
+
+        if (catCharacter.transform.position.x >= moveDistance)
+        {
+            moveRight = false;
+            catAnimator.SetBool("Move_Left", !moveRight);
+        }
+        else if (catCharacter.transform.position.x <= -moveDistance)
+        {
+            moveRight = true;
+            catAnimator.SetBool("Move_Left", !moveRight);
         }
     }
 
@@ -76,22 +103,6 @@ public class MenuScreenManager : MonoBehaviour
         {
             Debug.Log("Quit Game!");
             Application.Quit();
-        }
-    }
-
-    void FirstScene()
-    {
-        Vector3 targetPosition = catCharacter.transform.position + Vector3.right * 5f;
-
-        StartCoroutine(MoveToTargetPosition(targetPosition));
-    }
-
-    IEnumerator MoveToTargetPosition(Vector3 targetPosition)
-    {
-        while (catCharacter.transform.position != targetPosition)
-        {
-            catCharacter.transform.position = Vector3.MoveTowards(catCharacter.transform.position, targetPosition, speed * Time.deltaTime);
-            yield return null;
         }
     }
 }
