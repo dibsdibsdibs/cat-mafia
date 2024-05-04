@@ -1,18 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 public class QuitGame : MonoBehaviour
 {
+    private Button button; 
     void Start()
     {
-        Button btn = GetComponentInChildren<Button>();
-        btn.onClick.AddListener(ExitGame);
+        button = GetComponent<Button>();
+        button.onClick.AddListener(ExitGame);
     }
     public void ExitGame()
     {
-        Debug.Log("Button clicked");
-        Debug.Log("Exiting...");
         Application.Quit();
     }
 }
