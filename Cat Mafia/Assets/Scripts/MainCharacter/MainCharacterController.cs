@@ -6,77 +6,79 @@ public class MainCharacterController : MonoBehaviour
 {
     private Animator animator;
     [SerializeField] private float movementSpeed = 5;
+    private float xDir = 0;
+    private float yDir = -1;
+    private Vector2 movement;
+    private Rigidbody2D characterRigidBody;
+    private bool canDash = true;
+    private bool isDashing = false;
+    [SerializeField]private float dashingPower;
+    [SerializeField]private float dashingTime;
+    [SerializeField]private float dashingCooldown;
+    private TrailRenderer trailRenderer;
     // Start is called before the first frame update
     void Start()
     {
         animator = GetComponent<Animator>();
+        characterRigidBody = GetComponent<Rigidbody2D>();
+        trailRenderer = GetComponent<TrailRenderer>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        // prevent horizontal movement
-        if(!(Input.GetAxis("Horizontal") != 0 && Input.GetAxis("Vertical") != 0)){
-            if(Input.GetAxis("Horizontal") > 0){
-                MoveRight();
-            }
-            if(Input.GetAxis("Horizontal") < 0){
-                MoveLeft();
-            }
-            if(Input.GetAxis("Vertical") > 0){
-                MoveUp();
-            }
-            if(Input.GetAxis("Vertical") < 0){
-                MoveDown();
-            }
+        if(isDashing){
+            return;
         }
-    if(Input.GetKeyDown(KeyCode.A)){
-        animator.SetFloat("moveX", -1f);
-        animator.SetFloat("moveY", 0);
+        // prevent diagonal movement
+        if(!(Input.GetAxis("Vertical") == 0 && Input.GetAxis("Horizontal") == 0)){
+            movement = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+            SetCharDirection(movement);
+        }else{
+            OffIsMoving();
+        }
+        // execute dash
+        if(Input.GetKeyDown(KeyCode.Q) && canDash){
+            StartCoroutine(Dash());
+        }
+    }
+    void FixedUpdate(){
+        if(isDashing){
+            return;
+        }
+        MoveCharacter(movement);
+    }
+    // animates the character based on the direction it is facing
+    public void SetCharDirection(Vector2 direction){
+        animator.SetFloat("moveX", direction.x);
+        animator.SetFloat("moveY", direction.y);
         OnIsMoving();
     }
-    if(Input.GetKeyDown(KeyCode.D)){
-        animator.SetFloat("moveX", 1f);
-        animator.SetFloat("moveY", 0);
-        OnIsMoving();
-    }
-    if(Input.GetKeyDown(KeyCode.S)){
-        animator.SetFloat("moveX", 0);
-        animator.SetFloat("moveY", -1f);
-        OnIsMoving();
-    }
-    if(Input.GetKeyDown(KeyCode.W)){
-        animator.SetFloat("moveX", 0);
-        animator.SetFloat("moveY", 1f);
-        OnIsMoving();
-    }
-    if(Input.GetKeyUp(KeyCode.S)
-    ||Input.GetKeyUp(KeyCode.W)
-    ||Input.GetKeyUp(KeyCode.A)||
-    Input.GetKeyUp(KeyCode.D)){
-        OffIsMoving();
-    }
-
-    }
+    // turns off the walking animation
     public void OffIsMoving(){
         animator.SetBool("isMoving", false);
     }
+    // turns on the walking animation
     public void OnIsMoving(){
         animator.SetBool("isMoving", true);
     }
-    // experimental
-    // change accordingly
-    private void MoveRight(){
-        transform.Translate(Vector3.right * movementSpeed * Time.deltaTime);
+    // moves the character based on user input
+    private void MoveCharacter(Vector2 direction){
+        characterRigidBody.MovePosition((Vector2)transform.position + (direction * movementSpeed * Time.deltaTime));
     }
-    private void MoveLeft(){
-        transform.Translate(Vector3.left * movementSpeed * Time.deltaTime);
-    }
-    private void MoveDown(){
-        transform.Translate(Vector3.down * movementSpeed * Time.deltaTime);
-
-    }
-    private void MoveUp(){
-        transform.Translate(Vector3.up * movementSpeed * Time.deltaTime);
+    // perform dash
+    private IEnumerator Dash(){
+        canDash = false;
+        isDashing = true;
+        float originalGravity = characterRigidBody.gravityScale;
+        characterRigidBody.gravityScale = 0f;
+        characterRigidBody.velocity = new Vector2(movement.x  * dashingPower, movement.y * dashingPower);
+        trailRenderer.emitting = true; 
+        yield return new WaitForSeconds(dashingTime);
+        trailRenderer.emitting = false;
+        characterRigidBody.gravityScale = originalGravity;
+        isDashing = false;
+        yield return new WaitForSeconds(dashingCooldown);
+        canDash = true;
     }
 }
