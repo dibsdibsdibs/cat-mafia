@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class MenuScreenManager : MonoBehaviour
 {
     [SerializeField] public GameObject catCharacter;
-    [SerializeField] private float moveSpeed = 2.0f;
+    [SerializeField] private float moveSpeed = 1.0f;
     [SerializeField] private bool moveRight = true;
     [SerializeField] private float moveDistance = 10.0f;
 

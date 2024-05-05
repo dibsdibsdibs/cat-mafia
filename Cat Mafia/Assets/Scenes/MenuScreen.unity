@@ -502,7 +502,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   catCharacter: {fileID: 1339442383}
-  moveSpeed: 3
+  moveSpeed: 1
   moveRight: 1
   moveDistance: 10
   startButton: {fileID: 578624872}
