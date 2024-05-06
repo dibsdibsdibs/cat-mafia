@@ -135,7 +135,11 @@ GameObject:
   - component: {fileID: 36746811}
   - component: {fileID: 36746810}
   m_Layer: 0
+<<<<<<< Updated upstream
   m_Name: Tilemap
+=======
+  m_Name: Level 1
+>>>>>>> Stashed changes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -150,11 +154,19 @@ Transform:
   m_GameObject: {fileID: 36746808}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+<<<<<<< Updated upstream
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 810835798}
+=======
+  m_LocalPosition: {x: 0, y: 0, z: -1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 996016181}
+>>>>>>> Stashed changes
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!483693784 &36746810
 TilemapRenderer:
@@ -524,7 +536,11 @@ GameObject:
   - component: {fileID: 677228233}
   - component: {fileID: 677228235}
   m_Layer: 0
+<<<<<<< Updated upstream
   m_Name: Tilemap
+=======
+  m_Name: Level 2
+>>>>>>> Stashed changes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -539,11 +555,19 @@ Transform:
   m_GameObject: {fileID: 677228231}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+<<<<<<< Updated upstream
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1775899070}
+=======
+  m_LocalPosition: {x: 0, y: 0, z: -2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 996016181}
+>>>>>>> Stashed changes
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!483693784 &677228233
 TilemapRenderer:
@@ -872,6 +896,7 @@ TilemapCollider2D:
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0
   m_UseDelaunayMesh: 0
+<<<<<<< Updated upstream
 --- !u!1 &693537065
 GameObject:
   m_ObjectHideFlags: 0
@@ -962,6 +987,8 @@ Transform:
   - {fileID: 36746809}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+>>>>>>> Stashed changes
 --- !u!1 &920772466
 GameObject:
   m_ObjectHideFlags: 0
@@ -974,7 +1001,11 @@ GameObject:
   - component: {fileID: 920772469}
   - component: {fileID: 920772468}
   m_Layer: 0
+<<<<<<< Updated upstream
   m_Name: Tilemap
+=======
+  m_Name: Level 7
+>>>>>>> Stashed changes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -989,11 +1020,19 @@ Transform:
   m_GameObject: {fileID: 920772466}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+<<<<<<< Updated upstream
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1980249163}
+=======
+  m_LocalPosition: {x: 0, y: 0, z: -7}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 996016181}
+>>>>>>> Stashed changes
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!483693784 &920772468
 TilemapRenderer:
@@ -1381,7 +1420,11 @@ GameObject:
   - component: {fileID: 996016181}
   - component: {fileID: 996016180}
   m_Layer: 0
+<<<<<<< Updated upstream
   m_Name: Floor
+=======
+  m_Name: Map
+>>>>>>> Stashed changes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1413,6 +1456,16 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2117118474}
+<<<<<<< Updated upstream
+=======
+  - {fileID: 36746809}
+  - {fileID: 677228232}
+  - {fileID: 1960366544}
+  - {fileID: 2078753829}
+  - {fileID: 1791593494}
+  - {fileID: 2051319468}
+  - {fileID: 920772467}
+>>>>>>> Stashed changes
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1062100921
@@ -1574,9 +1627,15 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
+<<<<<<< Updated upstream
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 0.13, y: 0.3}
     newSize: {x: 0.13, y: 0.3}
+=======
+    pivot: {x: 0.5, y: 0}
+    oldSize: {x: 0.32, y: 0.32}
+    newSize: {x: 0.32, y: 0.32}
+>>>>>>> Stashed changes
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -1584,6 +1643,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.13, y: 0.34}
   m_EdgeRadius: 0
+<<<<<<< Updated upstream
 --- !u!1 &1291492717
 GameObject:
   m_ObjectHideFlags: 0
@@ -1719,6 +1779,8 @@ Transform:
   - {fileID: 1791593494}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+>>>>>>> Stashed changes
 --- !u!1001 &1598859675
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1798,6 +1860,7 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1225012188}
   m_SourcePrefab: {fileID: 100100000, guid: 18cfb5c431e1f8b4a9252ac118c8cb2c, type: 3}
+<<<<<<< Updated upstream
 --- !u!1 &1775899068
 GameObject:
   m_ObjectHideFlags: 0
@@ -1843,6 +1906,8 @@ Transform:
   - {fileID: 677228232}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+>>>>>>> Stashed changes
 --- !u!1 &1791593493
 GameObject:
   m_ObjectHideFlags: 0
@@ -1855,7 +1920,11 @@ GameObject:
   - component: {fileID: 1791593496}
   - component: {fileID: 1791593495}
   m_Layer: 0
+<<<<<<< Updated upstream
   m_Name: Tilemap
+=======
+  m_Name: Level 5
+>>>>>>> Stashed changes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1870,11 +1939,19 @@ Transform:
   m_GameObject: {fileID: 1791593493}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+<<<<<<< Updated upstream
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1555392544}
+=======
+  m_LocalPosition: {x: 0, y: 0, z: -5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 996016181}
+>>>>>>> Stashed changes
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!483693784 &1791593495
 TilemapRenderer:
@@ -2210,7 +2287,11 @@ GameObject:
   - component: {fileID: 1960366545}
   - component: {fileID: 1960366547}
   m_Layer: 0
+<<<<<<< Updated upstream
   m_Name: Tilemap
+=======
+  m_Name: Level 3
+>>>>>>> Stashed changes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2225,11 +2306,19 @@ Transform:
   m_GameObject: {fileID: 1960366543}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+<<<<<<< Updated upstream
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1291492719}
+=======
+  m_LocalPosition: {x: 0, y: 0, z: -3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 996016181}
+>>>>>>> Stashed changes
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!483693784 &1960366545
 TilemapRenderer:
@@ -2594,6 +2683,7 @@ TilemapCollider2D:
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0
   m_UseDelaunayMesh: 0
+<<<<<<< Updated upstream
 --- !u!1 &1980249161
 GameObject:
   m_ObjectHideFlags: 0
@@ -2639,6 +2729,8 @@ Transform:
   - {fileID: 920772467}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+>>>>>>> Stashed changes
 --- !u!1 &2051319467
 GameObject:
   m_ObjectHideFlags: 0
@@ -2651,7 +2743,11 @@ GameObject:
   - component: {fileID: 2051319470}
   - component: {fileID: 2051319469}
   m_Layer: 0
+<<<<<<< Updated upstream
   m_Name: Tilemap
+=======
+  m_Name: Level 6
+>>>>>>> Stashed changes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2666,11 +2762,19 @@ Transform:
   m_GameObject: {fileID: 2051319467}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+<<<<<<< Updated upstream
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1346702986}
+=======
+  m_LocalPosition: {x: 0, y: 0, z: -6}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 996016181}
+>>>>>>> Stashed changes
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!483693784 &2051319469
 TilemapRenderer:
@@ -2890,7 +2994,11 @@ GameObject:
   - component: {fileID: 2078753830}
   - component: {fileID: 2078753832}
   m_Layer: 0
+<<<<<<< Updated upstream
   m_Name: Tilemap
+=======
+  m_Name: Level 4
+>>>>>>> Stashed changes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2905,11 +3013,19 @@ Transform:
   m_GameObject: {fileID: 2078753828}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+<<<<<<< Updated upstream
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 693537067}
+=======
+  m_LocalPosition: {x: 0, y: -0.029999971, z: -4}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 996016181}
+>>>>>>> Stashed changes
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!483693784 &2078753830
 TilemapRenderer:
@@ -3175,7 +3291,11 @@ GameObject:
   - component: {fileID: 2117118475}
   - component: {fileID: 2117118477}
   m_Layer: 0
+<<<<<<< Updated upstream
   m_Name: Tilemap
+=======
+  m_Name: Floor
+>>>>>>> Stashed changes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3813,6 +3933,7 @@ SceneRoots:
   m_Roots:
   - {fileID: 1062100924}
   - {fileID: 996016181}
+<<<<<<< Updated upstream
   - {fileID: 810835798}
   - {fileID: 1598859675}
   - {fileID: 1775899070}
@@ -3821,3 +3942,6 @@ SceneRoots:
   - {fileID: 1555392544}
   - {fileID: 1346702986}
   - {fileID: 1980249163}
+=======
+  - {fileID: 1598859675}
+>>>>>>> Stashed changes
