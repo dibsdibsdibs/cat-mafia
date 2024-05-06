@@ -41,3 +41,27 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Floor
+    uniqueID: 1261427325
+    locked: 0
+  - name: Level 1
+    uniqueID: 318803559
+    locked: 0
+  - name: Level 2
+    uniqueID: 978999133
+    locked: 0
+  - name: Level 3
+    uniqueID: 249287903
+    locked: 0
+  - name: Level 4
+    uniqueID: 2138154601
+    locked: 0
+  - name: Level 5
+    uniqueID: 3678934835
+    locked: 0
+  - name: Level 6
+    uniqueID: 3409800375
+    locked: 0
+  - name: Level 7
+    uniqueID: 2463244727
+    locked: 0
