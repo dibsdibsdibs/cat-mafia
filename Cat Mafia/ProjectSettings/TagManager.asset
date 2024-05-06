@@ -65,3 +65,6 @@ TagManager:
   - name: Level 7
     uniqueID: 2463244727
     locked: 0
+  - name: MainChar
+    uniqueID: 71584595
+    locked: 0
