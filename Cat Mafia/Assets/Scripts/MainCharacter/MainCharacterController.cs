@@ -38,31 +38,27 @@ public class MainCharacterController : MonoBehaviour
             }
         }
 
-        if(Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow)){
+        if(Input.GetKeyDown(KeyCode.LeftArrow)){
             animator.SetFloat("moveX", -1f);
             animator.SetFloat("moveY", 0);
             OnIsMoving();
         }
-        if(Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow)){
+        if(Input.GetKeyDown(KeyCode.RightArrow)){
             animator.SetFloat("moveX", 1f);
             animator.SetFloat("moveY", 0);
             OnIsMoving();
         }
-        if(Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow)){
+        if(Input.GetKeyDown(KeyCode.DownArrow)){
             animator.SetFloat("moveX", 0);
             animator.SetFloat("moveY", -1f);
             OnIsMoving();
         }
-        if(Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)){
+        if(Input.GetKeyDown(KeyCode.UpArrow)){
             animator.SetFloat("moveX", 0);
             animator.SetFloat("moveY", 1f);
             OnIsMoving();
         }
-        if(Input.GetKeyUp(KeyCode.S)
-        ||Input.GetKeyUp(KeyCode.W)
-        ||Input.GetKeyUp(KeyCode.A)
-        || Input.GetKeyUp(KeyCode.D) 
-        || Input.GetKeyDown(KeyCode.DownArrow) 
+        if(Input.GetKeyDown(KeyCode.DownArrow) 
         || Input.GetKeyDown(KeyCode.UpArrow) 
         || Input.GetKeyDown(KeyCode.LeftArrow) 
         || Input.GetKeyDown(KeyCode.RightArrow)){
