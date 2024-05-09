@@ -572,12 +572,12 @@ MonoBehaviour:
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
-  m_FillMethod: 4
+  m_FillMethod: 1
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 10
 --- !u!222 &146906677
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -744,13 +744,12 @@ MonoBehaviour:
   - {fileID: 8300000, guid: c646dee48713ea845af08246a4825865, type: 3}
   currentAudioIndex: 0
   firstEventDialogue: {fileID: 981594910}
-  firstEventDialogueManager: {fileID: 0}
+  checkDialogue: {fileID: 0}
   firstEventFinished: 0
   blackPanel: {fileID: 146906674}
   moveDialogue: {fileID: 1539341688}
   controlDialogue: {fileID: 1907947055}
   endTutorialDialogue: {fileID: 2112078293}
-  endDialogue: 0
 --- !u!1 &677228231
 GameObject:
   m_ObjectHideFlags: 0
@@ -1709,7 +1708,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 3.87
+  orthographic size: 4.11
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -2393,6 +2392,10 @@ PrefabInstance:
     - target: {fileID: 7737090797000442780, guid: 18cfb5c431e1f8b4a9252ac118c8cb2c, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7737090797000442780, guid: 18cfb5c431e1f8b4a9252ac118c8cb2c, type: 3}
+      propertyPath: movementSpeed
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

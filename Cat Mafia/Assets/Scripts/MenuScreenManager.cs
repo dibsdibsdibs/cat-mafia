@@ -2,19 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class MenuScreenManager : MonoBehaviour
 {
+    [Header("Cat in the Screen")]
     [SerializeField] public GameObject catCharacter;
     [SerializeField] private float moveSpeed = 1.0f;
     [SerializeField] private bool moveRight = true;
     [SerializeField] private float moveDistance = 10.0f;
+    [SerializeField] private Animator catAnimator;
 
+    [Header("Menu Manager")]
+    [SerializeField] public string nextScene;
     [SerializeField] public Button startButton;
     [SerializeField] public Button quitButton;
     [SerializeField] private int selectedButtonIndex = 0;
     [SerializeField] public Image selectionIndicator;
-    [SerializeField] private Animator catAnimator;
 
     void Start()
     {
@@ -98,6 +102,7 @@ public class MenuScreenManager : MonoBehaviour
         if (selectedButtonIndex == 0)
         {
             Debug.Log("Start Game!");
+            SceneManager.LoadScene(nextScene);
         }
         else
         {
