@@ -24,14 +24,18 @@ public class TutorialScreenManager : MonoBehaviour
 
     [Header("Audio Clips")]
     public AudioClip[] audioClips;
+    public int currentAudioIndex = 0;
 
     [Header("Cut Scenes")]
     public GameObject firstEventDialogue;
+    public DialogueManager firstEventDialogueManager;
     public bool firstEventFinished = false;
+    public GameObject blackPanel;
 
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
+        firstEventDialogueManager = firstEventDialogue.GetComponent<DialogueManager>();
         FirstEvent();
     }
 
@@ -39,8 +43,7 @@ public class TutorialScreenManager : MonoBehaviour
     {   
         if(firstEventFinished)
         {
-            MovementTutorial();
-            movementTutorialFinished = true;
+            Invoke("MovementTutorial", audioClips[1].length);
         }
 
         if(movementTutorialFinished)
@@ -68,20 +71,36 @@ public class TutorialScreenManager : MonoBehaviour
         // }
     }
 
+    void PlayAudio(AudioClip audio)
+    {
+        audioSource.clip = audio;
+        audioSource.Play();
+    }
+
     void FirstEvent()
     {
-        audioSource.clip = audioClips[0];
-        audioSource.Play();
+        // audioSource.clip = audioClips[0];
+        // audioSource.Play();
+        PlayAudio(audioClips[0]);
         Invoke("FirstEventDialogue", audioClips[0].length);
     }
 
     void FirstEventDialogue()
     {
         firstEventDialogue.SetActive(true);
+        StartCoroutine(CheckFirstEventDialogueFinished());
+    }
+
+    IEnumerator CheckFirstEventDialogueFinished()
+    {
+        yield return new WaitUntil(() => firstEventDialogueManager.IsDialogueFinished());
+        firstEventFinished = true;
+        PlayAudio(audioClips[1]);
     }
 
     void MovementTutorial()
     {
+        blackPanel.SetActive(false);
         if(Input.GetKey(KeyCode.LeftArrow))
         {
             MoveLeft();

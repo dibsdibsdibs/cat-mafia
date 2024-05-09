@@ -595,7 +595,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 401988283}
-  - component: {fileID: 401988284}
+  - component: {fileID: 401988286}
   - component: {fileID: 401988285}
   m_Layer: 0
   m_Name: TutorialManager
@@ -619,35 +619,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &401988284
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 401988282}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 069696eac396d5a43b3ea35c09359e4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  catCharacter: {fileID: 1225012176}
-  movementSpeed: 5
-  audioSource: {fileID: 401988285}
-  movementTutorialFinished: 0
-  leftArrowPressed: 0
-  rightArrowPressed: 0
-  upArrowPressed: 0
-  downArrowPressed: 0
-  controlTutorialFinished: 0
-  zButtonPressed: 0
-  xButtonPressed: 0
-  audioClips:
-  - {fileID: 8300000, guid: 8db3bb9cae2088745a1d3084b03020fd, type: 3}
-  - {fileID: 8300000, guid: c646dee48713ea845af08246a4825865, type: 3}
-  firstEventTextDialogues:
-  - {fileID: 1494640463}
-  - {fileID: 0}
 --- !u!82 &401988285
 AudioSource:
   m_ObjectHideFlags: 0
@@ -744,6 +715,37 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &401988286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 401988282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 069696eac396d5a43b3ea35c09359e4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  catCharacter: {fileID: 1225012176}
+  movementSpeed: 5
+  audioSource: {fileID: 401988285}
+  movementTutorialFinished: 0
+  leftArrowPressed: 0
+  rightArrowPressed: 0
+  upArrowPressed: 0
+  downArrowPressed: 0
+  controlTutorialFinished: 0
+  zButtonPressed: 0
+  xButtonPressed: 0
+  audioClips:
+  - {fileID: 8300000, guid: 8db3bb9cae2088745a1d3084b03020fd, type: 3}
+  - {fileID: 8300000, guid: c646dee48713ea845af08246a4825865, type: 3}
+  currentAudioIndex: 0
+  firstEventDialogue: {fileID: 981594910}
+  firstEventDialogueManager: {fileID: 0}
+  firstEventFinished: 0
+  blackPanel: {fileID: 146906674}
 --- !u!1 &677228231
 GameObject:
   m_ObjectHideFlags: 0
@@ -1511,7 +1513,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &981594911
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1588,6 +1590,7 @@ MonoBehaviour:
   - I know that you really liked your previous neighborhood, but this will be a fresh
     start for us!
   textSpeed: 0.01
+  dialogueFinished: 0
 --- !u!1 &996016179
 GameObject:
   m_ObjectHideFlags: 0
@@ -2788,9 +2791,9 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 146906675}
+  - {fileID: 981594911}
   - {fileID: 1430182387}
   - {fileID: 1261051249}
-  - {fileID: 981594911}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
