@@ -505,11 +505,12 @@ MonoBehaviour:
   moveSpeed: 1
   moveRight: 1
   moveDistance: 10
+  catAnimator: {fileID: 0}
+  nextScene: TutorialScene
   startButton: {fileID: 578624872}
   quitButton: {fileID: 1733168302}
   selectedButtonIndex: 0
   selectionIndicator: {fileID: 371077478}
-  catAnimator: {fileID: 0}
 --- !u!212 &590937670
 SpriteRenderer:
   m_ObjectHideFlags: 0
