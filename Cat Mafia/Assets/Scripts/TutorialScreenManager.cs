@@ -1,14 +1,13 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AI;
-using System;
+using UnityEngine.SceneManagement;
 
 public class TutorialScreenManager : MonoBehaviour
 {
     [SerializeField] public GameObject catCharacter;
     [SerializeField] private float movementSpeed = 5;
     [SerializeField] public AudioSource audioSource;
+    [SerializeField] public string nextScene;
 
     [Header("Movement Tutorial")]
     public bool movementTutorialFinished = false;
@@ -28,14 +27,17 @@ public class TutorialScreenManager : MonoBehaviour
 
     [Header("Cut Scenes")]
     public GameObject firstEventDialogue;
-    public DialogueManager firstEventDialogueManager;
+    public DialogueManager checkDialogue;
     public bool firstEventFinished = false;
     public GameObject blackPanel;
+    public GameObject moveDialogue;
+    public GameObject controlDialogue;
+    public GameObject endTutorialDialogue;
 
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
-        firstEventDialogueManager = firstEventDialogue.GetComponent<DialogueManager>();
+        checkDialogue = firstEventDialogue.GetComponent<DialogueManager>();
         FirstEvent();
     }
 
@@ -64,11 +66,18 @@ public class TutorialScreenManager : MonoBehaviour
             }
         }
 
-        // if(controlTutorialFinished == false)
-        // {
-        //     Debug.Log("Entering control tutorial");
-        //     ControlTutorial();
-        // }
+        if(movementTutorialFinished && controlTutorialFinished == false)
+        {
+            Debug.Log("Entering control tutorial");
+            ControlTutorial();
+        }
+
+        if(movementTutorialFinished && controlTutorialFinished)
+        {
+            Debug.Log("Ending tutorial");
+            checkDialogue = endTutorialDialogue.GetComponent<DialogueManager>();
+            Invoke("EndTutorial", 1.0f);
+        }
     }
 
     void PlayAudio(AudioClip audio)
@@ -79,8 +88,6 @@ public class TutorialScreenManager : MonoBehaviour
 
     void FirstEvent()
     {
-        // audioSource.clip = audioClips[0];
-        // audioSource.Play();
         PlayAudio(audioClips[0]);
         Invoke("FirstEventDialogue", audioClips[0].length);
     }
@@ -93,7 +100,7 @@ public class TutorialScreenManager : MonoBehaviour
 
     IEnumerator CheckFirstEventDialogueFinished()
     {
-        yield return new WaitUntil(() => firstEventDialogueManager.IsDialogueFinished());
+        yield return new WaitUntil(() => checkDialogue.IsDialogueFinished());
         firstEventFinished = true;
         PlayAudio(audioClips[1]);
     }
@@ -101,6 +108,8 @@ public class TutorialScreenManager : MonoBehaviour
     void MovementTutorial()
     {
         blackPanel.SetActive(false);
+        moveDialogue.SetActive(true);
+
         if(Input.GetKey(KeyCode.LeftArrow))
         {
             MoveLeft();
@@ -129,11 +138,14 @@ public class TutorialScreenManager : MonoBehaviour
         {
             movementTutorialFinished = true;
             Debug.Log("Finished movement tutorial");
+            moveDialogue.SetActive(false);
         }
     }
 
     void ControlTutorial()
     {
+        controlDialogue.SetActive(true);
+
         if(Input.GetKey(KeyCode.Z))
         {
             zButtonPressed = true;
@@ -146,7 +158,21 @@ public class TutorialScreenManager : MonoBehaviour
         if(zButtonPressed && xButtonPressed)
         {
             controlTutorialFinished = true;
+            Debug.Log("Finished control tutorial");
+            controlDialogue.SetActive(false);
         }
+    }
+
+    void EndTutorial()
+    {
+        endTutorialDialogue.SetActive(true);
+        StartCoroutine(CheckEndTutorialDialogue());
+    }
+
+    IEnumerator CheckEndTutorialDialogue()
+    {
+        yield return new WaitUntil(() => checkDialogue.IsDialogueFinished());
+        NextScene();
     }
 
     private void MoveRight(){
@@ -163,4 +189,8 @@ public class TutorialScreenManager : MonoBehaviour
         transform.Translate(Vector3.up * movementSpeed * Time.deltaTime);
     }
 
+    private void NextScene()
+    {
+        SceneManager.LoadScene(nextScene);
+    }
 }

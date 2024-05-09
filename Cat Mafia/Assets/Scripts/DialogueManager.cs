@@ -5,9 +5,9 @@ using TMPro;
 
 public class DialogueManager : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI textComponent;
-    [SerializeField] private string[] lines;
-    [SerializeField] private float textSpeed = 0.01f;
+    [SerializeField] public TextMeshProUGUI textComponent;
+    [SerializeField] public string[] lines;
+    [SerializeField] public float textSpeed = 0.5f;
 
     private int index;
     [SerializeField] public bool dialogueFinished = false;
@@ -58,7 +58,7 @@ public class DialogueManager : MonoBehaviour
         {
             gameObject.SetActive(false);
             dialogueFinished = true;
-            Debug.Log(dialogueFinished);
+            Debug.Log("Finished Dialogue");
         }
     }
 
