@@ -2,11 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using System;
 
 public class TutorialScreenManager : MonoBehaviour
 {
     [SerializeField] public GameObject catCharacter;
     [SerializeField] private float movementSpeed = 5;
+    [SerializeField] public AudioSource audioSource;
 
     [Header("Movement Tutorial")]
     public bool movementTutorialFinished = false;
@@ -20,18 +22,29 @@ public class TutorialScreenManager : MonoBehaviour
     public bool zButtonPressed = false;
     public bool xButtonPressed = false;
 
+    [Header("Audio Clips")]
+    public AudioClip[] audioClips;
+
+    [Header("Cut Scenes")]
+    public GameObject firstEventDialogue;
+    public bool firstEventFinished = false;
+
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
+        FirstEvent();
     }
 
-    // Update is called once per frame
     void Update()
-    {
-        if(movementTutorialFinished == false)
+    {   
+        if(firstEventFinished)
         {
-            Debug.Log("Entering movement tutorial");
             MovementTutorial();
-        }else{
+            movementTutorialFinished = true;
+        }
+
+        if(movementTutorialFinished)
+        {
             if(!(Input.GetAxis("Horizontal") != 0 && Input.GetAxis("Vertical") != 0)){
                 if(Input.GetAxis("Horizontal") > 0){
                     MoveRight();
@@ -48,11 +61,23 @@ public class TutorialScreenManager : MonoBehaviour
             }
         }
 
-        if(controlTutorialFinished == false)
-        {
-            Debug.Log("Entering control tutorial");
-            ControlTutorial();
-        }
+        // if(controlTutorialFinished == false)
+        // {
+        //     Debug.Log("Entering control tutorial");
+        //     ControlTutorial();
+        // }
+    }
+
+    void FirstEvent()
+    {
+        audioSource.clip = audioClips[0];
+        audioSource.Play();
+        Invoke("FirstEventDialogue", audioClips[0].length);
+    }
+
+    void FirstEventDialogue()
+    {
+        firstEventDialogue.SetActive(true);
     }
 
     void MovementTutorial()
@@ -119,8 +144,4 @@ public class TutorialScreenManager : MonoBehaviour
         transform.Translate(Vector3.up * movementSpeed * Time.deltaTime);
     }
 
-    private void PickUp()
-    {
-        
-    }
 }
