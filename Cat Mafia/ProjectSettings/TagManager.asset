@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Food
   layers:
   - Default
   - TransparentFX
@@ -62,9 +63,12 @@ TagManager:
   - name: Level 6
     uniqueID: 3409800375
     locked: 0
-  - name: Level 7
+  - name: Walls
     uniqueID: 2463244727
     locked: 0
   - name: MainChar
     uniqueID: 71584595
+    locked: 0
+  - name: Item
+    uniqueID: 1098350269
     locked: 0

@@ -14,10 +14,11 @@ public class TutorialScreenManager : MonoBehaviour
     public bool leftArrowPressed = false;
     public bool rightArrowPressed = false;
     public bool upArrowPressed = false;
-    public bool downArrowPressed = false; 
+    public bool downArrowPressed = false;
 
     [Header("Control Tutorial")]
     public bool controlTutorialFinished = false;
+    public bool itemPickedUp = false;
     public bool zButtonPressed = false;
     public bool xButtonPressed = false;
 
@@ -148,7 +149,10 @@ public class TutorialScreenManager : MonoBehaviour
 
         if(Input.GetKey(KeyCode.Z))
         {
-            zButtonPressed = true;
+            if(itemPickedUp == true)
+            {
+                zButtonPressed = true;
+            }
         }
         if(Input.GetKey(KeyCode.X))
         {
@@ -188,9 +192,14 @@ public class TutorialScreenManager : MonoBehaviour
     private void MoveUp(){
         transform.Translate(Vector3.up * movementSpeed * Time.deltaTime);
     }
-
+    
     private void NextScene()
     {
         SceneManager.LoadScene(nextScene);
+    }
+
+    public void UpdatePickUp(bool pickedUp)
+    {
+        itemPickedUp = pickedUp;
     }
 }
