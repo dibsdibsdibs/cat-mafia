@@ -7,11 +7,11 @@ public class LevelInteractItemScript : MonoBehaviour
     [SerializeField] public string itemName;
     [SerializeField] public bool isPlayerInRange = false;
     [SerializeField] public bool pickedUpItem = false;
-    private LevelManagerScript levelManager;
+    // private LevelManagerScript levelManager;
 
     void Start()
     {
-        levelManager = GameObject.Find("LevelManager").GetComponent<LevelManagerScript>();
+        // levelManager = GameObject.Find("LevelManager").GetComponent<LevelManagerScript>();
     }
 
     void Update()
@@ -42,7 +42,7 @@ public class LevelInteractItemScript : MonoBehaviour
     {
         pickedUpItem = true;
         Debug.Log("Picked up " + itemName);
-        levelManager.UpdatePickUp(pickedUpItem);
+        // levelManager.UpdatePickUp(pickedUpItem);
         Destroy(gameObject);
     }
 }

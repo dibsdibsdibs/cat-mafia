@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class TutorialScreenManager : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class TutorialScreenManager : MonoBehaviour
     [SerializeField] private float movementSpeed = 5;
     [SerializeField] public AudioSource audioSource;
     [SerializeField] public string nextScene;
+    public GameObject pausePanel;
 
     [Header("Movement Tutorial")]
     public bool movementTutorialFinished = false;
@@ -21,6 +23,7 @@ public class TutorialScreenManager : MonoBehaviour
     public bool itemPickedUp = false;
     public bool zButtonPressed = false;
     public bool xButtonPressed = false;
+    public bool accessInventory = false;
 
     [Header("Audio Clips")]
     public AudioClip[] audioClips;
@@ -34,6 +37,13 @@ public class TutorialScreenManager : MonoBehaviour
     public GameObject moveDialogue;
     public GameObject controlDialogue;
     public GameObject endTutorialDialogue;
+
+    [Header("Pause Manager")]
+    [SerializeField] public Button titleButton;
+    [SerializeField] public Button continueButton;
+    [SerializeField] public Button quitButton;
+    [SerializeField] private int selectedButtonIndex = 0;
+    [SerializeField] public Image selectionIndicator;
 
     void Start()
     {
@@ -157,6 +167,10 @@ public class TutorialScreenManager : MonoBehaviour
         if(Input.GetKey(KeyCode.X))
         {
             xButtonPressed = true;
+            if(xButtonPressed == true)
+            {
+                PauseGame();
+            }
         }
 
         if(zButtonPressed && xButtonPressed)
@@ -201,5 +215,10 @@ public class TutorialScreenManager : MonoBehaviour
     public void UpdatePickUp(bool pickedUp)
     {
         itemPickedUp = pickedUp;
+    }
+
+    void PauseGame()
+    {
+        pausePanel.SetActive(true);
     }
 }
