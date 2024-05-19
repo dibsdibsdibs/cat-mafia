@@ -1,24 +1,88 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PauseScript : MonoBehaviour
 {
-    public GameObject pausePanel;
+    [Header("Pause Manager")]
+    public GameObject pauseScreen;
+    [SerializeField] public Button titleButton;
+    [SerializeField] public Button continueButton;
+    [SerializeField] public Button quitButton;
+    [SerializeField] private int selectedButtonIndex = 0;
+    [SerializeField] public Image selectionIndicator;
+
+    private Button[] buttons;
 
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            selectedButtonIndex = (selectedButtonIndex + 1) % buttons.Length;
+            UpdateSelection();
+        }
+        else if (Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            selectedButtonIndex = (selectedButtonIndex - 1 + buttons.Length) % buttons.Length;
+            UpdateSelection();
+        }
+        else if (Input.GetKeyDown(KeyCode.Z))
+        {
+            ExecuteOption();
+        }
+        else if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            TogglePause();
+        }
     }
 
-    public void PauseGame()
+    public void TogglePause()
     {
-        pausePanel.SetActive(true);
+        bool isActive = !pauseScreen.activeSelf;
+        pauseScreen.SetActive(isActive);
+
+        if (isActive)
+        {
+            buttons = new Button[] { continueButton, titleButton, quitButton };
+            continueButton.Select();
+            UpdateIndicatorPosition();
+        }
+    }
+
+    void UpdateSelection()
+    {
+        buttons[selectedButtonIndex].Select();
+        UpdateIndicatorPosition();
+    }
+
+    void UpdateIndicatorPosition()
+    {
+        selectionIndicator.transform.position = buttons[selectedButtonIndex].transform.position;
+    }
+
+    void ExecuteOption()
+    {
+        if (selectedButtonIndex == 0)
+        {
+            Debug.Log("Continue Game");
+            pauseScreen.SetActive(false);
+        }
+        else if (selectedButtonIndex == 1)
+        {
+            Debug.Log("Go to Title Screen");
+            SceneManager.LoadScene("MenuScreen");
+        }
+        else if (selectedButtonIndex == 2)
+        {
+            Debug.Log("Quit Game!");
+            Application.Quit();
+        }
     }
 }

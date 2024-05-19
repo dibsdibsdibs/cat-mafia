@@ -1,7 +1,6 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
 public class TutorialScreenManager : MonoBehaviour
 {
@@ -37,13 +36,6 @@ public class TutorialScreenManager : MonoBehaviour
     public GameObject moveDialogue;
     public GameObject controlDialogue;
     public GameObject endTutorialDialogue;
-
-    [Header("Pause Manager")]
-    [SerializeField] public Button titleButton;
-    [SerializeField] public Button continueButton;
-    [SerializeField] public Button quitButton;
-    [SerializeField] private int selectedButtonIndex = 0;
-    [SerializeField] public Image selectionIndicator;
 
     void Start()
     {
