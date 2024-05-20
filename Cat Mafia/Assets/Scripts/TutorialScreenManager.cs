@@ -8,7 +8,6 @@ public class TutorialScreenManager : MonoBehaviour
     [SerializeField] private float movementSpeed = 5;
     [SerializeField] public AudioSource audioSource;
     [SerializeField] public string nextScene;
-    public GameObject pausePanel;
 
     [Header("Movement Tutorial")]
     public bool movementTutorialFinished = false;
@@ -23,6 +22,8 @@ public class TutorialScreenManager : MonoBehaviour
     public bool zButtonPressed = false;
     public bool xButtonPressed = false;
     public bool accessInventory = false;
+    private PauseScript pauseManager;
+    public bool checkedPause = false;
 
     [Header("Audio Clips")]
     public AudioClip[] audioClips;
@@ -41,6 +42,7 @@ public class TutorialScreenManager : MonoBehaviour
     {
         audioSource = GetComponent<AudioSource>();
         checkDialogue = firstEventDialogue.GetComponent<DialogueManager>();
+        pauseManager = GameObject.Find("PauseScreen").GetComponent<PauseScript>();
         FirstEvent();
     }
 
@@ -159,13 +161,10 @@ public class TutorialScreenManager : MonoBehaviour
         if(Input.GetKey(KeyCode.X))
         {
             xButtonPressed = true;
-            if(xButtonPressed == true)
-            {
-                PauseGame();
-            }
+            PauseGame();
         }
 
-        if(zButtonPressed && xButtonPressed)
+        if(zButtonPressed && checkedPause)
         {
             controlTutorialFinished = true;
             Debug.Log("Finished control tutorial");
@@ -211,6 +210,7 @@ public class TutorialScreenManager : MonoBehaviour
 
     void PauseGame()
     {
-        pausePanel.SetActive(true);
+        pauseManager.TogglePause();
+        checkedPause = true;
     }
 }
