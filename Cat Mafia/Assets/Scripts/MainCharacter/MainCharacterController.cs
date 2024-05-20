@@ -11,6 +11,16 @@ public class MainCharacterController : MonoBehaviour
     private BoxCollider2D boxCollider;
     public GameObject pauseScreen;
     private PauseScript pauseManager;
+    
+    // collider manager
+    private BoxColliderManager boxColliderManager;
+
+    // movement variables
+    private Vector2 movement;
+
+    // keeps track of the direction where the cat is facing
+    // necessary for the implementatino of dash
+    private Vector2 direction;
 
 
     // Start is called before the first frame update
@@ -19,6 +29,8 @@ public class MainCharacterController : MonoBehaviour
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         boxCollider = GetComponent<BoxCollider2D>();
+        // manages the vertical  and horizontal box colliders
+        boxColliderManager = GetComponent<BoxColliderManager>();
         pauseManager = pauseScreen.GetComponent<PauseScript>();
     }
 
@@ -26,60 +38,46 @@ public class MainCharacterController : MonoBehaviour
     void Update()
     {
         bool isPauseActive = pauseScreen.activeSelf;
-
-        if(isPauseActive == false)
-        {
-            if(!(Input.GetAxis("Horizontal") != 0 && Input.GetAxis("Vertical") != 0)){
-                if(Input.GetAxis("Horizontal") > 0){
-                    MoveRight();
-                }
-                if(Input.GetAxis("Horizontal") < 0){
-                    MoveLeft();
-                }
-                if(Input.GetAxis("Vertical") > 0){
-                    MoveUp();
-                }
-                if(Input.GetAxis("Vertical") < 0){
-                    MoveDown();
-                }
+        // prevents user input from affecting the character when the game is paused
+        if(isPauseActive == false){
+            if(Input.GetKey(KeyCode.UpArrow)){
+                movement.x = 0;
+                movement.y = 1;
+                ChangeDirection();
+            }
+            if(Input.GetKey(KeyCode.DownArrow)){
+                movement.x = 0;
+                movement.y = -1;
+                ChangeDirection();
+            }
+            if(Input.GetKey(KeyCode.LeftArrow)){
+                movement.y = 0;
+                movement.x = -1;
+                ChangeDirection();
+            }
+            if(Input.GetKey(KeyCode.RightArrow)){
+                movement.y = 0;
+                movement.x = 1;
+                ChangeDirection();
             }
         }
-        // prevent horizontal movement
-
-        if(Input.GetKeyDown(KeyCode.LeftArrow)){
-            animator.SetFloat("moveX", -1f);
-            animator.SetFloat("moveY", 0);
-            OnIsMoving();
+        if(Input.GetKeyUp(KeyCode.LeftArrow)
+        ||Input.GetKeyUp(KeyCode.RightArrow)
+        ||Input.GetKeyUp(KeyCode.UpArrow)
+        ||Input.GetKeyUp(KeyCode.DownArrow)
+        ){
+            movement = Vector2.zero;
+            SetIsNotMoving();
         }
-        if(Input.GetKeyDown(KeyCode.RightArrow)){
-            animator.SetFloat("moveX", 1f);
-            animator.SetFloat("moveY", 0);
-            OnIsMoving();
-        }
-        if(Input.GetKeyDown(KeyCode.DownArrow)){
-            animator.SetFloat("moveX", 0);
-            animator.SetFloat("moveY", -1f);
-            OnIsMoving();
-        }
-        if(Input.GetKeyDown(KeyCode.UpArrow)){
-            animator.SetFloat("moveX", 0);
-            animator.SetFloat("moveY", 1f);
-            OnIsMoving();
-        }
-        if(Input.GetKeyDown(KeyCode.DownArrow) 
-        || Input.GetKeyDown(KeyCode.UpArrow) 
-        || Input.GetKeyDown(KeyCode.LeftArrow) 
-        || Input.GetKeyDown(KeyCode.RightArrow)){
-            OffIsMoving();
-        }
-
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, boxCollider.bounds.extents.y + 0.1f, groundLayer);
-        if (hit.collider != null)
-        {
-            float distanceToGround = hit.distance - boxCollider.bounds.extents.y;
-            rb.position += Vector2.down * distanceToGround;
-            rb.velocity = new Vector2(rb.velocity.x, 0f);
-        }
+        
+        // i guess this is for collision only?
+        // RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, boxCollider.bounds.extents.y + 0.1f, groundLayer);
+        // if (hit.collider != null)
+        // {
+        //     float distanceToGround = hit.distance - boxCollider.bounds.extents.y;
+        //     rb.position += Vector2.down * distanceToGround;
+        //     rb.velocity = new Vector2(rb.velocity.x, 0f);
+        // }
 
         if(Input.GetKey(KeyCode.X))
         {
@@ -87,25 +85,44 @@ public class MainCharacterController : MonoBehaviour
             pauseManager.TogglePause();
         }
     }
-    public void OffIsMoving(){
-        animator.SetBool("isMoving", false);
+
+    void FixedUpdate(){
+        Move();
     }
-    public void OnIsMoving(){
+
+    // moving animation
+    private void SetIsMoving(){
         animator.SetBool("isMoving", true);
     }
-    // experimental
-    // change accordingly
-    private void MoveRight(){
-        transform.Translate(Vector3.right * movementSpeed * Time.deltaTime);
+    // idle animation
+    private void SetIsNotMoving(){
+        animator.SetBool("isMoving", false);
     }
-    private void MoveLeft(){
-        transform.Translate(Vector3.left * movementSpeed * Time.deltaTime);
+    // replaced translate with rigidbody.moveposition
+    private void Move(){
+        rb.MovePosition(rb.position + movement * movementSpeed * Time.deltaTime);
     }
-    private void MoveDown(){
-        transform.Translate(Vector3.down * movementSpeed * Time.deltaTime);
-
-    }
-    private void MoveUp(){
-        transform.Translate(Vector3.up * movementSpeed * Time.deltaTime);
+    // changes the direction where the character is facing
+    // dependent on the input
+    private void ChangeDirection () {
+        // keeps track of the direction where the character is facing
+        direction = movement;
+        // sets up the vertical movement box collider
+        if(direction.y > 0){
+            boxColliderManager.SetUpBoxCollider();
+        }else if(direction.y < 0){
+            boxColliderManager.SetDownBoxCollider();
+        }
+        // sets up the horizontal movement collider
+        if(direction.x > 0){
+            boxColliderManager.SetRightBoxCollider();
+        }else if(direction.x < 0){
+            boxColliderManager.SetLeftBoxCollider();
+        }
+        // turns on animation based on user input
+        animator.SetFloat("moveX", movement.x);
+        animator.SetFloat("moveY", movement.y);
+        // enables the movement animation
+        SetIsMoving();
     }
 }
