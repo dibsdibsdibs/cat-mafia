@@ -23,12 +23,12 @@ public class PauseScript : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.RightArrow))
+        if (Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.LeftArrow))
         {
             selectedButtonIndex = (selectedButtonIndex + 1) % buttons.Length;
             UpdateSelection();
         }
-        else if (Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.LeftArrow))
+        else if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.RightArrow))
         {
             selectedButtonIndex = (selectedButtonIndex - 1 + buttons.Length) % buttons.Length;
             UpdateSelection();
