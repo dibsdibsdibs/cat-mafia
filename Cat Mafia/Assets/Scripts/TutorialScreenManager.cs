@@ -21,7 +21,6 @@ public class TutorialScreenManager : MonoBehaviour
     public bool itemPickedUp = false;
     public bool zButtonPressed = false;
     public bool xButtonPressed = false;
-    public bool accessInventory = false;
     private PauseScript pauseManager;
     public bool checkedPause = false;
     public GameObject pauseScreen;
@@ -82,7 +81,7 @@ public class TutorialScreenManager : MonoBehaviour
         {
             Debug.Log("Ending tutorial");
             checkDialogue = endTutorialDialogue.GetComponent<DialogueManager>();
-            Invoke("EndTutorial", 1.0f);
+            // Invoke("EndTutorial", 1.0f);
         }
     }
 

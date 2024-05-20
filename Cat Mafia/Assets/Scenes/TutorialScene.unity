@@ -4211,7 +4211,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c107872771f75574a8e93d539280941c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pauseScreen: {fileID: 1328573487}
+  pauseScreen: {fileID: 1929486073}
   titleButton: {fileID: 2075397813}
   continueButton: {fileID: 144367950}
   quitButton: {fileID: 1142491985}
