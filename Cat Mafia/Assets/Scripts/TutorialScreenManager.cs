@@ -20,7 +20,10 @@ public class TutorialScreenManager : MonoBehaviour
     public bool controlTutorialFinished = false;
     public bool itemPickedUp = false;
     public bool zButtonPressed = false;
+    public bool xButtonPressed = false;
+    private PauseScript pauseManager;
     public bool checkedPause = false;
+    public GameObject pauseScreen;
 
     [Header("Audio Clips")]
     public AudioClip[] audioClips;
@@ -39,6 +42,7 @@ public class TutorialScreenManager : MonoBehaviour
     {
         audioSource = GetComponent<AudioSource>();
         checkDialogue = firstEventDialogue.GetComponent<DialogueManager>();
+        pauseManager = pauseScreen.GetComponent<PauseScript>();
         FirstEvent();
     }
 
@@ -136,6 +140,11 @@ public class TutorialScreenManager : MonoBehaviour
                 zButtonPressed = true;
             }
         }
+        if(Input.GetKey(KeyCode.X))
+        {
+            xButtonPressed = true;
+            PauseGame();
+        }
 
         if(zButtonPressed && checkedPause)
         {
@@ -179,5 +188,13 @@ public class TutorialScreenManager : MonoBehaviour
     public void UpdatePickUp(bool pickedUp)
     {
         itemPickedUp = pickedUp;
+    }
+
+    void PauseGame()
+    {
+        if(pauseScreen.activeSelf)
+        {
+            checkedPause = true;
+        }
     }
 }
