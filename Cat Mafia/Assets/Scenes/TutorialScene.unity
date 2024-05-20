@@ -861,7 +861,6 @@ MonoBehaviour:
   itemPickedUp: 0
   zButtonPressed: 0
   xButtonPressed: 0
-  accessInventory: 0
   checkedPause: 0
   pauseScreen: {fileID: 1929486073}
   audioClips:
@@ -3413,8 +3412,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7737090797000442780, guid: 18cfb5c431e1f8b4a9252ac118c8cb2c, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7737090797000442780, guid: 18cfb5c431e1f8b4a9252ac118c8cb2c, type: 3}
+      propertyPath: pauseScreen
+      value: 
+      objectReference: {fileID: 1929486073}
     - target: {fileID: 7737090797000442780, guid: 18cfb5c431e1f8b4a9252ac118c8cb2c, type: 3}
       propertyPath: movementSpeed
       value: 3

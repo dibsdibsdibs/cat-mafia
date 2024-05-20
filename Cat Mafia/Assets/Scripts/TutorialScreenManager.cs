@@ -42,7 +42,7 @@ public class TutorialScreenManager : MonoBehaviour
     {
         audioSource = GetComponent<AudioSource>();
         checkDialogue = firstEventDialogue.GetComponent<DialogueManager>();
-        pauseManager =pauseScreen.GetComponent<PauseScript>();
+        pauseManager = pauseScreen.GetComponent<PauseScript>();
         FirstEvent();
     }
 
@@ -210,8 +210,11 @@ public class TutorialScreenManager : MonoBehaviour
 
     void PauseGame()
     {
-        pauseScreen.SetActive(true);
-        pauseManager.TogglePause();
-        checkedPause = true;
+        // pauseScreen.SetActive(true);
+        // pauseManager.TogglePause();
+        if(pauseScreen.activeSelf)
+        {
+            checkedPause = true;
+        }
     }
 }
