@@ -24,6 +24,7 @@ public class TutorialScreenManager : MonoBehaviour
     public bool accessInventory = false;
     private PauseScript pauseManager;
     public bool checkedPause = false;
+    public GameObject pauseScreen;
 
     [Header("Audio Clips")]
     public AudioClip[] audioClips;
@@ -42,7 +43,7 @@ public class TutorialScreenManager : MonoBehaviour
     {
         audioSource = GetComponent<AudioSource>();
         checkDialogue = firstEventDialogue.GetComponent<DialogueManager>();
-        pauseManager = GameObject.Find("PauseScreen").GetComponent<PauseScript>();
+        pauseManager =pauseScreen.GetComponent<PauseScript>();
         FirstEvent();
     }
 
@@ -210,6 +211,7 @@ public class TutorialScreenManager : MonoBehaviour
 
     void PauseGame()
     {
+        pauseScreen.SetActive(true);
         pauseManager.TogglePause();
         checkedPause = true;
     }

@@ -45,8 +45,8 @@ public class PauseScript : MonoBehaviour
 
     public void TogglePause()
     {
-        bool isActive = !pauseScreen.activeSelf;
-        pauseScreen.SetActive(isActive);
+        bool isActive = pauseScreen.activeSelf;
+        // pauseScreen.SetActive(isActive);
 
         if (isActive)
         {
