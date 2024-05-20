@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 public class TutorialScreenManager : MonoBehaviour
 {
     [SerializeField] public GameObject catCharacter;
+    private MainCharacterController characterController;
     [SerializeField] private float movementSpeed = 5;
     [SerializeField] public AudioSource audioSource;
     [SerializeField] public string nextScene;
@@ -40,6 +41,7 @@ public class TutorialScreenManager : MonoBehaviour
 
     void Start()
     {
+        characterController = catCharacter.GetComponent<MainCharacterController>();
         audioSource = GetComponent<AudioSource>();
         checkDialogue = firstEventDialogue.GetComponent<DialogueManager>();
         pauseManager = pauseScreen.GetComponent<PauseScript>();
@@ -50,6 +52,7 @@ public class TutorialScreenManager : MonoBehaviour
     {   
         if(firstEventFinished)
         {
+            characterController.enabled = true;
             Invoke("MovementTutorial", audioClips[1].length);
         }
 
@@ -63,7 +66,7 @@ public class TutorialScreenManager : MonoBehaviour
         {
             Debug.Log("Ending tutorial");
             checkDialogue = endTutorialDialogue.GetComponent<DialogueManager>();
-            Invoke("EndTutorial", 1.0f);
+            // Invoke("EndTutorial", 1.0f);
         }
     }
 
@@ -99,25 +102,21 @@ public class TutorialScreenManager : MonoBehaviour
 
         if(Input.GetKey(KeyCode.LeftArrow))
         {
-            MoveLeft();
             leftArrowPressed = true;
         }
 
         if(Input.GetKey(KeyCode.RightArrow))
         {
-            MoveRight();
             rightArrowPressed = true;
         }
 
         if(Input.GetKey(KeyCode.UpArrow))
         {
-            MoveUp();
             upArrowPressed = true;
         }
 
         if(Input.GetKey(KeyCode.DownArrow))
         {
-            MoveDown();
             downArrowPressed = true;
         }
 
