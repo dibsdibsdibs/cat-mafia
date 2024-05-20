@@ -2,16 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TutorialInteractItemScript : MonoBehaviour
+public class LevelInteractItemScript : MonoBehaviour
 {
     [SerializeField] public string itemName;
     [SerializeField] public bool isPlayerInRange = false;
     [SerializeField] public bool pickedUpItem = false;
-    private TutorialScreenManager tutorialManager;
+    // private LevelManagerScript levelManager;
 
     void Start()
     {
-        tutorialManager = GameObject.Find("TutorialManager").GetComponent<TutorialScreenManager>();
+        // levelManager = GameObject.Find("LevelManager").GetComponent<LevelManagerScript>();
     }
 
     void Update()
@@ -42,7 +42,7 @@ public class TutorialInteractItemScript : MonoBehaviour
     {
         pickedUpItem = true;
         Debug.Log("Picked up " + itemName);
-        tutorialManager.UpdatePickUp(pickedUpItem);
+        // levelManager.UpdatePickUp(pickedUpItem);
         Destroy(gameObject);
     }
 }
