@@ -53,24 +53,6 @@ public class TutorialScreenManager : MonoBehaviour
             Invoke("MovementTutorial", audioClips[1].length);
         }
 
-        if(movementTutorialFinished)
-        {
-            if(!(Input.GetAxis("Horizontal") != 0 && Input.GetAxis("Vertical") != 0)){
-                if(Input.GetAxis("Horizontal") > 0){
-                    MoveRight();
-                }
-                if(Input.GetAxis("Horizontal") < 0){
-                    MoveLeft();
-                }
-                if(Input.GetAxis("Vertical") > 0){
-                    MoveUp();
-                }
-                if(Input.GetAxis("Vertical") < 0){
-                    MoveDown();
-                }
-            }
-        }
-
         if(movementTutorialFinished && controlTutorialFinished == false)
         {
             Debug.Log("Entering control tutorial");
