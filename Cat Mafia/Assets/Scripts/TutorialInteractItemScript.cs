@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InteractItemScript : MonoBehaviour
+public class TutorialInteractItemScript : MonoBehaviour
 {
     [SerializeField] public string itemName;
     [SerializeField] public bool isPlayerInRange = false;
