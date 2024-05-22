@@ -9,11 +9,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4293208624291507719}
-  - component: {fileID: 8660144637437193349}
   - component: {fileID: 1020658734399567266}
   - component: {fileID: 1475868694392952396}
   - component: {fileID: 5674544722051940355}
   - component: {fileID: 6735918259808972589}
+  - component: {fileID: -2259923936767381007}
   m_Layer: 0
   m_Name: Cake_1
   m_TagString: Untagged
@@ -36,21 +36,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8660144637437193349
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5651011412211922094}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e11d6c628e330643bcc6b3982d91932, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemName: Cake
-  isPlayerInRange: 0
-  pickedUpItem: 0
 --- !u!212 &1020658734399567266
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -220,3 +205,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
+--- !u!114 &-2259923936767381007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5651011412211922094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 291a28d53aa4d664cbfeec551dc29d4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: Cake
+  isPlayerInRange: 0
+  pickedUpItem: 0
+  itemValue: 1
