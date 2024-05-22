@@ -40,7 +40,7 @@ public class MenuScreenManager : MonoBehaviour
             selectedButtonIndex = (selectedButtonIndex == 1) ? 0 : 1;
             UpdateSelection();
         }
-        else if (Input.GetKeyDown(KeyCode.Return))
+        else if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Z))
         {
             ExecuteOption();
         }
