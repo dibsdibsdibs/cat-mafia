@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System.Numerics;
 
 public class MenuScreenManager : MonoBehaviour
 {
@@ -52,11 +53,11 @@ public class MenuScreenManager : MonoBehaviour
     {
         if (moveRight)
         {
-            catCharacter.transform.Translate(Vector3.right * moveSpeed * Time.deltaTime);
+            catCharacter.transform.Translate(UnityEngine.Vector3.right * moveSpeed * Time.deltaTime);
         }
         else
         {
-            catCharacter.transform.Translate(Vector3.left * moveSpeed * Time.deltaTime);
+            catCharacter.transform.Translate(UnityEngine.Vector3.left * moveSpeed * Time.deltaTime);
         }
 
         if (catCharacter.transform.position.x >= moveDistance)
@@ -89,11 +90,11 @@ public class MenuScreenManager : MonoBehaviour
     {
         if (selectedButtonIndex == 0)
         {
-            selectionIndicator.transform.position = startButton.transform.position;
+            selectionIndicator.transform.position = new UnityEngine.Vector3(startButton.transform.position.x-1.25f, startButton.transform.position.y, startButton.transform.position.z);
         }
         else
         {
-            selectionIndicator.transform.position = quitButton.transform.position;
+            selectionIndicator.transform.position = new UnityEngine.Vector3(quitButton.transform.position.x-1.25f, quitButton.transform.position.y, quitButton.transform.position.z);
         }
     }
 
