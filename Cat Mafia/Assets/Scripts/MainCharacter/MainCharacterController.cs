@@ -9,6 +9,8 @@ public class MainCharacterController : MonoBehaviour
     private Rigidbody2D rb;
     public LayerMask groundLayer;
     private BoxCollider2D boxCollider;
+    public GameObject pauseScreen;
+    private PauseScript pauseManager;
 
 
     // Start is called before the first frame update
@@ -17,26 +19,32 @@ public class MainCharacterController : MonoBehaviour
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         boxCollider = GetComponent<BoxCollider2D>();
+        pauseManager = pauseScreen.GetComponent<PauseScript>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        // prevent horizontal movement
-        if(!(Input.GetAxis("Horizontal") != 0 && Input.GetAxis("Vertical") != 0)){
-            if(Input.GetAxis("Horizontal") > 0){
-                MoveRight();
-            }
-            if(Input.GetAxis("Horizontal") < 0){
-                MoveLeft();
-            }
-            if(Input.GetAxis("Vertical") > 0){
-                MoveUp();
-            }
-            if(Input.GetAxis("Vertical") < 0){
-                MoveDown();
+        bool isPauseActive = pauseScreen.activeSelf;
+
+        if(isPauseActive == false)
+        {
+            if(!(Input.GetAxis("Horizontal") != 0 && Input.GetAxis("Vertical") != 0)){
+                if(Input.GetAxis("Horizontal") > 0){
+                    MoveRight();
+                }
+                if(Input.GetAxis("Horizontal") < 0){
+                    MoveLeft();
+                }
+                if(Input.GetAxis("Vertical") > 0){
+                    MoveUp();
+                }
+                if(Input.GetAxis("Vertical") < 0){
+                    MoveDown();
+                }
             }
         }
+        // prevent horizontal movement
 
         if(Input.GetKeyDown(KeyCode.LeftArrow)){
             animator.SetFloat("moveX", -1f);
@@ -71,6 +79,12 @@ public class MainCharacterController : MonoBehaviour
             float distanceToGround = hit.distance - boxCollider.bounds.extents.y;
             rb.position += Vector2.down * distanceToGround;
             rb.velocity = new Vector2(rb.velocity.x, 0f);
+        }
+
+        if(Input.GetKey(KeyCode.X))
+        {
+            pauseScreen.SetActive(true);
+            pauseManager.TogglePause();
         }
     }
     public void OffIsMoving(){

@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 public class TutorialScreenManager : MonoBehaviour
 {
     [SerializeField] public GameObject catCharacter;
+    private MainCharacterController characterController;
     [SerializeField] private float movementSpeed = 5;
     [SerializeField] public AudioSource audioSource;
     [SerializeField] public string nextScene;
@@ -21,6 +22,9 @@ public class TutorialScreenManager : MonoBehaviour
     public bool itemPickedUp = false;
     public bool zButtonPressed = false;
     public bool xButtonPressed = false;
+    private PauseScript pauseManager;
+    public bool checkedPause = false;
+    public GameObject pauseScreen;
 
     [Header("Audio Clips")]
     public AudioClip[] audioClips;
@@ -37,8 +41,10 @@ public class TutorialScreenManager : MonoBehaviour
 
     void Start()
     {
+        characterController = catCharacter.GetComponent<MainCharacterController>();
         audioSource = GetComponent<AudioSource>();
         checkDialogue = firstEventDialogue.GetComponent<DialogueManager>();
+        pauseManager = pauseScreen.GetComponent<PauseScript>();
         FirstEvent();
     }
 
@@ -46,25 +52,8 @@ public class TutorialScreenManager : MonoBehaviour
     {   
         if(firstEventFinished)
         {
+            characterController.enabled = true;
             Invoke("MovementTutorial", audioClips[1].length);
-        }
-
-        if(movementTutorialFinished)
-        {
-            if(!(Input.GetAxis("Horizontal") != 0 && Input.GetAxis("Vertical") != 0)){
-                if(Input.GetAxis("Horizontal") > 0){
-                    MoveRight();
-                }
-                if(Input.GetAxis("Horizontal") < 0){
-                    MoveLeft();
-                }
-                if(Input.GetAxis("Vertical") > 0){
-                    MoveUp();
-                }
-                if(Input.GetAxis("Vertical") < 0){
-                    MoveDown();
-                }
-            }
         }
 
         if(movementTutorialFinished && controlTutorialFinished == false)
@@ -77,7 +66,7 @@ public class TutorialScreenManager : MonoBehaviour
         {
             Debug.Log("Ending tutorial");
             checkDialogue = endTutorialDialogue.GetComponent<DialogueManager>();
-            Invoke("EndTutorial", 1.0f);
+            // Invoke("EndTutorial", 1.0f);
         }
     }
 
@@ -113,25 +102,21 @@ public class TutorialScreenManager : MonoBehaviour
 
         if(Input.GetKey(KeyCode.LeftArrow))
         {
-            MoveLeft();
             leftArrowPressed = true;
         }
 
         if(Input.GetKey(KeyCode.RightArrow))
         {
-            MoveRight();
             rightArrowPressed = true;
         }
 
         if(Input.GetKey(KeyCode.UpArrow))
         {
-            MoveUp();
             upArrowPressed = true;
         }
 
         if(Input.GetKey(KeyCode.DownArrow))
         {
-            MoveDown();
             downArrowPressed = true;
         }
 
@@ -157,9 +142,10 @@ public class TutorialScreenManager : MonoBehaviour
         if(Input.GetKey(KeyCode.X))
         {
             xButtonPressed = true;
+            PauseGame();
         }
 
-        if(zButtonPressed && xButtonPressed)
+        if(zButtonPressed && checkedPause)
         {
             controlTutorialFinished = true;
             Debug.Log("Finished control tutorial");
@@ -201,5 +187,13 @@ public class TutorialScreenManager : MonoBehaviour
     public void UpdatePickUp(bool pickedUp)
     {
         itemPickedUp = pickedUp;
+    }
+
+    void PauseGame()
+    {
+        if(pauseScreen.activeSelf)
+        {
+            checkedPause = true;
+        }
     }
 }
