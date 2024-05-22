@@ -64,9 +64,7 @@ public class PauseScript : MonoBehaviour
 
     void UpdateIndicatorPosition(Button button)
     {
-        Debug.Log(button.transform.position);
-        Debug.Log(selectionIndicator.transform.position);
-        selectionIndicator.transform.position = new Vector3(button.transform.position.x-1.25f, button.transform.position.y, button.transform.position.z);
+        selectionIndicator.transform.position = new Vector3(button.transform.position.x - 100f, button.transform.position.y, button.transform.position.z);
     }
 
     void ExecuteOption()
