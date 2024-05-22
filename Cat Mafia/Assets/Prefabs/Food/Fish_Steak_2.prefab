@@ -9,11 +9,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8777217244492274477}
-  - component: {fileID: 6129517519228722810}
   - component: {fileID: 4930682911406918184}
   - component: {fileID: 4351630703918471785}
   - component: {fileID: 1338372353518349344}
   - component: {fileID: 1772730731923602781}
+  - component: {fileID: 5643154571223691454}
   m_Layer: 0
   m_Name: Fish_Steak_2
   m_TagString: Untagged
@@ -36,21 +36,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6129517519228722810
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7320273620673604068}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e11d6c628e330643bcc6b3982d91932, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemName: Steak
-  isPlayerInRange: 0
-  pickedUpItem: 0
 --- !u!212 &4930682911406918184
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -220,3 +205,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
+--- !u!114 &5643154571223691454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7320273620673604068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 291a28d53aa4d664cbfeec551dc29d4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: Steak
+  isPlayerInRange: 0
+  pickedUpItem: 0
+  itemValue: 3

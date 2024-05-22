@@ -9,11 +9,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4578011123764739627}
-  - component: {fileID: 7233210167294071184}
   - component: {fileID: 1323317328304706463}
   - component: {fileID: 2775307041208141917}
   - component: {fileID: 4976236147993834300}
   - component: {fileID: 8638676471178053690}
+  - component: {fileID: 8158004747231894681}
   m_Layer: 0
   m_Name: Sushi_7
   m_TagString: Untagged
@@ -36,21 +36,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7233210167294071184
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1255808577136441329}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e11d6c628e330643bcc6b3982d91932, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemName: Sushi
-  isPlayerInRange: 0
-  pickedUpItem: 0
 --- !u!212 &1323317328304706463
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -220,3 +205,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
+--- !u!114 &8158004747231894681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1255808577136441329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 291a28d53aa4d664cbfeec551dc29d4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: Sushi
+  isPlayerInRange: 0
+  pickedUpItem: 0
+  itemValue: 2.5
