@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e11d6c628e330643bcc6b3982d91932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: 
+  itemName: Cake
   isPlayerInRange: 0
   pickedUpItem: 0
 --- !u!212 &1020658734399567266
