@@ -7,6 +7,7 @@ public class TutorialInteractItemScript : MonoBehaviour
     [SerializeField] public string itemName;
     [SerializeField] public bool isPlayerInRange = false;
     [SerializeField] public bool pickedUpItem = false;
+    [SerializeField] public float itemValue;
     private TutorialScreenManager tutorialManager;
 
     void Start()
@@ -42,6 +43,7 @@ public class TutorialInteractItemScript : MonoBehaviour
     {
         pickedUpItem = true;
         Debug.Log("Picked up " + itemName);
+        Debug.Log("Item value: " + itemValue);
         tutorialManager.UpdatePickUp(pickedUpItem);
         Destroy(gameObject);
     }
