@@ -16,6 +16,13 @@ public class MainCharacterController : MonoBehaviour
     private Vector2 movement;
     private Vector2 direction;
 
+    // dash
+    private bool canDash = true;
+    private bool isDashing = false;
+    [SerializeField] private float dashSpeed = 10;
+    [SerializeField] private float dashDuration = 1;
+    [SerializeField] private float dashCooldown = 7;
+
     // scripts
     private BoxColliderManager boxColliderManager;
 
@@ -49,9 +56,9 @@ public class MainCharacterController : MonoBehaviour
             if(Input.GetKey(KeyCode.RightArrow)){
                 rightMovement();
             }
-            // if(Input.GetKeyDown(KeyCode.Q) && canDash){
-            //     StartCoroutine(Dash());
-            // }
+            if(Input.GetKeyDown(KeyCode.Q) && canDash){
+                StartCoroutine(Dash());
+            }
 
             if(Input.GetKeyUp(KeyCode.LeftArrow)
             ||Input.GetKeyUp(KeyCode.RightArrow)
@@ -79,7 +86,9 @@ public class MainCharacterController : MonoBehaviour
     }
     // renders movement on a definite number of frames
     void FixedUpdate(){
-        Move();
+        if(!isDashing){
+            Move();
+        }
     }
     // arrow movements
     private void LeftMovement(){
@@ -128,6 +137,16 @@ public class MainCharacterController : MonoBehaviour
     // performs a translation like movement
     private void Move(){
         rb.MovePosition(rb.position + movement * movementSpeed * Time.deltaTime);
+    }
+    // perform dash
+    private IEnumerator Dash () {
+        isDashing = true;
+        canDash = false;
+        rb.velocity = direction * dashSpeed;
+        yield return new WaitForSeconds(dashDuration);
+        isDashing = false;
+        yield return new WaitForSeconds(dashCooldown);
+        canDash = true;
     }
 
 }
