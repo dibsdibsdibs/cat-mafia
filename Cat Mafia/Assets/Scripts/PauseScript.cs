@@ -52,19 +52,19 @@ public class PauseScript : MonoBehaviour
         {
             buttons = new Button[] { continueButton, titleButton, quitButton };
             continueButton.Select();
-            UpdateIndicatorPosition();
+            UpdateIndicatorPosition(continueButton);
         }
     }
 
     void UpdateSelection()
     {
         buttons[selectedButtonIndex].Select();
-        UpdateIndicatorPosition();
+        UpdateIndicatorPosition(buttons[selectedButtonIndex]);
     }
 
-    void UpdateIndicatorPosition()
+    void UpdateIndicatorPosition(Button button)
     {
-        selectionIndicator.transform.position = buttons[selectedButtonIndex].transform.position;
+        selectionIndicator.transform.position = new Vector3(button.transform.position.x - 100f, button.transform.position.y, button.transform.position.z);
     }
 
     void ExecuteOption()
