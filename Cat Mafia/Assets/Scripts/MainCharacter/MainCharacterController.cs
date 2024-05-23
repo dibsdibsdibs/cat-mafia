@@ -12,6 +12,12 @@ public class MainCharacterController : MonoBehaviour
     public GameObject pauseScreen;
     private PauseScript pauseManager;
 
+    // movement variables
+    private Vector2 movement;
+    private Vector2 direction;
+
+    // scripts
+    private BoxColliderManager boxColliderManager;
 
     // Start is called before the first frame update
     void Start()
@@ -19,67 +25,51 @@ public class MainCharacterController : MonoBehaviour
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         boxCollider = GetComponent<BoxCollider2D>();
+        rb = GetComponent<Rigidbody2D>();
+        boxColliderManager = GetComponent<BoxColliderManager>();
         pauseManager = pauseScreen.GetComponent<PauseScript>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        bool isPauseActive = pauseScreen.activeSelf;
-
+        // bool isPauseActive = pauseScreen.activeSelf;
+        bool isPauseActive = false;
         if(isPauseActive == false)
         {
-            if(!(Input.GetAxis("Horizontal") != 0 && Input.GetAxis("Vertical") != 0)){
-                if(Input.GetAxis("Horizontal") > 0){
-                    MoveRight();
-                }
-                if(Input.GetAxis("Horizontal") < 0){
-                    MoveLeft();
-                }
-                if(Input.GetAxis("Vertical") > 0){
-                    MoveUp();
-                }
-                if(Input.GetAxis("Vertical") < 0){
-                    MoveDown();
-                }
+            if(Input.GetKey(KeyCode.UpArrow)){
+                UpMovement();
+            }
+            if(Input.GetKey(KeyCode.DownArrow)){
+                DownMovement();
+            }
+            if(Input.GetKey(KeyCode.LeftArrow)){
+                LeftMovement();
+            }
+            if(Input.GetKey(KeyCode.RightArrow)){
+                rightMovement();
+            }
+            // if(Input.GetKeyDown(KeyCode.Q) && canDash){
+            //     StartCoroutine(Dash());
+            // }
+
+            if(Input.GetKeyUp(KeyCode.LeftArrow)
+            ||Input.GetKeyUp(KeyCode.RightArrow)
+            ||Input.GetKeyUp(KeyCode.UpArrow)
+            ||Input.GetKeyUp(KeyCode.DownArrow)
+            ){
+                movement = Vector2.zero;
+                SetIsNotMoving();
             }
         }
-        // prevent horizontal movement
 
-        if(Input.GetKeyDown(KeyCode.LeftArrow)){
-            animator.SetFloat("moveX", -1f);
-            animator.SetFloat("moveY", 0);
-            OnIsMoving();
-        }
-        if(Input.GetKeyDown(KeyCode.RightArrow)){
-            animator.SetFloat("moveX", 1f);
-            animator.SetFloat("moveY", 0);
-            OnIsMoving();
-        }
-        if(Input.GetKeyDown(KeyCode.DownArrow)){
-            animator.SetFloat("moveX", 0);
-            animator.SetFloat("moveY", -1f);
-            OnIsMoving();
-        }
-        if(Input.GetKeyDown(KeyCode.UpArrow)){
-            animator.SetFloat("moveX", 0);
-            animator.SetFloat("moveY", 1f);
-            OnIsMoving();
-        }
-        if(Input.GetKeyDown(KeyCode.DownArrow) 
-        || Input.GetKeyDown(KeyCode.UpArrow) 
-        || Input.GetKeyDown(KeyCode.LeftArrow) 
-        || Input.GetKeyDown(KeyCode.RightArrow)){
-            OffIsMoving();
-        }
-
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, boxCollider.bounds.extents.y + 0.1f, groundLayer);
-        if (hit.collider != null)
-        {
-            float distanceToGround = hit.distance - boxCollider.bounds.extents.y;
-            rb.position += Vector2.down * distanceToGround;
-            rb.velocity = new Vector2(rb.velocity.x, 0f);
-        }
+        // RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, boxCollider.bounds.extents.y + 0.1f, groundLayer);
+        // if (hit.collider != null)
+        // {
+        //     float distanceToGround = hit.distance - boxCollider.bounds.extents.y;
+        //     rb.position += Vector2.down * distanceToGround;
+        //     rb.velocity = new Vector2(rb.velocity.x, 0f);
+        // }
 
         if(Input.GetKey(KeyCode.X))
         {
@@ -87,25 +77,57 @@ public class MainCharacterController : MonoBehaviour
             pauseManager.TogglePause();
         }
     }
-    public void OffIsMoving(){
-        animator.SetBool("isMoving", false);
+    // renders movement on a definite number of frames
+    void FixedUpdate(){
+        Move();
     }
-    public void OnIsMoving(){
+    // arrow movements
+    private void LeftMovement(){
+        boxColliderManager.UseLeftCollider();
+        movement.y = 0;
+        movement.x = -1;
+        ChangeDirection();
+    }
+
+    private void rightMovement(){
+        boxColliderManager.UseRightCollider();
+        movement.y = 0;
+        movement.x = 1;
+        ChangeDirection();
+    }
+
+    private void DownMovement(){
+        movement.x = 0;
+        movement.y = -1;
+        boxColliderManager.UseDownCollider();
+        ChangeDirection();
+    }
+
+    private void UpMovement(){
+        movement.x = 0;
+        movement.y = 1;
+        boxColliderManager.UseUpCollider();
+        ChangeDirection();
+    }
+    // sets the direction where the character faces
+    private void ChangeDirection () {
+        direction = movement;
+        animator.SetFloat("moveX", movement.x);
+        animator.SetFloat("moveY", movement.y);
+        SetIsMoving();
+    }
+    // walking animation 
+    // can be in another script for animation
+    private void SetIsMoving(){
         animator.SetBool("isMoving", true);
     }
-    // experimental
-    // change accordingly
-    private void MoveRight(){
-        transform.Translate(Vector3.right * movementSpeed * Time.deltaTime);
-    }
-    private void MoveLeft(){
-        transform.Translate(Vector3.left * movementSpeed * Time.deltaTime);
-    }
-    private void MoveDown(){
-        transform.Translate(Vector3.down * movementSpeed * Time.deltaTime);
 
+    private void SetIsNotMoving(){
+        animator.SetBool("isMoving", false);
     }
-    private void MoveUp(){
-        transform.Translate(Vector3.up * movementSpeed * Time.deltaTime);
+    // performs a translation like movement
+    private void Move(){
+        rb.MovePosition(rb.position + movement * movementSpeed * Time.deltaTime);
     }
+
 }
