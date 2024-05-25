@@ -6028,8 +6028,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -156}
-  m_SizeDelta: {x: 0, y: -300}
+  m_AnchoredPosition: {x: 0, y: -203}
+  m_SizeDelta: {x: 0, y: -394}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1412275667
 MonoBehaviour:
@@ -7354,7 +7354,7 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
-  pauseScreen: {fileID: 482842639}
+  pauseScreen: {fileID: 0}
 --- !u!114 &1989139720
 MonoBehaviour:
   m_ObjectHideFlags: 0
