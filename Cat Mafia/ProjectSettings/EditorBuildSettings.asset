@@ -14,16 +14,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Bathroom.unity
     guid: 4df74b1b0eaf10749a36d3d591d18c8b
-  - enabled: 1
-    path: Assets/Scenes/Cat3Dialogue.unity
-    guid: b455f29fc3c4e6c4787e7e8ccbeb6993
-  - enabled: 1
-    path: Assets/Scenes/Cat2Ending.unity
-    guid: f66e4b864dd606248866e841e168828f
-  - enabled: 1
-    path: Assets/Scenes/Cat2Dialogue.unity
-    guid: 40b15ec0996469c4694c85db81ad8fec
-  - enabled: 1
-    path: Assets/Scenes/Cat1Ending.unity
-    guid: 259ea17f7187d2647a6a89c4e41f9976
   m_configObjects: {}
