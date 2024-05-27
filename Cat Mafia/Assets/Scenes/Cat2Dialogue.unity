@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2415,6 +2415,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7737090797000442780, guid: 18cfb5c431e1f8b4a9252ac118c8cb2c, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7737090797000442780, guid: 18cfb5c431e1f8b4a9252ac118c8cb2c, type: 3}
+      propertyPath: movementSpeed
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 685808356527273354, guid: 902709b11a257394fa2abd96fe4cae0d, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -2494,14 +2502,6 @@ PrefabInstance:
     - target: {fileID: 8073495256899354999, guid: 902709b11a257394fa2abd96fe4cae0d, type: 3}
       propertyPath: m_SortingLayerID
       value: 71584595
-      objectReference: {fileID: 0}
-    - target: {fileID: 7737090797000442780, guid: 18cfb5c431e1f8b4a9252ac118c8cb2c, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7737090797000442780, guid: 18cfb5c431e1f8b4a9252ac118c8cb2c, type: 3}
-      propertyPath: movementSpeed
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6098,6 +6098,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7737090797000442780, guid: 18cfb5c431e1f8b4a9252ac118c8cb2c, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7737090797000442780, guid: 18cfb5c431e1f8b4a9252ac118c8cb2c, type: 3}
+      propertyPath: movementSpeed
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5044728401256979022, guid: ebb99827b3e1d3f4dab811301b625203, type: 3}
       propertyPath: m_Name
       value: Cat_Follower3
@@ -6136,7 +6144,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6460199660163179858, guid: ebb99827b3e1d3f4dab811301b625203, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.49
+      value: 21.1
       objectReference: {fileID: 0}
     - target: {fileID: 6460199660163179858, guid: ebb99827b3e1d3f4dab811301b625203, type: 3}
       propertyPath: m_LocalPosition.y
@@ -6176,14 +6184,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6460199660163179858, guid: ebb99827b3e1d3f4dab811301b625203, type: 3}
       propertyPath: m_ConstrainProportionsScale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7737090797000442780, guid: 18cfb5c431e1f8b4a9252ac118c8cb2c, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7737090797000442780, guid: 18cfb5c431e1f8b4a9252ac118c8cb2c, type: 3}
-      propertyPath: movementSpeed
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -7140,6 +7140,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7737090797000442780, guid: 18cfb5c431e1f8b4a9252ac118c8cb2c, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7737090797000442780, guid: 18cfb5c431e1f8b4a9252ac118c8cb2c, type: 3}
+      propertyPath: movementSpeed
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 4878791559892762259, guid: 5802e5b873fe493478485d41f2a91dcd, type: 3}
       propertyPath: m_SortingLayer
       value: 9
@@ -7211,14 +7219,6 @@ PrefabInstance:
     - target: {fileID: 7968676400139268644, guid: 5802e5b873fe493478485d41f2a91dcd, type: 3}
       propertyPath: m_TagString
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 7737090797000442780, guid: 18cfb5c431e1f8b4a9252ac118c8cb2c, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7737090797000442780, guid: 18cfb5c431e1f8b4a9252ac118c8cb2c, type: 3}
-      propertyPath: movementSpeed
-      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7354,7 +7354,7 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
-  pauseScreen: {fileID: 0}
+  pauseScreen: {fileID: 482842639}
 --- !u!114 &1989139720
 MonoBehaviour:
   m_ObjectHideFlags: 0
