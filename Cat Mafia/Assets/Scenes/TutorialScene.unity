@@ -863,7 +863,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   catCharacter: {fileID: 1225012176}
   audioSource: {fileID: 401988285}
-  nextScene: Bathroom
+  nextScene: Cat1Dialogue
   movementTutorialFinished: 0
   leftArrowPressed: 0
   rightArrowPressed: 0
@@ -1989,7 +1989,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1072425522
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4709,6 +4709,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textComponent: {fileID: 1072425523}
   lines:
+  - 'Cat: "I''m still hungry."'
   - 'Cat: "I wonder if there are more outside..."'
   textSpeed: 0
   dialogueFinished: 0

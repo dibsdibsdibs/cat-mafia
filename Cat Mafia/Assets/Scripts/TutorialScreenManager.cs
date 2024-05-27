@@ -55,7 +55,6 @@ public class TutorialScreenManager : MonoBehaviour
     {   
         if(firstEventFinished)
         {
-            characterController.enabled = true;
             Invoke("MovementTutorial", audioClips[1].length);
         }
 
@@ -75,7 +74,7 @@ public class TutorialScreenManager : MonoBehaviour
         {
             Debug.Log("Ending tutorial");
             checkDialogue = endTutorialDialogue.GetComponent<DialogueManager>();
-            // Invoke("EndTutorial", 1.0f);
+            Invoke("EndTutorial", 1.0f);
         }
     }
 
@@ -106,6 +105,7 @@ public class TutorialScreenManager : MonoBehaviour
 
     void MovementTutorial()
     {
+        characterController.enabled = true;
         blackPanel.SetActive(false);
         moveDialogue.SetActive(true);
 
@@ -179,6 +179,7 @@ public class TutorialScreenManager : MonoBehaviour
 
     void EndTutorial()
     {
+        characterController.enabled = false;
         endTutorialDialogue.SetActive(true);
         StartCoroutine(CheckEndTutorialDialogue());
     }
