@@ -1,4 +1,5 @@
 using System.Collections;
+using Unity.VisualScripting.Dependencies.Sqlite;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -6,7 +7,6 @@ public class TutorialScreenManager : MonoBehaviour
 {
     [SerializeField] public GameObject catCharacter;
     private MainCharacterController characterController;
-    [SerializeField] private float movementSpeed = 5;
     [SerializeField] public AudioSource audioSource;
     [SerializeField] public string nextScene;
 
@@ -25,7 +25,7 @@ public class TutorialScreenManager : MonoBehaviour
     private PauseScript pauseManager;
     public bool checkedPause = false;
     public GameObject pauseScreen;
-    public bool activateFood = false;
+    public GameObject foodItem;
 
     [Header("Audio Clips")]
     public AudioClip[] audioClips;
@@ -133,13 +133,14 @@ public class TutorialScreenManager : MonoBehaviour
     void ControlTutorial()
     {
         controlDialogue.SetActive(true);
-        activateFood = true;
+        foodItem.SetActive(true);
 
         if(Input.GetKey(KeyCode.Z))
         {
             if(itemPickedUp == true)
             {
                 zButtonPressed = true;
+                controlDialogue.SetActive(false);
             }
         }
 
@@ -152,9 +153,9 @@ public class TutorialScreenManager : MonoBehaviour
 
         if(zButtonPressed && checkedPause)
         {
+            checkPauseDialogue.SetActive(false);
             controlTutorialFinished = true;
             Debug.Log("Finished control tutorial");
-            controlDialogue.SetActive(false);
         }
     }
 
@@ -168,20 +169,6 @@ public class TutorialScreenManager : MonoBehaviour
     {
         yield return new WaitUntil(() => checkDialogue.IsDialogueFinished());
         NextScene();
-    }
-
-    private void MoveRight(){
-        transform.Translate(Vector3.right * movementSpeed * Time.deltaTime);
-    }
-    private void MoveLeft(){
-        transform.Translate(Vector3.left * movementSpeed * Time.deltaTime);
-    }
-    private void MoveDown(){
-        transform.Translate(Vector3.down * movementSpeed * Time.deltaTime);
-
-    }
-    private void MoveUp(){
-        transform.Translate(Vector3.up * movementSpeed * Time.deltaTime);
     }
     
     private void NextScene()

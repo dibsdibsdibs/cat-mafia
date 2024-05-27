@@ -8,7 +8,6 @@ public class TutorialInteractItemScript : MonoBehaviour
     [SerializeField] public bool isPlayerInRange = false;
     [SerializeField] public bool pickedUpItem = false;
     private TutorialScreenManager tutorialManager;
-    [SerializeField] public GameObject food;
 
     void Start()
     {
@@ -17,13 +16,7 @@ public class TutorialInteractItemScript : MonoBehaviour
 
     void Update()
     {
-        if(tutorialManager.activateFood)
-        {
-            food.SetActive(true);
-            Debug.Log(tutorialManager.activateFood);
-        }
-
-        if (tutorialManager.activateFood && isPlayerInRange && Input.GetKeyDown(KeyCode.Z))
+        if (isPlayerInRange && Input.GetKeyDown(KeyCode.Z))
         {
             Interact();
         }
@@ -50,6 +43,6 @@ public class TutorialInteractItemScript : MonoBehaviour
         pickedUpItem = true;
         Debug.Log("Picked up " + itemName);
         tutorialManager.UpdatePickUp(pickedUpItem);
-        Destroy(gameObject);
+        gameObject.SetActive(false);
     }
 }
