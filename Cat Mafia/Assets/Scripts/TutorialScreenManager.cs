@@ -59,7 +59,8 @@ public class TutorialScreenManager : MonoBehaviour
         if(movementTutorialFinished && controlTutorialFinished == false)
         {
             Debug.Log("Entering control tutorial");
-            ControlTutorial();
+            // ControlTutorial();
+            Invoke("ControlTutorial", 5.0f);
         }
 
         if(movementTutorialFinished && controlTutorialFinished)
@@ -139,7 +140,8 @@ public class TutorialScreenManager : MonoBehaviour
                 zButtonPressed = true;
             }
         }
-        if(Input.GetKey(KeyCode.X))
+
+        if(Input.GetKey(KeyCode.X) && zButtonPressed)
         {
             xButtonPressed = true;
             PauseGame();

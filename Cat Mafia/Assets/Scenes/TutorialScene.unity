@@ -748,7 +748,7 @@ MonoBehaviour:
   currentAudioIndex: 0
   firstEventDialogue: {fileID: 981594910}
   checkDialogue: {fileID: 0}
-  firstEventFinished: 1
+  firstEventFinished: 0
   blackPanel: {fileID: 146906674}
   moveDialogue: {fileID: 1539341688}
   controlDialogue: {fileID: 1907947055}
@@ -2656,7 +2656,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1737424348
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3324,9 +3324,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textComponent: {fileID: 1737424349}
   lines:
-  - 'Cat: "There''s a lot of pretty baubles here."'
+  - 'Cat: "Something smells good."'
   - To pick up an item, press Z.
-  - To check menu, press X.
+  - To pause the game, press X.
   textSpeed: 0
   dialogueFinished: 0
 --- !u!114 &1907947058
