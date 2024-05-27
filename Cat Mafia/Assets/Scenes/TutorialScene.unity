@@ -862,7 +862,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   catCharacter: {fileID: 1225012176}
-  movementSpeed: 5
   audioSource: {fileID: 401988285}
   nextScene: Bathroom
   movementTutorialFinished: 0
@@ -870,14 +869,14 @@ MonoBehaviour:
   rightArrowPressed: 0
   upArrowPressed: 0
   downArrowPressed: 0
-  controlTutorialFinished: 0
+  pickupTutorialFinished: 0
   itemPickedUp: 0
   zButtonPressed: 0
   xButtonPressed: 0
   checkedPause: 0
   pauseScreen: {fileID: 1929486073}
   foodItem: {fileID: 1250285271}
-  activateFood: 0
+  checkPauseTutorialFinished: 0
   audioClips:
   - {fileID: 8300000, guid: 8db3bb9cae2088745a1d3084b03020fd, type: 3}
   - {fileID: 8300000, guid: c646dee48713ea845af08246a4825865, type: 3}
@@ -887,8 +886,8 @@ MonoBehaviour:
   firstEventFinished: 0
   blackPanel: {fileID: 146906674}
   moveDialogue: {fileID: 1539341688}
-  controlDialogue: {fileID: 1907947055}
-  checkPauseDialogue: {fileID: 0}
+  pickUpTutorialDialogue: {fileID: 1907947055}
+  checkPauseDialogue: {fileID: 842048836}
   endTutorialDialogue: {fileID: 2112078293}
 --- !u!1 &677228231
 GameObject:

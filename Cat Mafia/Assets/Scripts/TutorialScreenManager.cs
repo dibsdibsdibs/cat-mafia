@@ -18,7 +18,7 @@ public class TutorialScreenManager : MonoBehaviour
     public bool downArrowPressed = false;
 
     [Header("Control Tutorial")]
-    public bool controlTutorialFinished = false;
+    public bool pickupTutorialFinished = false;
     public bool itemPickedUp = false;
     public bool zButtonPressed = false;
     public bool xButtonPressed = false;
@@ -26,6 +26,7 @@ public class TutorialScreenManager : MonoBehaviour
     public bool checkedPause = false;
     public GameObject pauseScreen;
     public GameObject foodItem;
+    public bool checkPauseTutorialFinished = false;
 
     [Header("Audio Clips")]
     public AudioClip[] audioClips;
@@ -37,7 +38,7 @@ public class TutorialScreenManager : MonoBehaviour
     public bool firstEventFinished = false;
     public GameObject blackPanel;
     public GameObject moveDialogue;
-    public GameObject controlDialogue;
+    public GameObject pickUpTutorialDialogue;
     public GameObject checkPauseDialogue;
     public GameObject endTutorialDialogue;
 
@@ -58,13 +59,19 @@ public class TutorialScreenManager : MonoBehaviour
             Invoke("MovementTutorial", audioClips[1].length);
         }
 
-        if(movementTutorialFinished && controlTutorialFinished == false)
+        if(movementTutorialFinished && pickupTutorialFinished == false)
         {
             Debug.Log("Entering control tutorial");
-            Invoke("ControlTutorial", 5.0f);
+            Invoke("PickUpTutorial", 3.0f);
         }
 
-        if(movementTutorialFinished && controlTutorialFinished)
+        if(pickupTutorialFinished)
+        {
+            Debug.Log("Entering pause tutorial");
+            Invoke("CheckPauseTutorial", 3.0f);
+        }
+
+        if(movementTutorialFinished && pickupTutorialFinished && checkPauseTutorialFinished)
         {
             Debug.Log("Ending tutorial");
             checkDialogue = endTutorialDialogue.GetComponent<DialogueManager>();
@@ -130,9 +137,9 @@ public class TutorialScreenManager : MonoBehaviour
         }
     }
 
-    void ControlTutorial()
+    void PickUpTutorial()
     {
-        controlDialogue.SetActive(true);
+        pickUpTutorialDialogue.SetActive(true);
         foodItem.SetActive(true);
 
         if(Input.GetKey(KeyCode.Z))
@@ -140,21 +147,32 @@ public class TutorialScreenManager : MonoBehaviour
             if(itemPickedUp == true)
             {
                 zButtonPressed = true;
-                controlDialogue.SetActive(false);
             }
         }
 
+        if(zButtonPressed && itemPickedUp)
+        {
+            foodItem.SetActive(false);
+            pickUpTutorialDialogue.SetActive(false);
+            pickupTutorialFinished = true;
+            Debug.Log("Finished control tutorial");
+        }
+    }
+
+    void CheckPauseTutorial()
+    {
+        checkPauseDialogue.SetActive(true);
+
         if(Input.GetKey(KeyCode.X) && zButtonPressed)
         {
-            checkPauseDialogue.SetActive(true);
             xButtonPressed = true;
             PauseGame();
         }
 
-        if(zButtonPressed && checkedPause)
+        if(checkedPause)
         {
             checkPauseDialogue.SetActive(false);
-            controlTutorialFinished = true;
+            checkPauseTutorialFinished = true;
             Debug.Log("Finished control tutorial");
         }
     }
