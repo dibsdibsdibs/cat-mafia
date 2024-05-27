@@ -6,7 +6,6 @@ public class TutorialScreenManager : MonoBehaviour
 {
     [SerializeField] public GameObject catCharacter;
     private MainCharacterController characterController;
-    [SerializeField] private float movementSpeed = 5;
     [SerializeField] public AudioSource audioSource;
     [SerializeField] public string nextScene;
 
@@ -18,13 +17,15 @@ public class TutorialScreenManager : MonoBehaviour
     public bool downArrowPressed = false;
 
     [Header("Control Tutorial")]
-    public bool controlTutorialFinished = false;
+    public bool pickupTutorialFinished = false;
     public bool itemPickedUp = false;
     public bool zButtonPressed = false;
     public bool xButtonPressed = false;
     private PauseScript pauseManager;
     public bool checkedPause = false;
     public GameObject pauseScreen;
+    public GameObject foodItem;
+    public bool checkPauseTutorialFinished = false;
 
     [Header("Audio Clips")]
     public AudioClip[] audioClips;
@@ -36,7 +37,8 @@ public class TutorialScreenManager : MonoBehaviour
     public bool firstEventFinished = false;
     public GameObject blackPanel;
     public GameObject moveDialogue;
-    public GameObject controlDialogue;
+    public GameObject pickUpTutorialDialogue;
+    public GameObject checkPauseDialogue;
     public GameObject endTutorialDialogue;
 
     void Start()
@@ -52,21 +54,26 @@ public class TutorialScreenManager : MonoBehaviour
     {   
         if(firstEventFinished)
         {
-            characterController.enabled = true;
             Invoke("MovementTutorial", audioClips[1].length);
         }
 
-        if(movementTutorialFinished && controlTutorialFinished == false)
+        if(movementTutorialFinished && pickupTutorialFinished == false)
         {
             Debug.Log("Entering control tutorial");
-            ControlTutorial();
+            Invoke("PickUpTutorial", 3.0f);
         }
 
-        if(movementTutorialFinished && controlTutorialFinished)
+        if(pickupTutorialFinished)
+        {
+            Debug.Log("Entering pause tutorial");
+            Invoke("CheckPauseTutorial", 3.0f);
+        }
+
+        if(movementTutorialFinished && pickupTutorialFinished && checkPauseTutorialFinished)
         {
             Debug.Log("Ending tutorial");
             checkDialogue = endTutorialDialogue.GetComponent<DialogueManager>();
-            // Invoke("EndTutorial", 1.0f);
+            Invoke("EndTutorial", 1.0f);
         }
     }
 
@@ -97,6 +104,7 @@ public class TutorialScreenManager : MonoBehaviour
 
     void MovementTutorial()
     {
+        characterController.enabled = true;
         blackPanel.SetActive(false);
         moveDialogue.SetActive(true);
 
@@ -128,9 +136,10 @@ public class TutorialScreenManager : MonoBehaviour
         }
     }
 
-    void ControlTutorial()
+    void PickUpTutorial()
     {
-        controlDialogue.SetActive(true);
+        pickUpTutorialDialogue.SetActive(true);
+        foodItem.SetActive(true);
 
         if(Input.GetKey(KeyCode.Z))
         {
@@ -139,22 +148,37 @@ public class TutorialScreenManager : MonoBehaviour
                 zButtonPressed = true;
             }
         }
-        if(Input.GetKey(KeyCode.X))
+
+        if(zButtonPressed && itemPickedUp)
+        {
+            foodItem.SetActive(false);
+            pickUpTutorialDialogue.SetActive(false);
+            pickupTutorialFinished = true;
+            Debug.Log("Finished control tutorial");
+        }
+    }
+
+    void CheckPauseTutorial()
+    {
+        checkPauseDialogue.SetActive(true);
+
+        if(Input.GetKey(KeyCode.X) && zButtonPressed)
         {
             xButtonPressed = true;
             PauseGame();
         }
 
-        if(zButtonPressed && checkedPause)
+        if(checkedPause)
         {
-            controlTutorialFinished = true;
+            checkPauseDialogue.SetActive(false);
+            checkPauseTutorialFinished = true;
             Debug.Log("Finished control tutorial");
-            controlDialogue.SetActive(false);
         }
     }
 
     void EndTutorial()
     {
+        characterController.enabled = false;
         endTutorialDialogue.SetActive(true);
         StartCoroutine(CheckEndTutorialDialogue());
     }
@@ -163,20 +187,6 @@ public class TutorialScreenManager : MonoBehaviour
     {
         yield return new WaitUntil(() => checkDialogue.IsDialogueFinished());
         NextScene();
-    }
-
-    private void MoveRight(){
-        transform.Translate(Vector3.right * movementSpeed * Time.deltaTime);
-    }
-    private void MoveLeft(){
-        transform.Translate(Vector3.left * movementSpeed * Time.deltaTime);
-    }
-    private void MoveDown(){
-        transform.Translate(Vector3.down * movementSpeed * Time.deltaTime);
-
-    }
-    private void MoveUp(){
-        transform.Translate(Vector3.up * movementSpeed * Time.deltaTime);
     }
     
     private void NextScene()

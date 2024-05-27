@@ -64,7 +64,7 @@ public class PauseScript : MonoBehaviour
 
     void UpdateIndicatorPosition(Button button)
     {
-        selectionIndicator.transform.position = new Vector3(button.transform.position.x - 150f, button.transform.position.y, button.transform.position.z);
+        selectionIndicator.transform.position = new Vector3(button.transform.position.x - 200f, button.transform.position.y, button.transform.position.z);
     }
 
     void ExecuteOption()
