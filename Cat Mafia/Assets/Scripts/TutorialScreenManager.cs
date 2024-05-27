@@ -25,6 +25,7 @@ public class TutorialScreenManager : MonoBehaviour
     private PauseScript pauseManager;
     public bool checkedPause = false;
     public GameObject pauseScreen;
+    public bool activateFood = false;
 
     [Header("Audio Clips")]
     public AudioClip[] audioClips;
@@ -59,7 +60,6 @@ public class TutorialScreenManager : MonoBehaviour
         if(movementTutorialFinished && controlTutorialFinished == false)
         {
             Debug.Log("Entering control tutorial");
-            // ControlTutorial();
             Invoke("ControlTutorial", 5.0f);
         }
 
@@ -132,6 +132,7 @@ public class TutorialScreenManager : MonoBehaviour
     void ControlTutorial()
     {
         controlDialogue.SetActive(true);
+        activateFood = true;
 
         if(Input.GetKey(KeyCode.Z))
         {

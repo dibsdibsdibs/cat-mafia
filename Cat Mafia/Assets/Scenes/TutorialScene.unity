@@ -742,6 +742,7 @@ MonoBehaviour:
   xButtonPressed: 0
   checkedPause: 0
   pauseScreen: {fileID: 1929486073}
+  activateFood: 0
   audioClips:
   - {fileID: 8300000, guid: 8db3bb9cae2088745a1d3084b03020fd, type: 3}
   - {fileID: 8300000, guid: c646dee48713ea845af08246a4825865, type: 3}
@@ -753,6 +754,55 @@ MonoBehaviour:
   moveDialogue: {fileID: 1539341688}
   controlDialogue: {fileID: 1907947055}
   endTutorialDialogue: {fileID: 2112078293}
+--- !u!1 &425193357
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 425193359}
+  - component: {fileID: 425193358}
+  m_Layer: 0
+  m_Name: Food Item
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &425193358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 425193357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e11d6c628e330643bcc6b3982d91932, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: Sushi
+  isPlayerInRange: 0
+  pickedUpItem: 0
+  food: {fileID: 1250285271}
+--- !u!4 &425193359
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 425193357}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 372.53934, y: 188.52698, z: 1.8985935}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1250285277}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &677228231
 GameObject:
   m_ObjectHideFlags: 0
@@ -1962,7 +2012,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1250285277}
-  - component: {fileID: 1250285276}
   - component: {fileID: 1250285275}
   - component: {fileID: 1250285274}
   - component: {fileID: 1250285273}
@@ -1973,7 +2022,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!50 &1250285272
 Rigidbody2D:
   serializedVersion: 4
@@ -2143,21 +2192,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1250285276
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1250285271}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e11d6c628e330643bcc6b3982d91932, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemName: Sushi
-  isPlayerInRange: 0
-  pickedUpItem: 0
 --- !u!4 &1250285277
 Transform:
   m_ObjectHideFlags: 0
@@ -2166,12 +2200,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1250285271}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.57, y: -0.4, z: -0.022735916}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -374.10934, y: -188.92697, z: -1.9213295}
   m_LocalScale: {x: 0.35, y: 0.35, z: 0.35}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 425193359}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1494640463
 GameObject:
@@ -5276,4 +5310,4 @@ SceneRoots:
   - {fileID: 401988283}
   - {fileID: 1885118511}
   - {fileID: 2034197731}
-  - {fileID: 1250285277}
+  - {fileID: 425193359}

@@ -8,6 +8,7 @@ public class TutorialInteractItemScript : MonoBehaviour
     [SerializeField] public bool isPlayerInRange = false;
     [SerializeField] public bool pickedUpItem = false;
     private TutorialScreenManager tutorialManager;
+    [SerializeField] public GameObject food;
 
     void Start()
     {
@@ -16,7 +17,13 @@ public class TutorialInteractItemScript : MonoBehaviour
 
     void Update()
     {
-        if (isPlayerInRange && Input.GetKeyDown(KeyCode.Z))
+        if(tutorialManager.activateFood)
+        {
+            food.SetActive(true);
+            Debug.Log(tutorialManager.activateFood);
+        }
+
+        if (tutorialManager.activateFood && isPlayerInRange && Input.GetKeyDown(KeyCode.Z))
         {
             Interact();
         }
