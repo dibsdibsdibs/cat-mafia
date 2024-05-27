@@ -38,6 +38,7 @@ public class TutorialScreenManager : MonoBehaviour
     public GameObject blackPanel;
     public GameObject moveDialogue;
     public GameObject controlDialogue;
+    public GameObject checkPauseDialogue;
     public GameObject endTutorialDialogue;
 
     void Start()
@@ -144,6 +145,7 @@ public class TutorialScreenManager : MonoBehaviour
 
         if(Input.GetKey(KeyCode.X) && zButtonPressed)
         {
+            checkPauseDialogue.SetActive(true);
             xButtonPressed = true;
             PauseGame();
         }
