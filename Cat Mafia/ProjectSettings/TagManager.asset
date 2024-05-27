@@ -66,9 +66,9 @@ TagManager:
   - name: Walls
     uniqueID: 2463244727
     locked: 0
-  - name: MainChar
-    uniqueID: 71584595
-    locked: 0
   - name: Item
     uniqueID: 1098350269
+    locked: 0
+  - name: MainChar
+    uniqueID: 71584595
     locked: 0
