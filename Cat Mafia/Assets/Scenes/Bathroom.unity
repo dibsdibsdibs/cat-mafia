@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -435,7 +435,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 1
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -459,8 +459,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 297598276}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -6.88}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.5509691, y: 0.37324262, z: -6.88}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1036,7 +1036,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3420433797060200599, guid: 5f3f9f21a3ffed24485587a0ba6ed50b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1830091201}
   m_SourcePrefab: {fileID: 100100000, guid: 5f3f9f21a3ffed24485587a0ba6ed50b, type: 3}
 --- !u!1 &1318695641
 GameObject:
@@ -4682,6 +4685,24 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &1830091200 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3420433797060200599, guid: 5f3f9f21a3ffed24485587a0ba6ed50b, type: 3}
+  m_PrefabInstance: {fileID: 1113734356}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1830091201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1830091200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4fb34232f259564f9ee5e4dde0bbdee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 297598278}
 --- !u!1 &1899118063
 GameObject:
   m_ObjectHideFlags: 0
@@ -4799,8 +4820,8 @@ Transform:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 297598279}
   - {fileID: 738219572}
+  - {fileID: 297598279}
   - {fileID: 359408929}
   - {fileID: 2063209647}
   - {fileID: 1318695643}
