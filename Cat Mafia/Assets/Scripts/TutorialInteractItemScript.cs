@@ -43,6 +43,5 @@ public class TutorialInteractItemScript : MonoBehaviour
         pickedUpItem = true;
         Debug.Log("Picked up " + itemName);
         tutorialManager.UpdatePickUp(pickedUpItem);
-        Destroy(gameObject);
     }
 }

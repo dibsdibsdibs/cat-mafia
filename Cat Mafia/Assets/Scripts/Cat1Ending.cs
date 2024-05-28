@@ -9,13 +9,15 @@ public class Cat1Ending : MonoBehaviour
     public Vector3 targetPosition; 
     public Vector3 finalTargetPosition;
     public Vector3 startPosition; 
+
     public DialogueManager star3Dialogue;
     public DialogueManager star2Dialogue;
     public DialogueManager star1Dialogue;
+
     public GameObject star1;
     public GameObject star2;
     public GameObject star3;
-    public bool isInPosition;
+    public bool isInPositio
     public bool isDone = false;
     public float speed = 2f;
     // Start is called before the first frame update
@@ -25,8 +27,8 @@ public class Cat1Ending : MonoBehaviour
         isInPosition = false;
         star1.SetActive(false);
         star2.SetActive(false);
-        star3.SetActive(false);
-        
+        star3.SetActive(false);    
+
     }
 
     // Update is called once per frame
@@ -61,14 +63,17 @@ public class Cat1Ending : MonoBehaviour
                 transform.position = finalTargetPosition;
                 if (star == "1")
                 {
+
                     star1.SetActive(true);
                     StartCoroutine(Star1Finished());              
+
                 }
 
                 else if (star == "2" )
                 {
                     star2.SetActive(true);
                     StartCoroutine(Star2Finished()); 
+
                 }
 
                 else
@@ -101,7 +106,6 @@ public class Cat1Ending : MonoBehaviour
         isDone = true;
      
     }
-
     public void OffIsMoving(){
         animator.SetBool("isMoving", false);
     }
