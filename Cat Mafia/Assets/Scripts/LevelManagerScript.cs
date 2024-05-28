@@ -2,17 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
+
 public class LevelManagerScript : MonoBehaviour
 {
-    [SerializeField]TextMeshProUGUI timeText;
+    [SerializeField] TextMeshProUGUI timeText;
     [SerializeField] float totalTime;
-    // Start is called before the first frame update
+    [SerializeField] GameObject foodBar;
+    [SerializeField] private Slider slider;
+    [SerializeField] public float sliderValue;
     void Start()
     {
-        
+        slider = foodBar.GetComponent<Slider>();
+        slider.value = sliderValue;
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (totalTime > 0){
@@ -24,6 +28,10 @@ public class LevelManagerScript : MonoBehaviour
   
         float seconds = Mathf.FloorToInt(totalTime % 60);
         timeText.text = string.Format("Time: {0:00}", seconds);
-
+    }
+    void UpdateBar(float itemValue)
+    {
+        sliderValue = slider.value + itemValue;
+        Debug.Log("Food bar value updated");
     }
 }
