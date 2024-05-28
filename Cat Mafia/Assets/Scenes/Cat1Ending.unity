@@ -2793,8 +2793,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -156}
-  m_SizeDelta: {x: 0, y: -300}
+  m_AnchoredPosition: {x: 0, y: -203}
+  m_SizeDelta: {x: 0, y: -394}
+
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &468413595
 MonoBehaviour:
@@ -6256,8 +6257,10 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -156}
-  m_SizeDelta: {x: 0, y: -300}
+
+  m_AnchoredPosition: {x: 0, y: -203}
+  m_SizeDelta: {x: 0, y: -394}
+
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1412275667
 MonoBehaviour:
@@ -6368,7 +6371,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6460199660163179858, guid: ebb99827b3e1d3f4dab811301b625203, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.49
+      value: 19.5
       objectReference: {fileID: 0}
     - target: {fileID: 6460199660163179858, guid: ebb99827b3e1d3f4dab811301b625203, type: 3}
       propertyPath: m_LocalPosition.y
@@ -7037,8 +7040,10 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -156}
-  m_SizeDelta: {x: 0, y: -300}
+
+  m_AnchoredPosition: {x: 0, y: -203}
+  m_SizeDelta: {x: 0, y: -394}
+
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1654435698
 MonoBehaviour:
@@ -7188,12 +7193,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1024, y: 574}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 0.5
+
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -7470,6 +7477,11 @@ MonoBehaviour:
   targetPosition: {x: 0, y: 0, z: 0}
   finalTargetPosition: {x: 0, y: 0, z: 0}
   startPosition: {x: 0, y: 0, z: 0}
+
+  star3Dialogue: {fileID: 0}
+  star2Dialogue: {fileID: 0}
+  star1Dialogue: {fileID: 0}
+
   star1: {fileID: 1412275665}
   star2: {fileID: 1654435696}
   star3: {fileID: 468413593}
@@ -7737,6 +7749,11 @@ MonoBehaviour:
   targetPosition: {x: -3.31, y: 5, z: -0.77}
   finalTargetPosition: {x: -3.31, y: 5, z: 0.31}
   startPosition: {x: 1.5, y: 5, z: -0.77}
+
+  star3Dialogue: {fileID: 468413595}
+  star2Dialogue: {fileID: 1654435698}
+  star1Dialogue: {fileID: 1412275667}
+
   star1: {fileID: 1412275665}
   star2: {fileID: 1654435696}
   star3: {fileID: 468413593}
