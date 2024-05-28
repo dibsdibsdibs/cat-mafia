@@ -45,6 +45,7 @@ public class LevelInteractItemScript : MonoBehaviour
         pickedUpItem = true;
         Debug.Log("Picked up " + itemName);
         Debug.Log("Item value: " + itemValue);
+        levelManager.UpdateBar(itemValue);
         Destroy(gameObject);
     }
 }

@@ -206,6 +206,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeText: {fileID: 1717347103}
   totalTime: 60
+  foodBar: {fileID: 1630680246}
 --- !u!4 &429158081
 Transform:
   m_ObjectHideFlags: 0
@@ -2356,6 +2357,11 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &1630680246 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9124077876391164673, guid: 9af32de1433845f4fb38e5f78b9d0b4b, type: 3}
+  m_PrefabInstance: {fileID: 1734868651}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1717347102
 GameObject:
   m_ObjectHideFlags: 0

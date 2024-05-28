@@ -9,12 +9,11 @@ public class LevelManagerScript : MonoBehaviour
     [SerializeField] TextMeshProUGUI timeText;
     [SerializeField] float totalTime;
     [SerializeField] GameObject foodBar;
-    [SerializeField] private Slider slider;
-    [SerializeField] public float sliderValue;
+    private FoodBarScript foodBarScript;
+
     void Start()
     {
-        slider = foodBar.GetComponent<Slider>();
-        slider.value = sliderValue;
+        foodBarScript = foodBar.GetComponent<FoodBarScript>();
     }
 
     void Update()
@@ -29,9 +28,9 @@ public class LevelManagerScript : MonoBehaviour
         float seconds = Mathf.FloorToInt(totalTime % 60);
         timeText.text = string.Format("Time: {0:00}", seconds);
     }
-    void UpdateBar(float itemValue)
+    public void UpdateBar(float itemValue)
     {
-        sliderValue = slider.value + itemValue;
+        foodBarScript.UpdateBar(itemValue);
         Debug.Log("Food bar value updated");
     }
 }
