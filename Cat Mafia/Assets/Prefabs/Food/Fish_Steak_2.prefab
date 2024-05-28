@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4351630703918471785}
   - component: {fileID: 1338372353518349344}
   - component: {fileID: 1772730731923602781}
-  - component: {fileID: 5643154571223691454}
+  - component: {fileID: 4824209484273275325}
   m_Layer: 0
   m_Name: Fish_Steak_2
   m_TagString: Untagged
@@ -205,7 +205,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
---- !u!114 &5643154571223691454
+--- !u!114 &4824209484273275325
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -214,10 +214,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 7320273620673604068}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 291a28d53aa4d664cbfeec551dc29d4e, type: 3}
+  m_Script: {fileID: 11500000, guid: 42dd9707c9b55f94e91feb6e2a9d61ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Steak
   isPlayerInRange: 0
   pickedUpItem: 0
-  itemValue: 3
+  itemValue: 0.1

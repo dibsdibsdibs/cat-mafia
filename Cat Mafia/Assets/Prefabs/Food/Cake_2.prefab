@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 416714903346853409}
   - component: {fileID: 5947996886636900996}
   - component: {fileID: 6318225748136117437}
-  - component: {fileID: 4277216112896661113}
+  - component: {fileID: 8186125806548049752}
   m_Layer: 0
   m_Name: Cake_2
   m_TagString: Untagged
@@ -205,7 +205,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
---- !u!114 &4277216112896661113
+--- !u!114 &8186125806548049752
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -214,10 +214,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3898556357762758839}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 291a28d53aa4d664cbfeec551dc29d4e, type: 3}
+  m_Script: {fileID: 11500000, guid: 42dd9707c9b55f94e91feb6e2a9d61ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Cake
   isPlayerInRange: 0
   pickedUpItem: 0
-  itemValue: 1
+  itemValue: 0.03333

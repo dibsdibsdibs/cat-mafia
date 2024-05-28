@@ -17,7 +17,7 @@ public class FoodBarScript : MonoBehaviour
         slider.value = sliderValue;
     }
 
-    void UpdateBar(float itemValue)
+    public void UpdateBar(float itemValue)
     {
         sliderValue = slider.value + itemValue;
         Debug.Log("Food bar value updated");

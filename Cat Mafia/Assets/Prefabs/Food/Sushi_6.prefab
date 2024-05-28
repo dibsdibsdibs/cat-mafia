@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2724778046964438086}
   - component: {fileID: 3465026422186228943}
   - component: {fileID: 31097273515570593}
-  - component: {fileID: 6179592117079968448}
+  - component: {fileID: -8142553781974534994}
   m_Layer: 0
   m_Name: Sushi_6
   m_TagString: Untagged
@@ -205,7 +205,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
---- !u!114 &6179592117079968448
+--- !u!114 &-8142553781974534994
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -214,10 +214,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 8350016510529040427}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 291a28d53aa4d664cbfeec551dc29d4e, type: 3}
+  m_Script: {fileID: 11500000, guid: 42dd9707c9b55f94e91feb6e2a9d61ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Sushi
-  isPlayerInRange: 0
+  isPlayerInRange: 1
   pickedUpItem: 0
-  itemValue: 2.5
+  itemValue: 0.083333
