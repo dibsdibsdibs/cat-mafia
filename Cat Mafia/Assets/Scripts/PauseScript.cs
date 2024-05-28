@@ -13,6 +13,9 @@ public class PauseScript : MonoBehaviour
     [SerializeField] public Button quitButton;
     [SerializeField] private int selectedButtonIndex = 0;
     [SerializeField] public Image selectionIndicator;
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip selectionSound;
+    [SerializeField] private AudioClip finalSelectionSound;
 
     private Button[] buttons;
 
@@ -58,6 +61,7 @@ public class PauseScript : MonoBehaviour
 
     void UpdateSelection()
     {
+        PlaySelectionSound();
         buttons[selectedButtonIndex].Select();
         UpdateIndicatorPosition(buttons[selectedButtonIndex]);
     }
@@ -69,6 +73,7 @@ public class PauseScript : MonoBehaviour
 
     void ExecuteOption()
     {
+        PlayFinalSelectionSound();
         if (selectedButtonIndex == 0)
         {
             Debug.Log("Continue Game");
@@ -83,6 +88,21 @@ public class PauseScript : MonoBehaviour
         {
             Debug.Log("Quit Game!");
             Application.Quit();
+        }
+    }
+
+    void PlaySelectionSound()
+    {
+        if (audioSource != null && selectionSound != null)
+        {
+            audioSource.PlayOneShot(selectionSound);
+        }
+    }
+    void PlayFinalSelectionSound()
+    {
+        if (audioSource != null && finalSelectionSound != null)
+        {
+            audioSource.PlayOneShot(finalSelectionSound);
         }
     }
 }
