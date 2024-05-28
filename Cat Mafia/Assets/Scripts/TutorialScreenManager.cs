@@ -30,6 +30,7 @@ public class TutorialScreenManager : MonoBehaviour
     [Header("Audio Clips")]
     public AudioClip[] audioClips;
     public int currentAudioIndex = 0;
+    public GameObject backgroundMusicSource;
 
     [Header("Cut Scenes")]
     public GameObject firstEventDialogue;
@@ -54,6 +55,7 @@ public class TutorialScreenManager : MonoBehaviour
     {   
         if(firstEventFinished)
         {
+            Invoke("PlayBGM", audioClips[1].length);
             Invoke("MovementTutorial", audioClips[1].length);
         }
 
@@ -104,6 +106,7 @@ public class TutorialScreenManager : MonoBehaviour
 
     void MovementTutorial()
     {
+
         characterController.enabled = true;
         blackPanel.SetActive(false);
         moveDialogue.SetActive(true);
@@ -145,6 +148,7 @@ public class TutorialScreenManager : MonoBehaviour
         {
             if(itemPickedUp == true)
             {
+                PlayAudio(audioClips[2]);
                 zButtonPressed = true;
             }
         }
@@ -205,5 +209,10 @@ public class TutorialScreenManager : MonoBehaviour
         {
             checkedPause = true;
         }
+    }
+
+    void PlayBGM()
+    {
+        backgroundMusicSource.SetActive(true);
     }
 }
