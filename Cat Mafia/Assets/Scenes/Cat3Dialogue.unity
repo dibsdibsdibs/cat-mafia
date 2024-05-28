@@ -6392,15 +6392,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7247641389398544432, guid: d8f8368476703b94482658c775583463, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.155
+      value: 0.17
       objectReference: {fileID: 0}
     - target: {fileID: 7247641389398544432, guid: d8f8368476703b94482658c775583463, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.155
+      value: 0.17
       objectReference: {fileID: 0}
     - target: {fileID: 7247641389398544432, guid: d8f8368476703b94482658c775583463, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.019375
+      value: 0.02125
       objectReference: {fileID: 0}
     - target: {fileID: 7247641389398544432, guid: d8f8368476703b94482658c775583463, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6908,7 +6908,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   catCharacter: {fileID: 0}
-  movementSpeed: 5
   audioSource: {fileID: 1567894728}
   nextScene: Bathroom
   movementTutorialFinished: 0
@@ -6916,12 +6915,14 @@ MonoBehaviour:
   rightArrowPressed: 0
   upArrowPressed: 0
   downArrowPressed: 0
-  controlTutorialFinished: 0
+  pickupTutorialFinished: 0
   itemPickedUp: 0
   zButtonPressed: 0
   xButtonPressed: 0
   checkedPause: 0
   pauseScreen: {fileID: 0}
+  foodItem: {fileID: 0}
+  checkPauseTutorialFinished: 0
   audioClips:
   - {fileID: 8300000, guid: 8db3bb9cae2088745a1d3084b03020fd, type: 3}
   - {fileID: 8300000, guid: c646dee48713ea845af08246a4825865, type: 3}
@@ -6931,7 +6932,8 @@ MonoBehaviour:
   firstEventFinished: 0
   blackPanel: {fileID: 0}
   moveDialogue: {fileID: 0}
-  controlDialogue: {fileID: 0}
+  pickUpTutorialDialogue: {fileID: 0}
+  checkPauseDialogue: {fileID: 0}
   endTutorialDialogue: {fileID: 0}
 --- !u!4 &1567894730
 Transform:

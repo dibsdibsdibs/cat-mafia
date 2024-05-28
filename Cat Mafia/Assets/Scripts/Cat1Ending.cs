@@ -17,7 +17,7 @@ public class Cat1Ending : MonoBehaviour
     public GameObject star1;
     public GameObject star2;
     public GameObject star3;
-    public bool isInPositio
+    public bool isInPosition;
     public bool isDone = false;
     public float speed = 2f;
     // Start is called before the first frame update
