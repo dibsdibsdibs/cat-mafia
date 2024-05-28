@@ -20,6 +20,9 @@ public class MenuScreenManager : MonoBehaviour
     [SerializeField] public Button quitButton;
     [SerializeField] private int selectedButtonIndex = 0;
     [SerializeField] public Image selectionIndicator;
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip selectionSound;
+    [SerializeField] private AudioClip finalSelectionSound;
 
     void Start()
     {
@@ -74,6 +77,8 @@ public class MenuScreenManager : MonoBehaviour
 
     void UpdateSelection()
     {
+        PlaySelectionSound();
+
         if (selectedButtonIndex == 0)
         {
             startButton.Select();
@@ -100,15 +105,43 @@ public class MenuScreenManager : MonoBehaviour
 
     void ExecuteOption()
     {
+        PlayFinalSelectionSound();
+
         if (selectedButtonIndex == 0)
         {
             Debug.Log("Start Game!");
-            SceneManager.LoadScene(nextScene);
+            Invoke("StartGame", finalSelectionSound.length);   
         }
         else
         {
             Debug.Log("Quit Game!");
-            Application.Quit();
+            Invoke("QuitGame", finalSelectionSound.length);   
         }
+    }
+
+    void PlaySelectionSound()
+    {
+        if (audioSource != null && selectionSound != null)
+        {
+            audioSource.PlayOneShot(selectionSound);
+        }
+    }
+
+    void PlayFinalSelectionSound()
+    {
+        if (audioSource != null && finalSelectionSound != null)
+        {
+            audioSource.PlayOneShot(finalSelectionSound);
+        }
+    }
+
+    void StartGame()
+    {
+        SceneManager.LoadScene(nextScene);
+    }
+
+    void QuitGame()
+    {
+        Application.Quit();
     }
 }
