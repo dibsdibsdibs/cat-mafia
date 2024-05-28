@@ -220,4 +220,4 @@ MonoBehaviour:
   itemName: Cake
   isPlayerInRange: 0
   pickedUpItem: 0
-  itemValue: 1
+  itemValue: 0.03333

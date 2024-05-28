@@ -220,4 +220,4 @@ MonoBehaviour:
   itemName: Steak
   isPlayerInRange: 0
   pickedUpItem: 0
-  itemValue: 3
+  itemValue: 0.1

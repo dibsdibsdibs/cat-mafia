@@ -220,4 +220,4 @@ MonoBehaviour:
   itemName: Stick
   isPlayerInRange: 0
   pickedUpItem: 0
-  itemValue: 2
+  itemValue: 0.06667

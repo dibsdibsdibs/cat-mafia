@@ -220,4 +220,4 @@ MonoBehaviour:
   itemName: Tempura
   isPlayerInRange: 0
   pickedUpItem: 0
-  itemValue: 1.5
+  itemValue: 0.05
