@@ -20,6 +20,8 @@ public class MenuScreenManager : MonoBehaviour
     [SerializeField] public Button quitButton;
     [SerializeField] private int selectedButtonIndex = 0;
     [SerializeField] public Image selectionIndicator;
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip selectionSound;
 
     void Start()
     {
@@ -74,6 +76,8 @@ public class MenuScreenManager : MonoBehaviour
 
     void UpdateSelection()
     {
+        PlaySelectionSound();
+
         if (selectedButtonIndex == 0)
         {
             startButton.Select();
@@ -109,6 +113,14 @@ public class MenuScreenManager : MonoBehaviour
         {
             Debug.Log("Quit Game!");
             Application.Quit();
+        }
+    }
+    
+    void PlaySelectionSound()
+    {
+        if (audioSource != null && selectionSound != null)
+        {
+            audioSource.PlayOneShot(selectionSound);
         }
     }
 }
