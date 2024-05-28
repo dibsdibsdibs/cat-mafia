@@ -2810,7 +2810,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textComponent: {fileID: 2054156404}
   lines:
-  - 'Wow! You really outdid yourself! This is just what I needed! You have my loyalty! '
+  - 'I didn''t expect you to do this good. I think you actually have a chance going
+    against our leader. '
+  - "Our leader? Well, his name is Al Purrcino, and he\u2019s a vicious, cruel, cat."
+  - 'Best not to get on his bad side, meow. '
   textSpeed: 0
   dialogueFinished: 0
 --- !u!114 &468413596
@@ -6256,8 +6259,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: 0, y: -203}
+  m_SizeDelta: {x: 0, y: -394}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1412275667
 MonoBehaviour:
@@ -6273,7 +6276,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textComponent: {fileID: 1566296428}
   lines:
-  - Hm, I guess that'll do...
+  - "Was this what you also gave to Daigo Meowjima? Its\u2026 something\u2026"
   textSpeed: 0
   dialogueFinished: 0
 --- !u!114 &1412275668
@@ -6961,6 +6964,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   catCharacter: {fileID: 0}
+  movementSpeed: 5
   audioSource: {fileID: 1567894728}
   nextScene: Bathroom
   movementTutorialFinished: 0
@@ -6968,14 +6972,12 @@ MonoBehaviour:
   rightArrowPressed: 0
   upArrowPressed: 0
   downArrowPressed: 0
-  pickupTutorialFinished: 0
+  controlTutorialFinished: 0
   itemPickedUp: 0
   zButtonPressed: 0
   xButtonPressed: 0
   checkedPause: 0
   pauseScreen: {fileID: 0}
-  foodItem: {fileID: 0}
-  checkPauseTutorialFinished: 0
   audioClips:
   - {fileID: 8300000, guid: 8db3bb9cae2088745a1d3084b03020fd, type: 3}
   - {fileID: 8300000, guid: c646dee48713ea845af08246a4825865, type: 3}
@@ -6985,8 +6987,7 @@ MonoBehaviour:
   firstEventFinished: 0
   blackPanel: {fileID: 0}
   moveDialogue: {fileID: 0}
-  pickUpTutorialDialogue: {fileID: 0}
-  checkPauseDialogue: {fileID: 0}
+  controlDialogue: {fileID: 0}
   endTutorialDialogue: {fileID: 0}
 --- !u!4 &1567894730
 Transform:
@@ -7039,8 +7040,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: 0, y: -203}
+  m_SizeDelta: {x: 0, y: -394}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1654435698
 MonoBehaviour:
@@ -7056,7 +7057,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textComponent: {fileID: 625568956}
   lines:
-  - 'Not bad, I''ll take it! '
+  - I've seen better.
   textSpeed: 0
   dialogueFinished: 0
 --- !u!114 &1654435699
@@ -7190,12 +7191,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 1
+  m_UiScaleMode: 0
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 1024, y: 574}
+  m_ReferenceResolution: {x: 800, y: 600}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0.5
+  m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -7475,9 +7476,9 @@ MonoBehaviour:
   star3Dialogue: {fileID: 0}
   star2Dialogue: {fileID: 0}
   star1Dialogue: {fileID: 0}
-  star1: {fileID: 0}
-  star2: {fileID: 0}
-  star3: {fileID: 0}
+  star1: {fileID: 1412275665}
+  star2: {fileID: 1654435696}
+  star3: {fileID: 468413593}
   isInPosition: 0
   isDone: 0
   speed: 2
@@ -7527,7 +7528,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7126328687155795427, guid: 5802e5b873fe493478485d41f2a91dcd, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.77
+      value: -0.6
       objectReference: {fileID: 0}
     - target: {fileID: 7126328687155795427, guid: 5802e5b873fe493478485d41f2a91dcd, type: 3}
       propertyPath: m_LocalRotation.w
@@ -7591,6 +7592,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7968676400139268644, guid: 5802e5b873fe493478485d41f2a91dcd, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1989139721}
+    - targetCorrespondingSourceObject: {fileID: 7968676400139268644, guid: 5802e5b873fe493478485d41f2a91dcd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1989139722}
   m_SourcePrefab: {fileID: 100100000, guid: 5802e5b873fe493478485d41f2a91dcd, type: 3}
 --- !u!1 &1989139714 stripped
 GameObject:
@@ -7734,13 +7738,36 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1989139714}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e372ab082b35bff46817f8c00877ffcf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   targetPosition: {x: -3.31, y: 5, z: -0.77}
   finalTargetPosition: {x: -3.31, y: 5, z: 0.31}
+  startPosition: {x: 1.5, y: 5, z: -0.77}
+  star3Dialogue: {fileID: 468413595}
+  star2Dialogue: {fileID: 1654435698}
+  star1Dialogue: {fileID: 1412275667}
+  star1: {fileID: 1412275665}
+  star2: {fileID: 1654435696}
+  star3: {fileID: 468413593}
+  isInPosition: 0
+  isDone: 0
+  speed: 2
+--- !u!114 &1989139722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1989139714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36ffcd1c957a6de41890b1983f1c2c78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetPosition: {x: 5.51, y: 5, z: -0.47}
   startPosition: {x: 1.5, y: 5, z: -0.77}
   star3Dialogue: {fileID: 468413595}
   star2Dialogue: {fileID: 1654435698}

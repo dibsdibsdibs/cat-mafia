@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2206,6 +2206,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7737090797000442780, guid: 18cfb5c431e1f8b4a9252ac118c8cb2c, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7737090797000442780, guid: 18cfb5c431e1f8b4a9252ac118c8cb2c, type: 3}
+      propertyPath: movementSpeed
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 685808356527273354, guid: 902709b11a257394fa2abd96fe4cae0d, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -2220,7 +2228,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 685808356527273354, guid: 902709b11a257394fa2abd96fe4cae0d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.33
+      value: 6.2
       objectReference: {fileID: 0}
     - target: {fileID: 685808356527273354, guid: 902709b11a257394fa2abd96fe4cae0d, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2228,7 +2236,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 685808356527273354, guid: 902709b11a257394fa2abd96fe4cae0d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.11
+      value: -0.1
       objectReference: {fileID: 0}
     - target: {fileID: 685808356527273354, guid: 902709b11a257394fa2abd96fe4cae0d, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2285,14 +2293,6 @@ PrefabInstance:
     - target: {fileID: 8073495256899354999, guid: 902709b11a257394fa2abd96fe4cae0d, type: 3}
       propertyPath: m_SortingLayerID
       value: 71584595
-      objectReference: {fileID: 0}
-    - target: {fileID: 7737090797000442780, guid: 18cfb5c431e1f8b4a9252ac118c8cb2c, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7737090797000442780, guid: 18cfb5c431e1f8b4a9252ac118c8cb2c, type: 3}
-      propertyPath: movementSpeed
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2608,6 +2608,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7737090797000442780, guid: 18cfb5c431e1f8b4a9252ac118c8cb2c, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7737090797000442780, guid: 18cfb5c431e1f8b4a9252ac118c8cb2c, type: 3}
+      propertyPath: movementSpeed
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 6083095170013229739, guid: 62ff121616cc227478b3f0f624f8bfbf, type: 3}
       propertyPath: m_Name
       value: MainChar3
@@ -2618,19 +2626,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6417199398643165715, guid: 62ff121616cc227478b3f0f624f8bfbf, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 1.1
       objectReference: {fileID: 0}
     - target: {fileID: 6417199398643165715, guid: 62ff121616cc227478b3f0f624f8bfbf, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 1.1
       objectReference: {fileID: 0}
     - target: {fileID: 6417199398643165715, guid: 62ff121616cc227478b3f0f624f8bfbf, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.125
+      value: 0.1375
       objectReference: {fileID: 0}
     - target: {fileID: 6417199398643165715, guid: 62ff121616cc227478b3f0f624f8bfbf, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.51
+      value: 5.57
       objectReference: {fileID: 0}
     - target: {fileID: 6417199398643165715, guid: 62ff121616cc227478b3f0f624f8bfbf, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2638,7 +2646,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6417199398643165715, guid: 62ff121616cc227478b3f0f624f8bfbf, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.18
+      value: -0.17
       objectReference: {fileID: 0}
     - target: {fileID: 6417199398643165715, guid: 62ff121616cc227478b3f0f624f8bfbf, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2679,14 +2687,6 @@ PrefabInstance:
     - target: {fileID: 9181607336444340053, guid: 62ff121616cc227478b3f0f624f8bfbf, type: 3}
       propertyPath: m_SortingLayerID
       value: 71584595
-      objectReference: {fileID: 0}
-    - target: {fileID: 7737090797000442780, guid: 18cfb5c431e1f8b4a9252ac118c8cb2c, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7737090797000442780, guid: 18cfb5c431e1f8b4a9252ac118c8cb2c, type: 3}
-      propertyPath: movementSpeed
-      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2812,7 +2812,7 @@ Animator:
   m_GameObject: {fileID: 412295124}
   m_Enabled: 0
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 91060e314663de44e978e0435be2d075, type: 2}
+  m_Controller: {fileID: 9100000, guid: 1fea397e3e754c641a7775e8a2c20ca4, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -6358,6 +6358,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7737090797000442780, guid: 18cfb5c431e1f8b4a9252ac118c8cb2c, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7737090797000442780, guid: 18cfb5c431e1f8b4a9252ac118c8cb2c, type: 3}
+      propertyPath: movementSpeed
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5322582637478261017, guid: d8f8368476703b94482658c775583463, type: 3}
       propertyPath: m_FlipX
       value: 0
@@ -6384,15 +6392,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7247641389398544432, guid: d8f8368476703b94482658c775583463, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.155
+      value: 0.17
       objectReference: {fileID: 0}
     - target: {fileID: 7247641389398544432, guid: d8f8368476703b94482658c775583463, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.155
+      value: 0.17
       objectReference: {fileID: 0}
     - target: {fileID: 7247641389398544432, guid: d8f8368476703b94482658c775583463, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.019375
+      value: 0.02125
       objectReference: {fileID: 0}
     - target: {fileID: 7247641389398544432, guid: d8f8368476703b94482658c775583463, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6436,14 +6444,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7247641389398544432, guid: d8f8368476703b94482658c775583463, type: 3}
       propertyPath: m_ConstrainProportionsScale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7737090797000442780, guid: 18cfb5c431e1f8b4a9252ac118c8cb2c, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7737090797000442780, guid: 18cfb5c431e1f8b4a9252ac118c8cb2c, type: 3}
-      propertyPath: movementSpeed
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -6575,7 +6575,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af7ddceb2b42d824baf7414d5efbfe2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  finalTargetPosition: {x: 6.37, y: 1.27, z: -0.54}
+  finalTargetPosition: {x: 6.19, y: 1.27, z: -0.44}
   startPosition: {x: 7.44, y: 1.27, z: -0.44}
   Cat3Dialogue: {fileID: 1412275665}
   isDone: 0
@@ -6908,7 +6908,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   catCharacter: {fileID: 0}
-  movementSpeed: 5
   audioSource: {fileID: 1567894728}
   nextScene: Bathroom
   movementTutorialFinished: 0
@@ -6916,12 +6915,14 @@ MonoBehaviour:
   rightArrowPressed: 0
   upArrowPressed: 0
   downArrowPressed: 0
-  controlTutorialFinished: 0
+  pickupTutorialFinished: 0
   itemPickedUp: 0
   zButtonPressed: 0
   xButtonPressed: 0
   checkedPause: 0
   pauseScreen: {fileID: 0}
+  foodItem: {fileID: 0}
+  checkPauseTutorialFinished: 0
   audioClips:
   - {fileID: 8300000, guid: 8db3bb9cae2088745a1d3084b03020fd, type: 3}
   - {fileID: 8300000, guid: c646dee48713ea845af08246a4825865, type: 3}
@@ -6931,7 +6932,8 @@ MonoBehaviour:
   firstEventFinished: 0
   blackPanel: {fileID: 0}
   moveDialogue: {fileID: 0}
-  controlDialogue: {fileID: 0}
+  pickUpTutorialDialogue: {fileID: 0}
+  checkPauseDialogue: {fileID: 0}
   endTutorialDialogue: {fileID: 0}
 --- !u!4 &1567894730
 Transform:
@@ -7041,12 +7043,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 1
+  m_UiScaleMode: 0
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 1024, y: 574}
+  m_ReferenceResolution: {x: 800, y: 600}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0.5
+  m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
