@@ -2,8 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-using UnityEngine;
-
 public class CameraZoom : MonoBehaviour
 {
     private float zoom;
@@ -14,7 +12,6 @@ public class CameraZoom : MonoBehaviour
     private float velocity = 0f;
     private float smoothTime = 0.25f;
 
-    private bool isZooming = false;
     private bool isCooldown = false;
 
     [SerializeField] private Camera cam;
@@ -27,14 +24,6 @@ public class CameraZoom : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetAxis("Mouse ScrollWheel") != 0)
-        {
-            float scroll = Input.GetAxis("Mouse ScrollWheel");
-            zoom -= scroll * zoomMultiplier;
-            zoom = Mathf.Clamp(zoom, minZoom, maxZoom);
-            cam.orthographicSize = Mathf.SmoothDamp(cam.orthographicSize, zoom, ref velocity, smoothTime);
-        }
-
         if (Input.GetKeyDown(KeyCode.D) && !isCooldown)
         {
             StartCoroutine(ZoomSkill());
@@ -44,7 +33,7 @@ public class CameraZoom : MonoBehaviour
     private IEnumerator ZoomSkill()
     {
         isCooldown = true;
-        isZooming = true;
+
 
         // Zoom out
         float targetZoom = maxZoom;
@@ -67,7 +56,6 @@ public class CameraZoom : MonoBehaviour
         }
 
         cam.orthographicSize = originalZoom;
-        isZooming = false;
 
         // Start cooldown
         yield return new WaitForSeconds(7f);
