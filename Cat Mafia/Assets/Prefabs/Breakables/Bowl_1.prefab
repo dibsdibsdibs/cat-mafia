@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 8283492384787767529}
   - component: {fileID: 1104367688745956734}
   - component: {fileID: 1746626081699152428}
-  - component: {fileID: 4672756435239079576}
   m_Layer: 0
   m_Name: Bowl_1
   m_TagString: Untagged
@@ -159,19 +158,3 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
---- !u!114 &4672756435239079576
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 907659331751074651}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 291a28d53aa4d664cbfeec551dc29d4e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemName: Bowl_1
-  isPlayerInRange: 0
-  pickedUpItem: 0
-  itemValue: -1.5

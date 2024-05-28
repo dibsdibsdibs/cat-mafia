@@ -15,9 +15,6 @@ public class LevelManagerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        // to update time by second and display it
-
         if (totalTime > 0){
             totalTime -= Time.deltaTime;
         }

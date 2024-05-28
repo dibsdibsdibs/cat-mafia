@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 6080868405810461047}
   - component: {fileID: 5621932708518311633}
   - component: {fileID: 5973373240639329722}
-  - component: {fileID: 86248284278820882}
   m_Layer: 0
   m_Name: Fan_2
   m_TagString: Untagged
@@ -159,19 +158,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &86248284278820882
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4994393488943512942}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 291a28d53aa4d664cbfeec551dc29d4e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemName: Fan_2
-  isPlayerInRange: 0
-  pickedUpItem: 0
-  itemValue: 0
