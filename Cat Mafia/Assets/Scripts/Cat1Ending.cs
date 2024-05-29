@@ -61,6 +61,7 @@ public class Cat1Ending : MonoBehaviour
                 animator.SetFloat("moveY", 0);
                 OffIsMoving();
                 transform.position = finalTargetPosition;
+                Invoke("DisableMovement", 1.0f);
                 if (star == "1")
                 {
 
@@ -85,7 +86,7 @@ public class Cat1Ending : MonoBehaviour
         }
         if (isDone)
         {
-            SceneManager.LoadScene("Cat2Dialogue");
+            Invoke("NextScene", 1.0f);
         }
     }
     IEnumerator Star1Finished()
@@ -108,5 +109,14 @@ public class Cat1Ending : MonoBehaviour
     }
     public void OffIsMoving(){
         animator.SetBool("isMoving", false);
+    }
+
+    private void NextScene()
+    {
+        SceneManager.LoadScene("Cat2Dialogue");
+    }
+    void DisableMovement()
+    {
+        animator.enabled = false;
     }
 }
