@@ -13,7 +13,6 @@ public class LevelManagerScript : MonoBehaviour
     [SerializeField] private FoodBarScript foodBarScript;
     [SerializeField] public bool treasureCollected = false;
     [SerializeField] public string nextScene;
-    [SerializeField] public int starRating;
 
     void Start()
     {
@@ -47,12 +46,12 @@ public class LevelManagerScript : MonoBehaviour
         {
             if(finishedFoodCollection && treasureCollected)
             {
-                starRating = 3;
+                StarRating.Rating = 3;
             }else if(finishedFoodCollection == false && treasureCollected)
             {
-                starRating = 2;
+                StarRating.Rating = 2;
             }else{
-                starRating = 1;
+                StarRating.Rating = 1;
             }
             Debug.Log("Received value" + finishedFoodCollection);
             NextScene();
@@ -63,6 +62,7 @@ public class LevelManagerScript : MonoBehaviour
 
     private void NextScene()
     {
+        
         SceneManager.LoadScene(nextScene);
     }
 

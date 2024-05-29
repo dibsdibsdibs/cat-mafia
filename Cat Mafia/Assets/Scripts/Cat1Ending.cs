@@ -22,11 +22,14 @@ public class Cat1Ending : MonoBehaviour
     public float speed = 2f;
     public AudioSource audioSource;
     public AudioClip starDisp;
+    public int starRating;
     // Start is called before the first frame update
     void Start()
     {
         animator = GetComponent<Animator>();
         isInPosition = false;
+        starRating = StarRating.Rating;
+        Debug.Log(starRating);
         star1.SetActive(false);
         star2.SetActive(false);
         star3.SetActive(false);
@@ -63,7 +66,9 @@ public class Cat1Ending : MonoBehaviour
                 animator.SetFloat("moveY", 0);
                 OffIsMoving();
                 transform.position = finalTargetPosition;
+
                 Invoke("DisableMovement", 1.0f);
+
                 if (star == "1")
                 {
 
