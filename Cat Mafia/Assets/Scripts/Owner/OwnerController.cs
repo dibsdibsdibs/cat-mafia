@@ -14,15 +14,18 @@ public class OwnerController : MonoBehaviour
     private Vector2 direction;
     [SerializeField] private GameObject player;
     [SerializeField] private float movementSpeed = 5;
+    private float tempMovementSpeed;
     [SerializeField] private LayerMask furnitures;
     Vector3 newPosition;
 
     private bool isMoving = false;
     private BoxCollider2D boxCollider;
+    private Rigidbody2D rb;
     void Start()
     {
         animator = GetComponent<Animator>();   
         boxCollider = GetComponent<BoxCollider2D>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -160,4 +163,16 @@ public class OwnerController : MonoBehaviour
             StartCoroutine(Move());
         }
     }
+    public void Charm(){
+        tempMovementSpeed = movementSpeed;
+        movementSpeed = 0;
+        StartCoroutine(StopMovement(2));
+    }
+
+    IEnumerator StopMovement(float time){
+        yield return new WaitForSeconds(time);
+        movementSpeed = tempMovementSpeed;
+
+    }
+
 }

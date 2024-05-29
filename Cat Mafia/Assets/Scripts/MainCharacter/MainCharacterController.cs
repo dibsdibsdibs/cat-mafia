@@ -14,7 +14,7 @@ public class MainCharacterController : MonoBehaviour
     private Vector2 movement;
     private Vector2 direction;
 
-
+    private Charm charm;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +22,7 @@ public class MainCharacterController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         boxCollider = GetComponent<BoxCollider2D>();
         pauseManager = pauseScreen.GetComponent<PauseScript>();
+        charm = GetComponent<Charm>();
     }
 
     // Update is called once per frame
