@@ -11,12 +11,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TutorialScene.unity
     guid: faaabf5d7dc6df844a70a2c140031783
+  - enabled: 1
+    path: Assets/Scenes/Cat1Dialogue.unity
+    guid: f743e67c6e81acc4d86109e6387a34ef
+  - enabled: 1
+    path: Assets/Scenes/Cat1Request.unity
+    guid: ccd2a73ad43a4d04abf2f540b5238a00
   - enabled: 0
     path: Assets/Scenes/Bathroom.unity
     guid: 4df74b1b0eaf10749a36d3d591d18c8b
-  - enabled: 1
-    path: Assets/Scenes/Cat3Dialogue.unity
-    guid: b455f29fc3c4e6c4787e7e8ccbeb6993
   - enabled: 1
     path: Assets/Scenes/Cat2Ending.unity
     guid: f66e4b864dd606248866e841e168828f
@@ -24,6 +27,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Cat2Dialogue.unity
     guid: 40b15ec0996469c4694c85db81ad8fec
   - enabled: 1
-    path: Assets/Scenes/Cat1Dialogue.unity
-    guid: f743e67c6e81acc4d86109e6387a34ef
+    path: Assets/Scenes/Cat3Dialogue.unity
+    guid: b455f29fc3c4e6c4787e7e8ccbeb6993
   m_configObjects: {}
