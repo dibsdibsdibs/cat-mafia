@@ -22,4 +22,15 @@ public class FoodBarScript : MonoBehaviour
         sliderValue = slider.value + itemValue;
         Debug.Log("Food bar value updated");
     }
+
+    public bool FinishedFoodCollection()
+    {
+        Debug.Log("Final Value" + slider.value);
+        if(slider.value == 1.0f)
+        {
+            return true;
+        }else{
+            return false;
+        }
+    }
 }

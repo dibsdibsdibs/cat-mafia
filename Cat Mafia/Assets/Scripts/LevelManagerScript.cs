@@ -3,13 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class LevelManagerScript : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI timeText;
     [SerializeField] float totalTime;
     [SerializeField] GameObject foodBar;
-    private FoodBarScript foodBarScript;
+    [SerializeField] private FoodBarScript foodBarScript;
+    [SerializeField] public bool treasureCollected = false;
+    [SerializeField] public string nextScene;
+    [SerializeField] public int starRating;
 
     void Start()
     {
@@ -23,6 +27,7 @@ public class LevelManagerScript : MonoBehaviour
         }
         else if(totalTime < 0){
             totalTime = 0;
+            CheckScene();
         }
   
         float seconds = Mathf.FloorToInt(totalTime % 60);
@@ -32,5 +37,38 @@ public class LevelManagerScript : MonoBehaviour
     {
         foodBarScript.UpdateBar(itemValue);
         Debug.Log("Food bar value updated");
+    }
+
+    void CheckScene()
+    {
+        bool finishedFoodCollection = foodBarScript.FinishedFoodCollection();
+
+        if(finishedFoodCollection || treasureCollected)
+        {
+            if(finishedFoodCollection && treasureCollected)
+            {
+                starRating = 3;
+            }else if(finishedFoodCollection == false && treasureCollected)
+            {
+                starRating = 2;
+            }else{
+                starRating = 1;
+            }
+            Debug.Log("Received value" + finishedFoodCollection);
+            NextScene();
+        }else{
+            RestartScene();
+        }
+    }
+
+    private void NextScene()
+    {
+        SceneManager.LoadScene(nextScene);
+    }
+
+    private void RestartScene()
+    {
+        Scene currentScene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(currentScene.name);
     }
 }
