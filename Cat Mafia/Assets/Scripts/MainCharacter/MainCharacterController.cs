@@ -14,13 +14,14 @@ public class MainCharacterController : MonoBehaviour
     private Vector2 movement;
     private Vector2 direction;
 
-
+    private Dash dash;
     // Start is called before the first frame update
     void Start()
     {
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         boxCollider = GetComponent<BoxCollider2D>();
+        dash = GetComponent<Dash>();  
         pauseManager = pauseScreen.GetComponent<PauseScript>();
     }
 
@@ -51,6 +52,10 @@ public class MainCharacterController : MonoBehaviour
         ){
             movement = Vector2.zero;
             SetIsNotMoving();
+        }
+
+        if(Input.GetKeyDown(KeyCode.Space)){
+            dash.characterDash(direction);
         }
 
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, boxCollider.bounds.extents.y + 0.1f, groundLayer);
