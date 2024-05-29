@@ -13,9 +13,20 @@ public class MainCharacterController : MonoBehaviour
     private PauseScript pauseManager;
     private Vector2 movement;
     private Vector2 direction;
+
     public GameObject failedScreen;
     public GameObject levelManager;
     public LevelManagerScript levelScript;
+
+    // dash variables
+    [SerializeField] private float dashSpeed = 20;
+
+    [SerializeField] private float dashDuration = 0.1f;
+
+    [SerializeField] private float dashCooldown = 7;
+    private bool isDashing = false;
+    private bool canDash = true;
+
 
     // Start is called before the first frame update
     void Start()
@@ -57,6 +68,13 @@ public class MainCharacterController : MonoBehaviour
             SetIsNotMoving();
         }
 
+        if(Input.GetKeyDown(KeyCode.Space)){
+            if(canDash){
+                isDashing = true;
+                StartCoroutine(PerformDash());
+            }
+        }
+
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, boxCollider.bounds.extents.y + 0.1f, groundLayer);
         if (hit.collider != null)
         {
@@ -69,7 +87,9 @@ public class MainCharacterController : MonoBehaviour
     }
 
     void FixedUpdate(){
-        Move();
+        if(!isDashing){
+            Move();
+        }
     }
 
     private void MoveUp(){
@@ -122,5 +142,13 @@ public class MainCharacterController : MonoBehaviour
             Debug.Log("Entered here");
             levelScript.FailedLevel();
         }
+    }
+    private IEnumerator PerformDash () {
+        canDash = false;
+        rb.velocity = direction * dashSpeed;
+        yield return new WaitForSeconds(dashDuration);
+        isDashing = false;
+        yield return new WaitForSeconds(dashCooldown);
+        canDash = true;
     }
 }
