@@ -3039,6 +3039,8 @@ MonoBehaviour:
   textComponent: {fileID: 1561104223}
   lines:
   - 'Wow! You really outdid yourself! This is just what I needed! You have my loyalty! '
+  - You have unlocked a new skill!
+  - Press SpaceBar to use Dash Skill.
   textSpeed: 0
   dialogueFinished: 0
 --- !u!114 &468413596
@@ -7925,7 +7927,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1989139714}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b4be9f3ca2a5f554ea91d458d7e542c4, type: 3}
   m_Name: 
@@ -7935,6 +7937,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   pauseScreen: {fileID: 482842639}
+  failedScreen: {fileID: 0}
+  levelManager: {fileID: 0}
+  levelScript: {fileID: 0}
 --- !u!114 &1989139720
 MonoBehaviour:
   m_ObjectHideFlags: 0
