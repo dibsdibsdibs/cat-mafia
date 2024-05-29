@@ -783,7 +783,6 @@ GameObject:
   m_Component:
   - component: {fileID: 611586296}
   - component: {fileID: 611586299}
-  - component: {fileID: 611586300}
   m_Layer: 0
   m_Name: Break6
   m_TagString: Untagged
@@ -826,19 +825,6 @@ MonoBehaviour:
   - {fileID: 2760823189386471387, guid: a1db8db10a9f0da4e8612c795de9ae4e, type: 3}
   - {fileID: 4994393488943512942, guid: 7a4eaeb33f3021b47b58a0ce002312f5, type: 3}
   - {fileID: 8430668093112651734, guid: 46efddbd67e282249a55343153e77e31, type: 3}
---- !u!114 &611586300
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 611586295}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97930a0eef6bf964999182547ed19984, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  breakable: []
 --- !u!1 &616953530
 GameObject:
   m_ObjectHideFlags: 0
@@ -6390,7 +6376,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1466446372
 Transform:
   m_ObjectHideFlags: 0
