@@ -340,6 +340,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeText: {fileID: 1717347103}
   totalTime: 60
+  foodBar: {fileID: 1734868653}
 --- !u!4 &429158081
 Transform:
   m_ObjectHideFlags: 0
@@ -3224,6 +3225,11 @@ PrefabInstance:
 --- !u!224 &1734868652 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 334986017101248065, guid: 9af32de1433845f4fb38e5f78b9d0b4b, type: 3}
+  m_PrefabInstance: {fileID: 1734868651}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1734868653 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9124077876391164673, guid: 9af32de1433845f4fb38e5f78b9d0b4b, type: 3}
   m_PrefabInstance: {fileID: 1734868651}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1820462158
