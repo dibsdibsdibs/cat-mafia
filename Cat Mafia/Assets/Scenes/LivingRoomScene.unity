@@ -967,6 +967,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f66d0b471fbc0e347958cd6d5875f32c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  catCharacter: {fileID: 956803514}
   pauseScreen: {fileID: 2050478578}
   titleButton: {fileID: 866919032}
   restartButton: {fileID: 1452176781}
@@ -1444,6 +1445,10 @@ PrefabInstance:
       propertyPath: pauseScreen
       value: 
       objectReference: {fileID: 598834302}
+    - target: {fileID: 7737090797000442780, guid: 18cfb5c431e1f8b4a9252ac118c8cb2c, type: 3}
+      propertyPath: failedScreen
+      value: 
+      objectReference: {fileID: 677049168}
     - target: {fileID: 7737090797000442780, guid: 18cfb5c431e1f8b4a9252ac118c8cb2c, type: 3}
       propertyPath: movementSpeed
       value: 3

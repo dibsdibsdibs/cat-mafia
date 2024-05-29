@@ -14,10 +14,12 @@ public class LevelManagerScript : MonoBehaviour
     [SerializeField] public bool treasureCollected = false;
     [SerializeField] public string nextScene;
     [SerializeField] public GameObject failedDialogue;
+    [SerializeField] private FailedLevelScript failedManager;
 
     void Start()
     {
         foodBarScript = foodBar.GetComponent<FoodBarScript>();
+        failedManager = failedDialogue.GetComponent<FailedLevelScript>();
     }
 
     void Update()
@@ -69,5 +71,6 @@ public class LevelManagerScript : MonoBehaviour
     void FailedLevel()
     {
         failedDialogue.SetActive(true);
+        failedManager.ToggleRestart();
     }
 }

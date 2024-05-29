@@ -12,6 +12,7 @@ public class MainCharacterController : MonoBehaviour
     public GameObject pauseScreen;
     private PauseScript pauseManager;
 
+    public GameObject failedScreen;
 
     // Start is called before the first frame update
     void Start()
@@ -26,8 +27,9 @@ public class MainCharacterController : MonoBehaviour
     void Update()
     {
         bool isPauseActive = pauseScreen.activeSelf;
+        bool isFailedActive = failedScreen.activeSelf;
 
-        if(isPauseActive == false)
+        if(isPauseActive == false && isFailedActive == false)
         {
             if(!(Input.GetAxis("Horizontal") != 0 && Input.GetAxis("Vertical") != 0)){
                 if(Input.GetAxis("Horizontal") > 0){

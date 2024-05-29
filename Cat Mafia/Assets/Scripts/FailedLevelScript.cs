@@ -6,6 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class FailedLevelScript : MonoBehaviour
 {
+    [SerializeField] public GameObject catCharacter;
+    private MainCharacterController characterController;
+
     [Header("Failed Manager")]
     public GameObject pauseScreen;
     [SerializeField] public Button titleButton;
@@ -20,7 +23,8 @@ public class FailedLevelScript : MonoBehaviour
 
     void Start()
     {
-        
+        characterController = catCharacter.GetComponent<MainCharacterController>();
+        characterController.enabled = false;
     }
 
     // Update is called once per frame
@@ -42,11 +46,11 @@ public class FailedLevelScript : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.Escape))
         {
-            TogglePause();
+            ToggleRestart();
         }
     }
 
-    public void TogglePause()
+    public void ToggleRestart()
     {
         bool isActive = pauseScreen.activeSelf;
         // pauseScreen.SetActive(isActive);
