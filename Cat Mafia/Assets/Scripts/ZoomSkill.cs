@@ -46,7 +46,7 @@ public class CameraZoom : MonoBehaviour
         cam.orthographicSize = targetZoom;
 
         // Wait for 5 seconds
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(3f);
 
         // Return to original zoom
         while (Mathf.Abs(cam.orthographicSize - originalZoom) > 0.01f)

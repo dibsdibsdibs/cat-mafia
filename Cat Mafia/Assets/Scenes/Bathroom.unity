@@ -219,24 +219,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 096aaea0a58785c43b6c59e81f9999a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  food:
-  - {fileID: 5651011412211922094, guid: 5462ec42bb4328042a68ae17f4ed4998, type: 3}
-  - {fileID: 3898556357762758839, guid: 9fb6759901c70f74ca5d7b71246683c3, type: 3}
-  - {fileID: 4178548119596189774, guid: 4f78e7402e35ea84ea4bdcb1b38f1789, type: 3}
-  - {fileID: 6821666823914569798, guid: 21e59c87d365ad8459037c44ef298121, type: 3}
-  - {fileID: 7320273620673604068, guid: 34bb3d5a275874846b0bf22be46633ca, type: 3}
-  - {fileID: 6582207848106062671, guid: a8f87f7f1fb0d4c4486fa4f0ce82fe29, type: 3}
-  - {fileID: 5851178165493276646, guid: 4b73099b399941544a7858f46b9a4489, type: 3}
-  - {fileID: 853382601684717734, guid: 3619543606e9c864c8a366c961d8894a, type: 3}
-  - {fileID: 5815576139884890781, guid: 3d8cc2dd3680e6c4d864f429d2cb6693, type: 3}
-  - {fileID: 8496003529976344465, guid: aa7aa99c739bb674f856418c4d094da2, type: 3}
-  - {fileID: 1582905363669223844, guid: 6966cad72a0be0a409cfd631bb818a3b, type: 3}
-  - {fileID: 8448081308628344717, guid: aa6fc60a7b91e1b478a5d2e6b9f53184, type: 3}
-  - {fileID: 3738582911905855285, guid: b3dfdbf5d6cded445ab1559185e20f92, type: 3}
-  - {fileID: 8350016510529040427, guid: dad0fa19f4c57dd41bf16dd59a5dad9e, type: 3}
-  - {fileID: 1255808577136441329, guid: e96ae258c2624474eaf2b7cb4aa77523, type: 3}
-  - {fileID: 4484664811016999427, guid: 2ad66afa257afee4b9e8a17c9223078a, type: 3}
-  - {fileID: 4154224636406750366, guid: 1905b38ab5f09d342a16c09f5bce7f88, type: 3}
+  treats: []
+  foodLoc: []
+  spawnRate: 5
 --- !u!1 &81892338
 GameObject:
   m_ObjectHideFlags: 0
@@ -437,24 +422,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 096aaea0a58785c43b6c59e81f9999a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  food:
-  - {fileID: 5651011412211922094, guid: 5462ec42bb4328042a68ae17f4ed4998, type: 3}
-  - {fileID: 3898556357762758839, guid: 9fb6759901c70f74ca5d7b71246683c3, type: 3}
-  - {fileID: 4178548119596189774, guid: 4f78e7402e35ea84ea4bdcb1b38f1789, type: 3}
-  - {fileID: 6821666823914569798, guid: 21e59c87d365ad8459037c44ef298121, type: 3}
-  - {fileID: 7320273620673604068, guid: 34bb3d5a275874846b0bf22be46633ca, type: 3}
-  - {fileID: 6582207848106062671, guid: a8f87f7f1fb0d4c4486fa4f0ce82fe29, type: 3}
-  - {fileID: 5851178165493276646, guid: 4b73099b399941544a7858f46b9a4489, type: 3}
-  - {fileID: 853382601684717734, guid: 3619543606e9c864c8a366c961d8894a, type: 3}
-  - {fileID: 5815576139884890781, guid: 3d8cc2dd3680e6c4d864f429d2cb6693, type: 3}
-  - {fileID: 8496003529976344465, guid: aa7aa99c739bb674f856418c4d094da2, type: 3}
-  - {fileID: 1582905363669223844, guid: 6966cad72a0be0a409cfd631bb818a3b, type: 3}
-  - {fileID: 8448081308628344717, guid: aa6fc60a7b91e1b478a5d2e6b9f53184, type: 3}
-  - {fileID: 3738582911905855285, guid: b3dfdbf5d6cded445ab1559185e20f92, type: 3}
-  - {fileID: 8350016510529040427, guid: dad0fa19f4c57dd41bf16dd59a5dad9e, type: 3}
-  - {fileID: 1255808577136441329, guid: e96ae258c2624474eaf2b7cb4aa77523, type: 3}
-  - {fileID: 4484664811016999427, guid: 2ad66afa257afee4b9e8a17c9223078a, type: 3}
-  - {fileID: 4154224636406750366, guid: 1905b38ab5f09d342a16c09f5bce7f88, type: 3}
+  treats: []
+  foodLoc: []
+  spawnRate: 5
 --- !u!1 &201077059
 GameObject:
   m_ObjectHideFlags: 0
@@ -568,7 +538,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5.7546983
+  orthographic size: 1
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -593,7 +563,7 @@ Transform:
   m_GameObject: {fileID: 297598276}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.77, y: 1.39, z: -20.9}
+  m_LocalPosition: {x: -2.52, y: -0.9, z: -20.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -643,24 +613,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 096aaea0a58785c43b6c59e81f9999a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  food:
-  - {fileID: 5651011412211922094, guid: 5462ec42bb4328042a68ae17f4ed4998, type: 3}
-  - {fileID: 3898556357762758839, guid: 9fb6759901c70f74ca5d7b71246683c3, type: 3}
-  - {fileID: 4178548119596189774, guid: 4f78e7402e35ea84ea4bdcb1b38f1789, type: 3}
-  - {fileID: 6821666823914569798, guid: 21e59c87d365ad8459037c44ef298121, type: 3}
-  - {fileID: 7320273620673604068, guid: 34bb3d5a275874846b0bf22be46633ca, type: 3}
-  - {fileID: 6582207848106062671, guid: a8f87f7f1fb0d4c4486fa4f0ce82fe29, type: 3}
-  - {fileID: 5851178165493276646, guid: 4b73099b399941544a7858f46b9a4489, type: 3}
-  - {fileID: 853382601684717734, guid: 3619543606e9c864c8a366c961d8894a, type: 3}
-  - {fileID: 5815576139884890781, guid: 3d8cc2dd3680e6c4d864f429d2cb6693, type: 3}
-  - {fileID: 8496003529976344465, guid: aa7aa99c739bb674f856418c4d094da2, type: 3}
-  - {fileID: 1582905363669223844, guid: 6966cad72a0be0a409cfd631bb818a3b, type: 3}
-  - {fileID: 8448081308628344717, guid: aa6fc60a7b91e1b478a5d2e6b9f53184, type: 3}
-  - {fileID: 3738582911905855285, guid: b3dfdbf5d6cded445ab1559185e20f92, type: 3}
-  - {fileID: 8350016510529040427, guid: dad0fa19f4c57dd41bf16dd59a5dad9e, type: 3}
-  - {fileID: 1255808577136441329, guid: e96ae258c2624474eaf2b7cb4aa77523, type: 3}
-  - {fileID: 4484664811016999427, guid: 2ad66afa257afee4b9e8a17c9223078a, type: 3}
-  - {fileID: 4154224636406750366, guid: 1905b38ab5f09d342a16c09f5bce7f88, type: 3}
+  treats: []
+  foodLoc: []
+  spawnRate: 5
 --- !u!1 &359408927
 GameObject:
   m_ObjectHideFlags: 0
@@ -706,6 +661,103 @@ Transform:
   - {fileID: 1734764943}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &367135012
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 367135013}
+  - component: {fileID: 367135015}
+  - component: {fileID: 367135014}
+  m_Layer: 0
+  m_Name: Treasure5
+  m_TagString: treasure
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &367135013
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 367135012}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -6.41, y: 0.39, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 715659360}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &367135014
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 367135012}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!114 &367135015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 367135012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ddd23a132117e146a687632c16f7e4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  treasureLoc:
+  - {fileID: 1101486039}
+  - {fileID: 1149885771}
+  - {fileID: 780751397}
+  - {fileID: 1648680738}
+  - {fileID: 367135013}
+  treasures: {fileID: 2316485678357962322, guid: 9beac4d57edcfdc46af07b5e3c9356fa, type: 3}
 --- !u!1 &382194884
 GameObject:
   m_ObjectHideFlags: 0
@@ -797,24 +849,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 096aaea0a58785c43b6c59e81f9999a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  food:
-  - {fileID: 5651011412211922094, guid: 5462ec42bb4328042a68ae17f4ed4998, type: 3}
-  - {fileID: 3898556357762758839, guid: 9fb6759901c70f74ca5d7b71246683c3, type: 3}
-  - {fileID: 4178548119596189774, guid: 4f78e7402e35ea84ea4bdcb1b38f1789, type: 3}
-  - {fileID: 6821666823914569798, guid: 21e59c87d365ad8459037c44ef298121, type: 3}
-  - {fileID: 7320273620673604068, guid: 34bb3d5a275874846b0bf22be46633ca, type: 3}
-  - {fileID: 6582207848106062671, guid: a8f87f7f1fb0d4c4486fa4f0ce82fe29, type: 3}
-  - {fileID: 5851178165493276646, guid: 4b73099b399941544a7858f46b9a4489, type: 3}
-  - {fileID: 853382601684717734, guid: 3619543606e9c864c8a366c961d8894a, type: 3}
-  - {fileID: 5815576139884890781, guid: 3d8cc2dd3680e6c4d864f429d2cb6693, type: 3}
-  - {fileID: 8496003529976344465, guid: aa7aa99c739bb674f856418c4d094da2, type: 3}
-  - {fileID: 1582905363669223844, guid: 6966cad72a0be0a409cfd631bb818a3b, type: 3}
-  - {fileID: 8448081308628344717, guid: aa6fc60a7b91e1b478a5d2e6b9f53184, type: 3}
-  - {fileID: 3738582911905855285, guid: b3dfdbf5d6cded445ab1559185e20f92, type: 3}
-  - {fileID: 8350016510529040427, guid: dad0fa19f4c57dd41bf16dd59a5dad9e, type: 3}
-  - {fileID: 1255808577136441329, guid: e96ae258c2624474eaf2b7cb4aa77523, type: 3}
-  - {fileID: 4484664811016999427, guid: 2ad66afa257afee4b9e8a17c9223078a, type: 3}
-  - {fileID: 4154224636406750366, guid: 1905b38ab5f09d342a16c09f5bce7f88, type: 3}
+  treats: []
+  foodLoc: []
+  spawnRate: 5
 --- !u!1 &416654482
 GameObject:
   m_ObjectHideFlags: 0
@@ -1045,24 +1082,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 096aaea0a58785c43b6c59e81f9999a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  food:
-  - {fileID: 5651011412211922094, guid: 5462ec42bb4328042a68ae17f4ed4998, type: 3}
-  - {fileID: 3898556357762758839, guid: 9fb6759901c70f74ca5d7b71246683c3, type: 3}
-  - {fileID: 4178548119596189774, guid: 4f78e7402e35ea84ea4bdcb1b38f1789, type: 3}
-  - {fileID: 6821666823914569798, guid: 21e59c87d365ad8459037c44ef298121, type: 3}
-  - {fileID: 7320273620673604068, guid: 34bb3d5a275874846b0bf22be46633ca, type: 3}
-  - {fileID: 6582207848106062671, guid: a8f87f7f1fb0d4c4486fa4f0ce82fe29, type: 3}
-  - {fileID: 5851178165493276646, guid: 4b73099b399941544a7858f46b9a4489, type: 3}
-  - {fileID: 853382601684717734, guid: 3619543606e9c864c8a366c961d8894a, type: 3}
-  - {fileID: 5815576139884890781, guid: 3d8cc2dd3680e6c4d864f429d2cb6693, type: 3}
-  - {fileID: 8496003529976344465, guid: aa7aa99c739bb674f856418c4d094da2, type: 3}
-  - {fileID: 1582905363669223844, guid: 6966cad72a0be0a409cfd631bb818a3b, type: 3}
-  - {fileID: 8448081308628344717, guid: aa6fc60a7b91e1b478a5d2e6b9f53184, type: 3}
-  - {fileID: 3738582911905855285, guid: b3dfdbf5d6cded445ab1559185e20f92, type: 3}
-  - {fileID: 8350016510529040427, guid: dad0fa19f4c57dd41bf16dd59a5dad9e, type: 3}
-  - {fileID: 1255808577136441329, guid: e96ae258c2624474eaf2b7cb4aa77523, type: 3}
-  - {fileID: 4484664811016999427, guid: 2ad66afa257afee4b9e8a17c9223078a, type: 3}
-  - {fileID: 4154224636406750366, guid: 1905b38ab5f09d342a16c09f5bce7f88, type: 3}
+  treats: []
+  foodLoc: []
+  spawnRate: 5
 --- !u!1 &594711038 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9124077876391164673, guid: 9af32de1433845f4fb38e5f78b9d0b4b, type: 3}
@@ -1163,24 +1185,45 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 096aaea0a58785c43b6c59e81f9999a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  food:
-  - {fileID: 5651011412211922094, guid: 5462ec42bb4328042a68ae17f4ed4998, type: 3}
-  - {fileID: 3898556357762758839, guid: 9fb6759901c70f74ca5d7b71246683c3, type: 3}
-  - {fileID: 4178548119596189774, guid: 4f78e7402e35ea84ea4bdcb1b38f1789, type: 3}
-  - {fileID: 6821666823914569798, guid: 21e59c87d365ad8459037c44ef298121, type: 3}
-  - {fileID: 7320273620673604068, guid: 34bb3d5a275874846b0bf22be46633ca, type: 3}
-  - {fileID: 6582207848106062671, guid: a8f87f7f1fb0d4c4486fa4f0ce82fe29, type: 3}
-  - {fileID: 5851178165493276646, guid: 4b73099b399941544a7858f46b9a4489, type: 3}
-  - {fileID: 853382601684717734, guid: 3619543606e9c864c8a366c961d8894a, type: 3}
-  - {fileID: 5815576139884890781, guid: 3d8cc2dd3680e6c4d864f429d2cb6693, type: 3}
-  - {fileID: 8496003529976344465, guid: aa7aa99c739bb674f856418c4d094da2, type: 3}
-  - {fileID: 1582905363669223844, guid: 6966cad72a0be0a409cfd631bb818a3b, type: 3}
-  - {fileID: 8448081308628344717, guid: aa6fc60a7b91e1b478a5d2e6b9f53184, type: 3}
-  - {fileID: 3738582911905855285, guid: b3dfdbf5d6cded445ab1559185e20f92, type: 3}
-  - {fileID: 8350016510529040427, guid: dad0fa19f4c57dd41bf16dd59a5dad9e, type: 3}
-  - {fileID: 1255808577136441329, guid: e96ae258c2624474eaf2b7cb4aa77523, type: 3}
-  - {fileID: 4484664811016999427, guid: 2ad66afa257afee4b9e8a17c9223078a, type: 3}
-  - {fileID: 4154224636406750366, guid: 1905b38ab5f09d342a16c09f5bce7f88, type: 3}
+  treats: []
+  foodLoc: []
+  spawnRate: 5
+--- !u!1 &715659359
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 715659360}
+  m_Layer: 0
+  m_Name: TreasureLocation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &715659360
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 715659359}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.5924066, y: 1.1984915, z: 0.18}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1101486039}
+  - {fileID: 1149885771}
+  - {fileID: 780751397}
+  - {fileID: 1648680738}
+  - {fileID: 367135013}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &720076252
 GameObject:
   m_ObjectHideFlags: 0
@@ -1633,6 +1676,103 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &780751396
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 780751397}
+  - component: {fileID: 780751399}
+  - component: {fileID: 780751398}
+  m_Layer: 0
+  m_Name: Treasure3
+  m_TagString: treasure
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &780751397
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 780751396}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.31, y: 1.99, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 715659360}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &780751398
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 780751396}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!114 &780751399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 780751396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ddd23a132117e146a687632c16f7e4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  treasureLoc:
+  - {fileID: 1101486039}
+  - {fileID: 1149885771}
+  - {fileID: 780751397}
+  - {fileID: 1648680738}
+  - {fileID: 367135013}
+  treasures: {fileID: 2316485678357962322, guid: 9beac4d57edcfdc46af07b5e3c9356fa, type: 3}
 --- !u!1 &912185814
 GameObject:
   m_ObjectHideFlags: 0
@@ -1677,24 +1817,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 096aaea0a58785c43b6c59e81f9999a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  food:
-  - {fileID: 5651011412211922094, guid: 5462ec42bb4328042a68ae17f4ed4998, type: 3}
-  - {fileID: 3898556357762758839, guid: 9fb6759901c70f74ca5d7b71246683c3, type: 3}
-  - {fileID: 4178548119596189774, guid: 4f78e7402e35ea84ea4bdcb1b38f1789, type: 3}
-  - {fileID: 6821666823914569798, guid: 21e59c87d365ad8459037c44ef298121, type: 3}
-  - {fileID: 7320273620673604068, guid: 34bb3d5a275874846b0bf22be46633ca, type: 3}
-  - {fileID: 6582207848106062671, guid: a8f87f7f1fb0d4c4486fa4f0ce82fe29, type: 3}
-  - {fileID: 5851178165493276646, guid: 4b73099b399941544a7858f46b9a4489, type: 3}
-  - {fileID: 853382601684717734, guid: 3619543606e9c864c8a366c961d8894a, type: 3}
-  - {fileID: 5815576139884890781, guid: 3d8cc2dd3680e6c4d864f429d2cb6693, type: 3}
-  - {fileID: 8496003529976344465, guid: aa7aa99c739bb674f856418c4d094da2, type: 3}
-  - {fileID: 1582905363669223844, guid: 6966cad72a0be0a409cfd631bb818a3b, type: 3}
-  - {fileID: 8448081308628344717, guid: aa6fc60a7b91e1b478a5d2e6b9f53184, type: 3}
-  - {fileID: 3738582911905855285, guid: b3dfdbf5d6cded445ab1559185e20f92, type: 3}
-  - {fileID: 8350016510529040427, guid: dad0fa19f4c57dd41bf16dd59a5dad9e, type: 3}
-  - {fileID: 1255808577136441329, guid: e96ae258c2624474eaf2b7cb4aa77523, type: 3}
-  - {fileID: 4484664811016999427, guid: 2ad66afa257afee4b9e8a17c9223078a, type: 3}
-  - {fileID: 4154224636406750366, guid: 1905b38ab5f09d342a16c09f5bce7f88, type: 3}
+  treats: []
+  foodLoc: []
+  spawnRate: 5
 --- !u!1 &1089944232
 GameObject:
   m_ObjectHideFlags: 0
@@ -1747,6 +1872,200 @@ MonoBehaviour:
   - {fileID: 2760823189386471387, guid: a1db8db10a9f0da4e8612c795de9ae4e, type: 3}
   - {fileID: 4994393488943512942, guid: 7a4eaeb33f3021b47b58a0ce002312f5, type: 3}
   - {fileID: 8430668093112651734, guid: 46efddbd67e282249a55343153e77e31, type: 3}
+--- !u!1 &1101486038
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1101486039}
+  - component: {fileID: 1101486041}
+  - component: {fileID: 1101486040}
+  m_Layer: 0
+  m_Name: Treasure1
+  m_TagString: treasure
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1101486039
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1101486038}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 3.91, y: -2.07, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 715659360}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1101486040
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1101486038}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!114 &1101486041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1101486038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ddd23a132117e146a687632c16f7e4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  treasureLoc:
+  - {fileID: 1101486039}
+  - {fileID: 1149885771}
+  - {fileID: 780751397}
+  - {fileID: 1648680738}
+  - {fileID: 367135013}
+  treasures: {fileID: 2316485678357962322, guid: 9beac4d57edcfdc46af07b5e3c9356fa, type: 3}
+--- !u!1 &1149885770
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1149885771}
+  - component: {fileID: 1149885773}
+  - component: {fileID: 1149885772}
+  m_Layer: 0
+  m_Name: Treasure2
+  m_TagString: treasure
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1149885771
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1149885770}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.92, y: 2.99, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 715659360}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1149885772
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1149885770}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!114 &1149885773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1149885770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ddd23a132117e146a687632c16f7e4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  treasureLoc:
+  - {fileID: 1101486039}
+  - {fileID: 1149885771}
+  - {fileID: 780751397}
+  - {fileID: 1648680738}
+  - {fileID: 367135013}
+  treasures: {fileID: 2316485678357962322, guid: 9beac4d57edcfdc46af07b5e3c9356fa, type: 3}
 --- !u!224 &1247000942 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2024510920264184725, guid: 8210436b8bfbdb241a6b452a02427dec, type: 3}
@@ -1882,24 +2201,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 096aaea0a58785c43b6c59e81f9999a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  food:
-  - {fileID: 5651011412211922094, guid: 5462ec42bb4328042a68ae17f4ed4998, type: 3}
-  - {fileID: 3898556357762758839, guid: 9fb6759901c70f74ca5d7b71246683c3, type: 3}
-  - {fileID: 4178548119596189774, guid: 4f78e7402e35ea84ea4bdcb1b38f1789, type: 3}
-  - {fileID: 6821666823914569798, guid: 21e59c87d365ad8459037c44ef298121, type: 3}
-  - {fileID: 7320273620673604068, guid: 34bb3d5a275874846b0bf22be46633ca, type: 3}
-  - {fileID: 6582207848106062671, guid: a8f87f7f1fb0d4c4486fa4f0ce82fe29, type: 3}
-  - {fileID: 5851178165493276646, guid: 4b73099b399941544a7858f46b9a4489, type: 3}
-  - {fileID: 853382601684717734, guid: 3619543606e9c864c8a366c961d8894a, type: 3}
-  - {fileID: 5815576139884890781, guid: 3d8cc2dd3680e6c4d864f429d2cb6693, type: 3}
-  - {fileID: 8496003529976344465, guid: aa7aa99c739bb674f856418c4d094da2, type: 3}
-  - {fileID: 1582905363669223844, guid: 6966cad72a0be0a409cfd631bb818a3b, type: 3}
-  - {fileID: 8448081308628344717, guid: aa6fc60a7b91e1b478a5d2e6b9f53184, type: 3}
-  - {fileID: 3738582911905855285, guid: b3dfdbf5d6cded445ab1559185e20f92, type: 3}
-  - {fileID: 8350016510529040427, guid: dad0fa19f4c57dd41bf16dd59a5dad9e, type: 3}
-  - {fileID: 1255808577136441329, guid: e96ae258c2624474eaf2b7cb4aa77523, type: 3}
-  - {fileID: 4484664811016999427, guid: 2ad66afa257afee4b9e8a17c9223078a, type: 3}
-  - {fileID: 4154224636406750366, guid: 1905b38ab5f09d342a16c09f5bce7f88, type: 3}
+  treats: []
+  foodLoc: []
+  spawnRate: 5
 --- !u!1 &1399950036
 GameObject:
   m_ObjectHideFlags: 0
@@ -1944,24 +2248,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 096aaea0a58785c43b6c59e81f9999a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  food:
-  - {fileID: 5651011412211922094, guid: 5462ec42bb4328042a68ae17f4ed4998, type: 3}
-  - {fileID: 3898556357762758839, guid: 9fb6759901c70f74ca5d7b71246683c3, type: 3}
-  - {fileID: 4178548119596189774, guid: 4f78e7402e35ea84ea4bdcb1b38f1789, type: 3}
-  - {fileID: 6821666823914569798, guid: 21e59c87d365ad8459037c44ef298121, type: 3}
-  - {fileID: 7320273620673604068, guid: 34bb3d5a275874846b0bf22be46633ca, type: 3}
-  - {fileID: 6582207848106062671, guid: a8f87f7f1fb0d4c4486fa4f0ce82fe29, type: 3}
-  - {fileID: 5851178165493276646, guid: 4b73099b399941544a7858f46b9a4489, type: 3}
-  - {fileID: 853382601684717734, guid: 3619543606e9c864c8a366c961d8894a, type: 3}
-  - {fileID: 5815576139884890781, guid: 3d8cc2dd3680e6c4d864f429d2cb6693, type: 3}
-  - {fileID: 8496003529976344465, guid: aa7aa99c739bb674f856418c4d094da2, type: 3}
-  - {fileID: 1582905363669223844, guid: 6966cad72a0be0a409cfd631bb818a3b, type: 3}
-  - {fileID: 8448081308628344717, guid: aa6fc60a7b91e1b478a5d2e6b9f53184, type: 3}
-  - {fileID: 3738582911905855285, guid: b3dfdbf5d6cded445ab1559185e20f92, type: 3}
-  - {fileID: 8350016510529040427, guid: dad0fa19f4c57dd41bf16dd59a5dad9e, type: 3}
-  - {fileID: 1255808577136441329, guid: e96ae258c2624474eaf2b7cb4aa77523, type: 3}
-  - {fileID: 4484664811016999427, guid: 2ad66afa257afee4b9e8a17c9223078a, type: 3}
-  - {fileID: 4154224636406750366, guid: 1905b38ab5f09d342a16c09f5bce7f88, type: 3}
+  treats: []
+  foodLoc: []
+  spawnRate: 5
 --- !u!1 &1443119595
 GameObject:
   m_ObjectHideFlags: 0
@@ -2006,24 +2295,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 096aaea0a58785c43b6c59e81f9999a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  food:
-  - {fileID: 5651011412211922094, guid: 5462ec42bb4328042a68ae17f4ed4998, type: 3}
-  - {fileID: 3898556357762758839, guid: 9fb6759901c70f74ca5d7b71246683c3, type: 3}
-  - {fileID: 4178548119596189774, guid: 4f78e7402e35ea84ea4bdcb1b38f1789, type: 3}
-  - {fileID: 6821666823914569798, guid: 21e59c87d365ad8459037c44ef298121, type: 3}
-  - {fileID: 7320273620673604068, guid: 34bb3d5a275874846b0bf22be46633ca, type: 3}
-  - {fileID: 6582207848106062671, guid: a8f87f7f1fb0d4c4486fa4f0ce82fe29, type: 3}
-  - {fileID: 5851178165493276646, guid: 4b73099b399941544a7858f46b9a4489, type: 3}
-  - {fileID: 853382601684717734, guid: 3619543606e9c864c8a366c961d8894a, type: 3}
-  - {fileID: 5815576139884890781, guid: 3d8cc2dd3680e6c4d864f429d2cb6693, type: 3}
-  - {fileID: 8496003529976344465, guid: aa7aa99c739bb674f856418c4d094da2, type: 3}
-  - {fileID: 1582905363669223844, guid: 6966cad72a0be0a409cfd631bb818a3b, type: 3}
-  - {fileID: 8448081308628344717, guid: aa6fc60a7b91e1b478a5d2e6b9f53184, type: 3}
-  - {fileID: 3738582911905855285, guid: b3dfdbf5d6cded445ab1559185e20f92, type: 3}
-  - {fileID: 8350016510529040427, guid: dad0fa19f4c57dd41bf16dd59a5dad9e, type: 3}
-  - {fileID: 1255808577136441329, guid: e96ae258c2624474eaf2b7cb4aa77523, type: 3}
-  - {fileID: 4484664811016999427, guid: 2ad66afa257afee4b9e8a17c9223078a, type: 3}
-  - {fileID: 4154224636406750366, guid: 1905b38ab5f09d342a16c09f5bce7f88, type: 3}
+  treats: []
+  foodLoc: []
+  spawnRate: 5
 --- !u!1 &1485367331
 GameObject:
   m_ObjectHideFlags: 0
@@ -2068,24 +2342,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 096aaea0a58785c43b6c59e81f9999a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  food:
-  - {fileID: 5651011412211922094, guid: 5462ec42bb4328042a68ae17f4ed4998, type: 3}
-  - {fileID: 3898556357762758839, guid: 9fb6759901c70f74ca5d7b71246683c3, type: 3}
-  - {fileID: 4178548119596189774, guid: 4f78e7402e35ea84ea4bdcb1b38f1789, type: 3}
-  - {fileID: 6821666823914569798, guid: 21e59c87d365ad8459037c44ef298121, type: 3}
-  - {fileID: 7320273620673604068, guid: 34bb3d5a275874846b0bf22be46633ca, type: 3}
-  - {fileID: 6582207848106062671, guid: a8f87f7f1fb0d4c4486fa4f0ce82fe29, type: 3}
-  - {fileID: 5851178165493276646, guid: 4b73099b399941544a7858f46b9a4489, type: 3}
-  - {fileID: 853382601684717734, guid: 3619543606e9c864c8a366c961d8894a, type: 3}
-  - {fileID: 5815576139884890781, guid: 3d8cc2dd3680e6c4d864f429d2cb6693, type: 3}
-  - {fileID: 8496003529976344465, guid: aa7aa99c739bb674f856418c4d094da2, type: 3}
-  - {fileID: 1582905363669223844, guid: 6966cad72a0be0a409cfd631bb818a3b, type: 3}
-  - {fileID: 8448081308628344717, guid: aa6fc60a7b91e1b478a5d2e6b9f53184, type: 3}
-  - {fileID: 3738582911905855285, guid: b3dfdbf5d6cded445ab1559185e20f92, type: 3}
-  - {fileID: 8350016510529040427, guid: dad0fa19f4c57dd41bf16dd59a5dad9e, type: 3}
-  - {fileID: 1255808577136441329, guid: e96ae258c2624474eaf2b7cb4aa77523, type: 3}
-  - {fileID: 4484664811016999427, guid: 2ad66afa257afee4b9e8a17c9223078a, type: 3}
-  - {fileID: 4154224636406750366, guid: 1905b38ab5f09d342a16c09f5bce7f88, type: 3}
+  treats: []
+  foodLoc: []
+  spawnRate: 5
 --- !u!1001 &1490972253
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2283,24 +2542,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 096aaea0a58785c43b6c59e81f9999a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  food:
-  - {fileID: 5651011412211922094, guid: 5462ec42bb4328042a68ae17f4ed4998, type: 3}
-  - {fileID: 3898556357762758839, guid: 9fb6759901c70f74ca5d7b71246683c3, type: 3}
-  - {fileID: 4178548119596189774, guid: 4f78e7402e35ea84ea4bdcb1b38f1789, type: 3}
-  - {fileID: 6821666823914569798, guid: 21e59c87d365ad8459037c44ef298121, type: 3}
-  - {fileID: 7320273620673604068, guid: 34bb3d5a275874846b0bf22be46633ca, type: 3}
-  - {fileID: 6582207848106062671, guid: a8f87f7f1fb0d4c4486fa4f0ce82fe29, type: 3}
-  - {fileID: 5851178165493276646, guid: 4b73099b399941544a7858f46b9a4489, type: 3}
-  - {fileID: 853382601684717734, guid: 3619543606e9c864c8a366c961d8894a, type: 3}
-  - {fileID: 5815576139884890781, guid: 3d8cc2dd3680e6c4d864f429d2cb6693, type: 3}
-  - {fileID: 8496003529976344465, guid: aa7aa99c739bb674f856418c4d094da2, type: 3}
-  - {fileID: 1582905363669223844, guid: 6966cad72a0be0a409cfd631bb818a3b, type: 3}
-  - {fileID: 8448081308628344717, guid: aa6fc60a7b91e1b478a5d2e6b9f53184, type: 3}
-  - {fileID: 3738582911905855285, guid: b3dfdbf5d6cded445ab1559185e20f92, type: 3}
-  - {fileID: 8350016510529040427, guid: dad0fa19f4c57dd41bf16dd59a5dad9e, type: 3}
-  - {fileID: 1255808577136441329, guid: e96ae258c2624474eaf2b7cb4aa77523, type: 3}
-  - {fileID: 4484664811016999427, guid: 2ad66afa257afee4b9e8a17c9223078a, type: 3}
-  - {fileID: 4154224636406750366, guid: 1905b38ab5f09d342a16c09f5bce7f88, type: 3}
+  treats: []
+  foodLoc: []
+  spawnRate: 5
 --- !u!1 &1573900092
 GameObject:
   m_ObjectHideFlags: 0
@@ -2345,24 +2589,106 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 096aaea0a58785c43b6c59e81f9999a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  food:
-  - {fileID: 5651011412211922094, guid: 5462ec42bb4328042a68ae17f4ed4998, type: 3}
-  - {fileID: 3898556357762758839, guid: 9fb6759901c70f74ca5d7b71246683c3, type: 3}
-  - {fileID: 4178548119596189774, guid: 4f78e7402e35ea84ea4bdcb1b38f1789, type: 3}
-  - {fileID: 6821666823914569798, guid: 21e59c87d365ad8459037c44ef298121, type: 3}
-  - {fileID: 7320273620673604068, guid: 34bb3d5a275874846b0bf22be46633ca, type: 3}
-  - {fileID: 6582207848106062671, guid: a8f87f7f1fb0d4c4486fa4f0ce82fe29, type: 3}
-  - {fileID: 5851178165493276646, guid: 4b73099b399941544a7858f46b9a4489, type: 3}
-  - {fileID: 853382601684717734, guid: 3619543606e9c864c8a366c961d8894a, type: 3}
-  - {fileID: 5815576139884890781, guid: 3d8cc2dd3680e6c4d864f429d2cb6693, type: 3}
-  - {fileID: 8496003529976344465, guid: aa7aa99c739bb674f856418c4d094da2, type: 3}
-  - {fileID: 1582905363669223844, guid: 6966cad72a0be0a409cfd631bb818a3b, type: 3}
-  - {fileID: 8448081308628344717, guid: aa6fc60a7b91e1b478a5d2e6b9f53184, type: 3}
-  - {fileID: 3738582911905855285, guid: b3dfdbf5d6cded445ab1559185e20f92, type: 3}
-  - {fileID: 8350016510529040427, guid: dad0fa19f4c57dd41bf16dd59a5dad9e, type: 3}
-  - {fileID: 1255808577136441329, guid: e96ae258c2624474eaf2b7cb4aa77523, type: 3}
-  - {fileID: 4484664811016999427, guid: 2ad66afa257afee4b9e8a17c9223078a, type: 3}
-  - {fileID: 4154224636406750366, guid: 1905b38ab5f09d342a16c09f5bce7f88, type: 3}
+  treats: []
+  foodLoc: []
+  spawnRate: 5
+--- !u!1 &1648680737
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1648680738}
+  - component: {fileID: 1648680740}
+  - component: {fileID: 1648680739}
+  m_Layer: 0
+  m_Name: Treasure4
+  m_TagString: treasure
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1648680738
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1648680737}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -6.14, y: 4.17, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 715659360}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1648680739
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1648680737}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!114 &1648680740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1648680737}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ddd23a132117e146a687632c16f7e4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  treasureLoc:
+  - {fileID: 1101486039}
+  - {fileID: 1149885771}
+  - {fileID: 780751397}
+  - {fileID: 1648680738}
+  - {fileID: 367135013}
+  treasures: {fileID: 2316485678357962322, guid: 9beac4d57edcfdc46af07b5e3c9356fa, type: 3}
 --- !u!1 &1689268054
 GameObject:
   m_ObjectHideFlags: 0
@@ -2407,24 +2733,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 096aaea0a58785c43b6c59e81f9999a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  food:
-  - {fileID: 5651011412211922094, guid: 5462ec42bb4328042a68ae17f4ed4998, type: 3}
-  - {fileID: 3898556357762758839, guid: 9fb6759901c70f74ca5d7b71246683c3, type: 3}
-  - {fileID: 4178548119596189774, guid: 4f78e7402e35ea84ea4bdcb1b38f1789, type: 3}
-  - {fileID: 6821666823914569798, guid: 21e59c87d365ad8459037c44ef298121, type: 3}
-  - {fileID: 7320273620673604068, guid: 34bb3d5a275874846b0bf22be46633ca, type: 3}
-  - {fileID: 6582207848106062671, guid: a8f87f7f1fb0d4c4486fa4f0ce82fe29, type: 3}
-  - {fileID: 5851178165493276646, guid: 4b73099b399941544a7858f46b9a4489, type: 3}
-  - {fileID: 853382601684717734, guid: 3619543606e9c864c8a366c961d8894a, type: 3}
-  - {fileID: 5815576139884890781, guid: 3d8cc2dd3680e6c4d864f429d2cb6693, type: 3}
-  - {fileID: 8496003529976344465, guid: aa7aa99c739bb674f856418c4d094da2, type: 3}
-  - {fileID: 1582905363669223844, guid: 6966cad72a0be0a409cfd631bb818a3b, type: 3}
-  - {fileID: 8448081308628344717, guid: aa6fc60a7b91e1b478a5d2e6b9f53184, type: 3}
-  - {fileID: 3738582911905855285, guid: b3dfdbf5d6cded445ab1559185e20f92, type: 3}
-  - {fileID: 8350016510529040427, guid: dad0fa19f4c57dd41bf16dd59a5dad9e, type: 3}
-  - {fileID: 1255808577136441329, guid: e96ae258c2624474eaf2b7cb4aa77523, type: 3}
-  - {fileID: 4484664811016999427, guid: 2ad66afa257afee4b9e8a17c9223078a, type: 3}
-  - {fileID: 4154224636406750366, guid: 1905b38ab5f09d342a16c09f5bce7f88, type: 3}
+  treats: []
+  foodLoc: []
+  spawnRate: 5
 --- !u!1 &1690369033
 GameObject:
   m_ObjectHideFlags: 0
@@ -6292,24 +6603,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 096aaea0a58785c43b6c59e81f9999a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  food:
-  - {fileID: 5651011412211922094, guid: 5462ec42bb4328042a68ae17f4ed4998, type: 3}
-  - {fileID: 3898556357762758839, guid: 9fb6759901c70f74ca5d7b71246683c3, type: 3}
-  - {fileID: 4178548119596189774, guid: 4f78e7402e35ea84ea4bdcb1b38f1789, type: 3}
-  - {fileID: 6821666823914569798, guid: 21e59c87d365ad8459037c44ef298121, type: 3}
-  - {fileID: 7320273620673604068, guid: 34bb3d5a275874846b0bf22be46633ca, type: 3}
-  - {fileID: 6582207848106062671, guid: a8f87f7f1fb0d4c4486fa4f0ce82fe29, type: 3}
-  - {fileID: 5851178165493276646, guid: 4b73099b399941544a7858f46b9a4489, type: 3}
-  - {fileID: 853382601684717734, guid: 3619543606e9c864c8a366c961d8894a, type: 3}
-  - {fileID: 5815576139884890781, guid: 3d8cc2dd3680e6c4d864f429d2cb6693, type: 3}
-  - {fileID: 8496003529976344465, guid: aa7aa99c739bb674f856418c4d094da2, type: 3}
-  - {fileID: 1582905363669223844, guid: 6966cad72a0be0a409cfd631bb818a3b, type: 3}
-  - {fileID: 8448081308628344717, guid: aa6fc60a7b91e1b478a5d2e6b9f53184, type: 3}
-  - {fileID: 3738582911905855285, guid: b3dfdbf5d6cded445ab1559185e20f92, type: 3}
-  - {fileID: 8350016510529040427, guid: dad0fa19f4c57dd41bf16dd59a5dad9e, type: 3}
-  - {fileID: 1255808577136441329, guid: e96ae258c2624474eaf2b7cb4aa77523, type: 3}
-  - {fileID: 4484664811016999427, guid: 2ad66afa257afee4b9e8a17c9223078a, type: 3}
-  - {fileID: 4154224636406750366, guid: 1905b38ab5f09d342a16c09f5bce7f88, type: 3}
+  treats: []
+  foodLoc: []
+  spawnRate: 5
 --- !u!1 &2063209645
 GameObject:
   m_ObjectHideFlags: 0
@@ -6486,3 +6782,4 @@ SceneRoots:
   - {fileID: 597769362}
   - {fileID: 1252585908}
   - {fileID: 81892342}
+  - {fileID: 715659360}
