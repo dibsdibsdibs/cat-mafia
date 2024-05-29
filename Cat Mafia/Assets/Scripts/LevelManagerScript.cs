@@ -9,10 +9,11 @@ public class LevelManagerScript : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI timeText;
     [SerializeField] float totalTime;
-    [SerializeField] GameObject foodBar;
+    [SerializeField] public GameObject foodBar;
     [SerializeField] private FoodBarScript foodBarScript;
     [SerializeField] public bool treasureCollected = false;
     [SerializeField] public string nextScene;
+    [SerializeField] public GameObject failedDialogue;
 
     void Start()
     {
@@ -56,13 +57,12 @@ public class LevelManagerScript : MonoBehaviour
             Debug.Log("Received value" + finishedFoodCollection);
             NextScene();
         }else{
-            RestartScene();
+            FailedLevel();
         }
     }
 
     private void NextScene()
     {
-        
         SceneManager.LoadScene(nextScene);
     }
 
@@ -70,5 +70,10 @@ public class LevelManagerScript : MonoBehaviour
     {
         Scene currentScene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(currentScene.name);
+    }
+
+    void FailedLevel()
+    {
+        failedDialogue.SetActive(true);
     }
 }
