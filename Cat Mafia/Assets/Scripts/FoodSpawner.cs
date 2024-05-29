@@ -36,8 +36,8 @@ public class FoodSpawner : MonoBehaviour
                 treat.transform.SetParent(randomfoodLoc);
                 i += 1;
 
-            }
-        yield return new WaitForSeconds(Random.Range(3f, 5f));    
+            }    
         }
+        yield return new WaitForSeconds(Random.Range(3f, 5f));
     }
 }
