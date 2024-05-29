@@ -9,10 +9,6 @@ public class BreakableSpawn : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Invoke("Spawn", 5.0f);
-    }
-    void Spawn()
-    {
         StartCoroutine(SpawnBreakable());
     }
 
@@ -21,7 +17,8 @@ public class BreakableSpawn : MonoBehaviour
     {
         while (true)  
         {
-            for (int i = 0; i < 5; i++)
+            int i = 0;
+            while (i < 8)
             {
                 Transform randomBreakableLoc = breakableLoc[Random.Range(0, breakableLoc.Length)];
                 if (randomBreakableLoc.childCount == 0)
@@ -31,11 +28,14 @@ public class BreakableSpawn : MonoBehaviour
                     breakable.transform.SetParent(randomBreakableLoc);
                     StartCoroutine(RemoveBreakable(breakable));
                     i += 1;
-                    yield return new WaitForSeconds(Random.Range(5f, 10f)); 
+                    yield return new WaitForSeconds(1f);
                 }
-                yield return null; 
+                else
+                {
+                    yield return null; 
+                }
             }
-            yield return new WaitForSeconds(Random.Range(5f, 10f));  // Wait before spawning next set of breakables
+            yield return new WaitForSeconds(Random.Range(2f, 5f));  // Wait before spawning next set of breakables
         }   
     }
     IEnumerator RemoveBreakable(GameObject breakable)

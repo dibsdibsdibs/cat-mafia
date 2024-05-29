@@ -6,7 +6,9 @@ public class FoodSpawner : MonoBehaviour
 {
     public GameObject[] treats;
     public Transform[] foodLoc;
-    public int spawnRate = 5;
+    public int spawnRate = 10;
+    public int spawnItem;
+    public bool hasSpawn = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,23 +23,43 @@ public class FoodSpawner : MonoBehaviour
 
     IEnumerator SpawnFood()
     {
-        int i = 0;
-        while (i < spawnRate)
+        while (true)
         {
-            Transform randomfoodLoc = foodLoc[Random.Range(0, foodLoc.Length)];
-            if (randomfoodLoc.childCount != 0)
-            {        
-                yield return null;
-            }
-            else
+            int i = 0;
+            while (i < spawnRate)
             {
-                GameObject randomTreat = treats[Random.Range(0, treats.Length)];
-                GameObject treat = Instantiate(randomTreat, randomfoodLoc.position, Quaternion.identity);
-                treat.transform.SetParent(randomfoodLoc);
-                i += 1;
+                Transform randomfoodLoc = foodLoc[Random.Range(0, foodLoc.Length)];
+                if (randomfoodLoc.childCount != 0)
+                {        
+                    yield return null;
+                }
+                else
+                {
+                    GameObject randomTreat;
+                    spawnItem = Random.Range(0, treats.Length);
+                    if (hasSpawn == false && spawnItem == 17)
+                    {
+                        randomTreat = treats[17];
+                        hasSpawn = true;
+                    }
+                    else
+                    {
+                        spawnItem = Random.Range(0, treats.Length);
+                        if (spawnItem == 17)
+                        {
+                            spawnItem = (spawnItem + 1) % treats.Length;
+                        }
+                        randomTreat = treats[spawnItem];
+                    }
+                    GameObject treat = Instantiate(randomTreat, randomfoodLoc.position, Quaternion.identity);
+                    treat.transform.SetParent(randomfoodLoc);
+                    i += 1;
 
-            }    
+                }    
+            }
+            yield return new WaitForSeconds(Random.Range(5f, 8f));
         }
-        yield return new WaitForSeconds(Random.Range(3f, 5f));
     }
+
 }
+
