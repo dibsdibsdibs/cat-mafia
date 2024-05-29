@@ -41,11 +41,10 @@ public class MainCharacterController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // bool isPauseActive = pauseScreen.activeSelf;
-        // bool isFailedActive = failedScreen.activeSelf;
+        bool isPauseActive = pauseScreen.activeSelf;
+        bool isFailedActive = failedScreen.activeSelf;
 
-        // // if(isPauseActive == false && isFailedActive == false)
-        if(true)
+        if(isPauseActive == false && isFailedActive == false)
         {
         if(Input.GetKey(KeyCode.UpArrow)){
             MoveUp();
