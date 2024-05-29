@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class FoodSpawner : MonoBehaviour
 {
-    public GameObject[] food;
+    public GameObject[] treats;
+    public Transform[] foodLoc;
+    public int spawnRate = 5;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,8 +21,23 @@ public class FoodSpawner : MonoBehaviour
 
     IEnumerator SpawnFood()
     {
-        GameObject randomFood = food[Random.Range(0, food.Length)];
-        Instantiate(randomFood, transform.position, Quaternion.identity);
-        yield return new WaitForSeconds(Random.Range(1f, 3f));
+        int i = 0;
+        while (i < spawnRate)
+        {
+            Transform randomfoodLoc = foodLoc[Random.Range(0, foodLoc.Length)];
+            if (randomfoodLoc.childCount != 0)
+            {        
+                yield return null;
+            }
+            else
+            {
+                GameObject randomTreat = treats[Random.Range(0, treats.Length)];
+                GameObject treat = Instantiate(randomTreat, randomfoodLoc.position, Quaternion.identity);
+                treat.transform.SetParent(randomfoodLoc);
+                i += 1;
+
+            }
+        yield return new WaitForSeconds(Random.Range(3f, 5f));    
+        }
     }
 }

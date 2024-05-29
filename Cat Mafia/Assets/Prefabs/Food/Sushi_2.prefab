@@ -219,5 +219,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Sushi
   isPlayerInRange: 1
-  pickedUpItem: 0
+  pickedUpItem: 1
   itemValue: 0.083333
