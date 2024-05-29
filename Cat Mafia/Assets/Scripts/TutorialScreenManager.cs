@@ -75,7 +75,14 @@ public class TutorialScreenManager : MonoBehaviour
         {
             Debug.Log("Ending tutorial");
             checkDialogue = endTutorialDialogue.GetComponent<DialogueManager>();
-            Invoke("EndTutorial", 1.0f);
+            Invoke("EndTutorial", 5.0f);
+        }
+
+        if(pauseScreen.activeSelf)
+        {
+            characterController.enabled = false;
+        }else{
+            characterController.enabled = true;
         }
     }
 
@@ -106,7 +113,6 @@ public class TutorialScreenManager : MonoBehaviour
 
     void MovementTutorial()
     {
-
         characterController.enabled = true;
         blackPanel.SetActive(false);
         moveDialogue.SetActive(true);
