@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CatFollower3Dialogue : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class CatFollower3Dialogue : MonoBehaviour
     public bool isDone;
     public DialogueManager checkDialogue;
     public float speed = 2f;
+    [SerializeField] public string nextScene;
 
     void Start()
     {   
@@ -35,9 +37,15 @@ public class CatFollower3Dialogue : MonoBehaviour
             transform.position = finalTargetPosition;
         }
     
-        if (isDone)
+        if (checkDialogue.IsDialogueFinished())
         {
-            Cat3Dialogue.SetActive(false); 
+            Cat3Dialogue.SetActive(false);
+            Invoke("NextScene", 1.0f);
         }
+    }
+
+    private void NextScene()
+    {
+        SceneManager.LoadScene(nextScene);
     }
 }

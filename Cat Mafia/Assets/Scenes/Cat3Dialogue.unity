@@ -6519,6 +6519,7 @@ MonoBehaviour:
   isDone: 0
   checkDialogue: {fileID: 1412275667}
   speed: 2
+  nextScene: Cat3Request
 --- !u!95 &1466947190
 Animator:
   serializedVersion: 5
