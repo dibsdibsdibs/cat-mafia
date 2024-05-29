@@ -4,18 +4,20 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CatFollower1Dialogue : MonoBehaviour
 {
-    private Animator animator;
-    public Vector3 targetPosition; 
-    public Vector3 finalTargetPosition;
-    public Vector3 startPosition; 
-    public GameObject Cat1Dialogue;
-    public bool isDone;
-    public bool isInPosition;
-    public DialogueManager checkDialogue;
-    public float speed = 2f;
+    [SerializeField] private Animator animator;
+    [SerializeField] public Vector3 targetPosition; 
+    [SerializeField] public Vector3 finalTargetPosition;
+    [SerializeField] public Vector3 startPosition; 
+    [SerializeField] public GameObject Cat1Dialogue;
+    [SerializeField] public bool isDone;
+    [SerializeField] public bool isInPosition;
+    [SerializeField] public DialogueManager checkDialogue;
+    [SerializeField] public float speed = 2f;
+    [SerializeField] public string nextScene;
 
     void Start()
     {   
@@ -43,7 +45,6 @@ public class CatFollower1Dialogue : MonoBehaviour
         }
         else
         {
-
             animator.SetFloat("moveX", 0);
             animator.SetFloat("moveY", 1f);
             animator.SetBool("isMoving", true);
@@ -56,14 +57,27 @@ public class CatFollower1Dialogue : MonoBehaviour
                 transform.position = finalTargetPosition;
                 
                 Cat1Dialogue.SetActive(true);
+                Invoke("DisableMovement", 1.0f);
             }
         }
-        if (isDone)
+
+        if (checkDialogue.IsDialogueFinished())
         {
-            Cat1Dialogue.SetActive(false); 
+            Cat1Dialogue.SetActive(false);
+            Invoke("NextScene", 1.0f);
         }
     }
     public void OffIsMoving(){
         animator.SetBool("isMoving", false);
+    }
+    
+    void DisableMovement()
+    {
+        animator.enabled = false;
+    }
+
+    private void NextScene()
+    {
+        SceneManager.LoadScene(nextScene);
     }
 }

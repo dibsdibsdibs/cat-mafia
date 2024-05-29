@@ -30,6 +30,7 @@ public class TutorialScreenManager : MonoBehaviour
     [Header("Audio Clips")]
     public AudioClip[] audioClips;
     public int currentAudioIndex = 0;
+    public GameObject backgroundMusicSource;
 
     [Header("Cut Scenes")]
     public GameObject firstEventDialogue;
@@ -54,6 +55,7 @@ public class TutorialScreenManager : MonoBehaviour
     {   
         if(firstEventFinished)
         {
+            Invoke("PlayBGM", audioClips[1].length);
             Invoke("MovementTutorial", audioClips[1].length);
         }
 
@@ -73,7 +75,14 @@ public class TutorialScreenManager : MonoBehaviour
         {
             Debug.Log("Ending tutorial");
             checkDialogue = endTutorialDialogue.GetComponent<DialogueManager>();
-            Invoke("EndTutorial", 1.0f);
+            Invoke("EndTutorial", 5.0f);
+        }
+
+        if(pauseScreen.activeSelf)
+        {
+            characterController.enabled = false;
+        }else{
+            characterController.enabled = true;
         }
     }
 
@@ -145,6 +154,7 @@ public class TutorialScreenManager : MonoBehaviour
         {
             if(itemPickedUp == true)
             {
+                PlayAudio(audioClips[2]);
                 zButtonPressed = true;
             }
         }
@@ -178,7 +188,6 @@ public class TutorialScreenManager : MonoBehaviour
 
     void EndTutorial()
     {
-        characterController.enabled = false;
         endTutorialDialogue.SetActive(true);
         StartCoroutine(CheckEndTutorialDialogue());
     }
@@ -205,5 +214,10 @@ public class TutorialScreenManager : MonoBehaviour
         {
             checkedPause = true;
         }
+    }
+
+    void PlayBGM()
+    {
+        backgroundMusicSource.SetActive(true);
     }
 }
