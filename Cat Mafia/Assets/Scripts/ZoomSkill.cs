@@ -13,6 +13,7 @@ public class CameraZoom : MonoBehaviour
     private float smoothTime = 0.25f;
 
     private bool isCooldown = false;
+    private float zoomCounter=0;
 
     [SerializeField] private Camera cam;
 
@@ -26,7 +27,10 @@ public class CameraZoom : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.D) && !isCooldown)
         {
-            StartCoroutine(ZoomSkill());
+            if (zoomCounter != 2 ){
+                StartCoroutine(ZoomSkill());
+                zoomCounter+=1;
+            }
         }
     }
 
