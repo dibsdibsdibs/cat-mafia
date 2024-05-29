@@ -17,6 +17,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Cat1Request.unity
     guid: ccd2a73ad43a4d04abf2f540b5238a00
+  - enabled: 1
+    path: Assets/Scenes/LivingRoomScene.unity
+    guid: 529a408407fe69c4eb0b6ccd7874e75e
   - enabled: 0
     path: Assets/Scenes/Bathroom.unity
     guid: 4df74b1b0eaf10749a36d3d591d18c8b
