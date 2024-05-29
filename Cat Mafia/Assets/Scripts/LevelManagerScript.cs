@@ -20,7 +20,7 @@ public class LevelManagerScript : MonoBehaviour
     [Header("Owner")]
     [SerializeField] public GameObject ownerClone;
     [SerializeField] public Vector2 spawnPointOwner;
-    public bool treasureCollected;
+    public bool treasureCollected = false;
 
     void Start()
     {
