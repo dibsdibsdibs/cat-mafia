@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEditor;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class CatFollower2Dialogue : MonoBehaviour
 {
     private Animator animator;
@@ -18,6 +18,8 @@ public class CatFollower2Dialogue : MonoBehaviour
 
     public DialogueManager checkDialogue;
     public float speed = 2f;
+    
+    [SerializeField] public string nextScene;
 
     void Start()
     {   
@@ -63,8 +65,17 @@ public class CatFollower2Dialogue : MonoBehaviour
         {
             Cat2Dialogue.SetActive(false); 
         }
+        if (checkDialogue.IsDialogueFinished())
+        {
+            Cat2Dialogue.SetActive(false);
+            Invoke("NextScene", 1.0f);
+        }
     }
     public void OffIsMoving(){
         animator.SetBool("isMoving", false);
+    }
+    private void NextScene()
+    {
+        SceneManager.LoadScene(nextScene);
     }
 }
