@@ -188,7 +188,6 @@ public class TutorialScreenManager : MonoBehaviour
 
     void EndTutorial()
     {
-        characterController.enabled = false;
         endTutorialDialogue.SetActive(true);
         StartCoroutine(CheckEndTutorialDialogue());
     }

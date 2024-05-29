@@ -662,7 +662,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &146906675
 RectTransform:
   m_ObjectHideFlags: 0
@@ -878,8 +878,8 @@ MonoBehaviour:
   foodItem: {fileID: 1250285271}
   checkPauseTutorialFinished: 0
   audioClips:
-  - {fileID: 8300000, guid: 8db3bb9cae2088745a1d3084b03020fd, type: 3}
-  - {fileID: 8300000, guid: c646dee48713ea845af08246a4825865, type: 3}
+  - {fileID: 8300000, guid: 62d848a2eb92e894198819d25d79b5a4, type: 3}
+  - {fileID: 8300000, guid: 62d848a2eb92e894198819d25d79b5a4, type: 3}
   - {fileID: 8300000, guid: 62d848a2eb92e894198819d25d79b5a4, type: 3}
   currentAudioIndex: 0
   backgroundMusicSource: {fileID: 962443424}
