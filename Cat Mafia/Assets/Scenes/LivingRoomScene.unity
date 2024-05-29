@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -167,7 +167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 096aaea0a58785c43b6c59e81f9999a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  food:
+  treats:
   - {fileID: 5651011412211922094, guid: 5462ec42bb4328042a68ae17f4ed4998, type: 3}
   - {fileID: 3898556357762758839, guid: 9fb6759901c70f74ca5d7b71246683c3, type: 3}
   - {fileID: 4178548119596189774, guid: 4f78e7402e35ea84ea4bdcb1b38f1789, type: 3}
@@ -185,6 +185,23 @@ MonoBehaviour:
   - {fileID: 1255808577136441329, guid: e96ae258c2624474eaf2b7cb4aa77523, type: 3}
   - {fileID: 4484664811016999427, guid: 2ad66afa257afee4b9e8a17c9223078a, type: 3}
   - {fileID: 4154224636406750366, guid: 1905b38ab5f09d342a16c09f5bce7f88, type: 3}
+  foodLoc:
+  - {fileID: 1150742001}
+  - {fileID: 1820462159}
+  - {fileID: 325218804}
+  - {fileID: 1924580023}
+  - {fileID: 1438621823}
+  - {fileID: 752515234}
+  - {fileID: 1270169612}
+  - {fileID: 2145062586}
+  - {fileID: 2119231878}
+  - {fileID: 2139292022}
+  - {fileID: 344198099}
+  - {fileID: 1469764101}
+  - {fileID: 1505430822}
+  - {fileID: 403598404}
+  - {fileID: 560748076}
+  spawnRate: 5
 --- !u!1 &344198098
 GameObject:
   m_ObjectHideFlags: 0
@@ -229,7 +246,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 096aaea0a58785c43b6c59e81f9999a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  food:
+  treats:
   - {fileID: 5651011412211922094, guid: 5462ec42bb4328042a68ae17f4ed4998, type: 3}
   - {fileID: 3898556357762758839, guid: 9fb6759901c70f74ca5d7b71246683c3, type: 3}
   - {fileID: 4178548119596189774, guid: 4f78e7402e35ea84ea4bdcb1b38f1789, type: 3}
@@ -247,6 +264,23 @@ MonoBehaviour:
   - {fileID: 1255808577136441329, guid: e96ae258c2624474eaf2b7cb4aa77523, type: 3}
   - {fileID: 4484664811016999427, guid: 2ad66afa257afee4b9e8a17c9223078a, type: 3}
   - {fileID: 4154224636406750366, guid: 1905b38ab5f09d342a16c09f5bce7f88, type: 3}
+  foodLoc:
+  - {fileID: 1150742001}
+  - {fileID: 1820462159}
+  - {fileID: 325218804}
+  - {fileID: 1924580023}
+  - {fileID: 1438621823}
+  - {fileID: 752515234}
+  - {fileID: 1270169612}
+  - {fileID: 2145062586}
+  - {fileID: 2119231878}
+  - {fileID: 2139292022}
+  - {fileID: 344198099}
+  - {fileID: 1469764101}
+  - {fileID: 1505430822}
+  - {fileID: 403598404}
+  - {fileID: 560748076}
+  spawnRate: 5
 --- !u!1 &403598403
 GameObject:
   m_ObjectHideFlags: 0
@@ -291,7 +325,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 096aaea0a58785c43b6c59e81f9999a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  food:
+  treats:
   - {fileID: 5651011412211922094, guid: 5462ec42bb4328042a68ae17f4ed4998, type: 3}
   - {fileID: 3898556357762758839, guid: 9fb6759901c70f74ca5d7b71246683c3, type: 3}
   - {fileID: 4178548119596189774, guid: 4f78e7402e35ea84ea4bdcb1b38f1789, type: 3}
@@ -309,6 +343,23 @@ MonoBehaviour:
   - {fileID: 1255808577136441329, guid: e96ae258c2624474eaf2b7cb4aa77523, type: 3}
   - {fileID: 4484664811016999427, guid: 2ad66afa257afee4b9e8a17c9223078a, type: 3}
   - {fileID: 4154224636406750366, guid: 1905b38ab5f09d342a16c09f5bce7f88, type: 3}
+  foodLoc:
+  - {fileID: 1150742001}
+  - {fileID: 1820462159}
+  - {fileID: 325218804}
+  - {fileID: 1924580023}
+  - {fileID: 1438621823}
+  - {fileID: 752515234}
+  - {fileID: 1270169612}
+  - {fileID: 2145062586}
+  - {fileID: 2119231878}
+  - {fileID: 2139292022}
+  - {fileID: 344198099}
+  - {fileID: 1469764101}
+  - {fileID: 1505430822}
+  - {fileID: 403598404}
+  - {fileID: 560748076}
+  spawnRate: 5
 --- !u!1 &429158079
 GameObject:
   m_ObjectHideFlags: 0
@@ -400,7 +451,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 096aaea0a58785c43b6c59e81f9999a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  food:
+  treats:
   - {fileID: 5651011412211922094, guid: 5462ec42bb4328042a68ae17f4ed4998, type: 3}
   - {fileID: 3898556357762758839, guid: 9fb6759901c70f74ca5d7b71246683c3, type: 3}
   - {fileID: 4178548119596189774, guid: 4f78e7402e35ea84ea4bdcb1b38f1789, type: 3}
@@ -418,6 +469,23 @@ MonoBehaviour:
   - {fileID: 1255808577136441329, guid: e96ae258c2624474eaf2b7cb4aa77523, type: 3}
   - {fileID: 4484664811016999427, guid: 2ad66afa257afee4b9e8a17c9223078a, type: 3}
   - {fileID: 4154224636406750366, guid: 1905b38ab5f09d342a16c09f5bce7f88, type: 3}
+  foodLoc:
+  - {fileID: 1150742001}
+  - {fileID: 1820462159}
+  - {fileID: 325218804}
+  - {fileID: 1924580023}
+  - {fileID: 1438621823}
+  - {fileID: 752515234}
+  - {fileID: 1270169612}
+  - {fileID: 2145062586}
+  - {fileID: 2119231878}
+  - {fileID: 2139292022}
+  - {fileID: 344198099}
+  - {fileID: 1469764101}
+  - {fileID: 1505430822}
+  - {fileID: 403598404}
+  - {fileID: 560748076}
+  spawnRate: 5
 --- !u!1 &566331002
 GameObject:
   m_ObjectHideFlags: 0
@@ -713,7 +781,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 096aaea0a58785c43b6c59e81f9999a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  food:
+  treats:
   - {fileID: 5651011412211922094, guid: 5462ec42bb4328042a68ae17f4ed4998, type: 3}
   - {fileID: 3898556357762758839, guid: 9fb6759901c70f74ca5d7b71246683c3, type: 3}
   - {fileID: 4178548119596189774, guid: 4f78e7402e35ea84ea4bdcb1b38f1789, type: 3}
@@ -731,6 +799,23 @@ MonoBehaviour:
   - {fileID: 1255808577136441329, guid: e96ae258c2624474eaf2b7cb4aa77523, type: 3}
   - {fileID: 4484664811016999427, guid: 2ad66afa257afee4b9e8a17c9223078a, type: 3}
   - {fileID: 4154224636406750366, guid: 1905b38ab5f09d342a16c09f5bce7f88, type: 3}
+  foodLoc:
+  - {fileID: 1150742001}
+  - {fileID: 1820462159}
+  - {fileID: 325218804}
+  - {fileID: 1924580023}
+  - {fileID: 1438621823}
+  - {fileID: 752515234}
+  - {fileID: 1270169612}
+  - {fileID: 2145062586}
+  - {fileID: 2119231878}
+  - {fileID: 2139292022}
+  - {fileID: 344198099}
+  - {fileID: 1469764101}
+  - {fileID: 1505430822}
+  - {fileID: 403598404}
+  - {fileID: 560748076}
+  spawnRate: 5
 --- !u!1001 &956803513
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -963,7 +1048,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 096aaea0a58785c43b6c59e81f9999a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  food:
+  treats:
   - {fileID: 5651011412211922094, guid: 5462ec42bb4328042a68ae17f4ed4998, type: 3}
   - {fileID: 3898556357762758839, guid: 9fb6759901c70f74ca5d7b71246683c3, type: 3}
   - {fileID: 4178548119596189774, guid: 4f78e7402e35ea84ea4bdcb1b38f1789, type: 3}
@@ -981,6 +1066,23 @@ MonoBehaviour:
   - {fileID: 1255808577136441329, guid: e96ae258c2624474eaf2b7cb4aa77523, type: 3}
   - {fileID: 4484664811016999427, guid: 2ad66afa257afee4b9e8a17c9223078a, type: 3}
   - {fileID: 4154224636406750366, guid: 1905b38ab5f09d342a16c09f5bce7f88, type: 3}
+  foodLoc:
+  - {fileID: 1150742001}
+  - {fileID: 1820462159}
+  - {fileID: 325218804}
+  - {fileID: 1924580023}
+  - {fileID: 1438621823}
+  - {fileID: 752515234}
+  - {fileID: 1270169612}
+  - {fileID: 2145062586}
+  - {fileID: 2119231878}
+  - {fileID: 2139292022}
+  - {fileID: 344198099}
+  - {fileID: 1469764101}
+  - {fileID: 1505430822}
+  - {fileID: 403598404}
+  - {fileID: 560748076}
+  spawnRate: 5
 --- !u!1 &1200489572
 GameObject:
   m_ObjectHideFlags: 0
@@ -1351,7 +1453,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 096aaea0a58785c43b6c59e81f9999a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  food:
+  treats:
   - {fileID: 5651011412211922094, guid: 5462ec42bb4328042a68ae17f4ed4998, type: 3}
   - {fileID: 3898556357762758839, guid: 9fb6759901c70f74ca5d7b71246683c3, type: 3}
   - {fileID: 4178548119596189774, guid: 4f78e7402e35ea84ea4bdcb1b38f1789, type: 3}
@@ -1369,6 +1471,23 @@ MonoBehaviour:
   - {fileID: 1255808577136441329, guid: e96ae258c2624474eaf2b7cb4aa77523, type: 3}
   - {fileID: 4484664811016999427, guid: 2ad66afa257afee4b9e8a17c9223078a, type: 3}
   - {fileID: 4154224636406750366, guid: 1905b38ab5f09d342a16c09f5bce7f88, type: 3}
+  foodLoc:
+  - {fileID: 1150742001}
+  - {fileID: 1820462159}
+  - {fileID: 325218804}
+  - {fileID: 1924580023}
+  - {fileID: 1438621823}
+  - {fileID: 752515234}
+  - {fileID: 1270169612}
+  - {fileID: 2145062586}
+  - {fileID: 2119231878}
+  - {fileID: 2139292022}
+  - {fileID: 344198099}
+  - {fileID: 1469764101}
+  - {fileID: 1505430822}
+  - {fileID: 403598404}
+  - {fileID: 560748076}
+  spawnRate: 5
 --- !u!1 &1322109445
 GameObject:
   m_ObjectHideFlags: 0
@@ -2802,7 +2921,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 096aaea0a58785c43b6c59e81f9999a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  food:
+  treats:
   - {fileID: 5651011412211922094, guid: 5462ec42bb4328042a68ae17f4ed4998, type: 3}
   - {fileID: 3898556357762758839, guid: 9fb6759901c70f74ca5d7b71246683c3, type: 3}
   - {fileID: 4178548119596189774, guid: 4f78e7402e35ea84ea4bdcb1b38f1789, type: 3}
@@ -2820,6 +2939,23 @@ MonoBehaviour:
   - {fileID: 1255808577136441329, guid: e96ae258c2624474eaf2b7cb4aa77523, type: 3}
   - {fileID: 4484664811016999427, guid: 2ad66afa257afee4b9e8a17c9223078a, type: 3}
   - {fileID: 4154224636406750366, guid: 1905b38ab5f09d342a16c09f5bce7f88, type: 3}
+  foodLoc:
+  - {fileID: 1150742001}
+  - {fileID: 1820462159}
+  - {fileID: 325218804}
+  - {fileID: 1924580023}
+  - {fileID: 1438621823}
+  - {fileID: 752515234}
+  - {fileID: 1270169612}
+  - {fileID: 2145062586}
+  - {fileID: 2119231878}
+  - {fileID: 2139292022}
+  - {fileID: 344198099}
+  - {fileID: 1469764101}
+  - {fileID: 1505430822}
+  - {fileID: 403598404}
+  - {fileID: 560748076}
+  spawnRate: 5
 --- !u!1 &1469764100
 GameObject:
   m_ObjectHideFlags: 0
@@ -2864,7 +3000,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 096aaea0a58785c43b6c59e81f9999a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  food:
+  treats:
   - {fileID: 5651011412211922094, guid: 5462ec42bb4328042a68ae17f4ed4998, type: 3}
   - {fileID: 3898556357762758839, guid: 9fb6759901c70f74ca5d7b71246683c3, type: 3}
   - {fileID: 4178548119596189774, guid: 4f78e7402e35ea84ea4bdcb1b38f1789, type: 3}
@@ -2882,6 +3018,23 @@ MonoBehaviour:
   - {fileID: 1255808577136441329, guid: e96ae258c2624474eaf2b7cb4aa77523, type: 3}
   - {fileID: 4484664811016999427, guid: 2ad66afa257afee4b9e8a17c9223078a, type: 3}
   - {fileID: 4154224636406750366, guid: 1905b38ab5f09d342a16c09f5bce7f88, type: 3}
+  foodLoc:
+  - {fileID: 1150742001}
+  - {fileID: 1820462159}
+  - {fileID: 325218804}
+  - {fileID: 1924580023}
+  - {fileID: 1438621823}
+  - {fileID: 752515234}
+  - {fileID: 1270169612}
+  - {fileID: 2145062586}
+  - {fileID: 2119231878}
+  - {fileID: 2139292022}
+  - {fileID: 344198099}
+  - {fileID: 1469764101}
+  - {fileID: 1505430822}
+  - {fileID: 403598404}
+  - {fileID: 560748076}
+  spawnRate: 5
 --- !u!1 &1505430821
 GameObject:
   m_ObjectHideFlags: 0
@@ -2926,7 +3079,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 096aaea0a58785c43b6c59e81f9999a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  food:
+  treats:
   - {fileID: 5651011412211922094, guid: 5462ec42bb4328042a68ae17f4ed4998, type: 3}
   - {fileID: 3898556357762758839, guid: 9fb6759901c70f74ca5d7b71246683c3, type: 3}
   - {fileID: 4178548119596189774, guid: 4f78e7402e35ea84ea4bdcb1b38f1789, type: 3}
@@ -2944,6 +3097,23 @@ MonoBehaviour:
   - {fileID: 1255808577136441329, guid: e96ae258c2624474eaf2b7cb4aa77523, type: 3}
   - {fileID: 4484664811016999427, guid: 2ad66afa257afee4b9e8a17c9223078a, type: 3}
   - {fileID: 4154224636406750366, guid: 1905b38ab5f09d342a16c09f5bce7f88, type: 3}
+  foodLoc:
+  - {fileID: 1150742001}
+  - {fileID: 1820462159}
+  - {fileID: 325218804}
+  - {fileID: 1924580023}
+  - {fileID: 1438621823}
+  - {fileID: 752515234}
+  - {fileID: 1270169612}
+  - {fileID: 2145062586}
+  - {fileID: 2119231878}
+  - {fileID: 2139292022}
+  - {fileID: 344198099}
+  - {fileID: 1469764101}
+  - {fileID: 1505430822}
+  - {fileID: 403598404}
+  - {fileID: 560748076}
+  spawnRate: 5
 --- !u!1 &1717347102
 GameObject:
   m_ObjectHideFlags: 0
@@ -3249,7 +3419,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 096aaea0a58785c43b6c59e81f9999a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  food:
+  treats:
   - {fileID: 5651011412211922094, guid: 5462ec42bb4328042a68ae17f4ed4998, type: 3}
   - {fileID: 3898556357762758839, guid: 9fb6759901c70f74ca5d7b71246683c3, type: 3}
   - {fileID: 4178548119596189774, guid: 4f78e7402e35ea84ea4bdcb1b38f1789, type: 3}
@@ -3267,6 +3437,23 @@ MonoBehaviour:
   - {fileID: 1255808577136441329, guid: e96ae258c2624474eaf2b7cb4aa77523, type: 3}
   - {fileID: 4484664811016999427, guid: 2ad66afa257afee4b9e8a17c9223078a, type: 3}
   - {fileID: 4154224636406750366, guid: 1905b38ab5f09d342a16c09f5bce7f88, type: 3}
+  foodLoc:
+  - {fileID: 1150742001}
+  - {fileID: 1820462159}
+  - {fileID: 325218804}
+  - {fileID: 1924580023}
+  - {fileID: 1438621823}
+  - {fileID: 752515234}
+  - {fileID: 1270169612}
+  - {fileID: 2145062586}
+  - {fileID: 2119231878}
+  - {fileID: 2139292022}
+  - {fileID: 344198099}
+  - {fileID: 1469764101}
+  - {fileID: 1505430822}
+  - {fileID: 403598404}
+  - {fileID: 560748076}
+  spawnRate: 5
 --- !u!1 &1913179968
 GameObject:
   m_ObjectHideFlags: 0
@@ -3415,7 +3602,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 096aaea0a58785c43b6c59e81f9999a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  food:
+  treats:
   - {fileID: 5651011412211922094, guid: 5462ec42bb4328042a68ae17f4ed4998, type: 3}
   - {fileID: 3898556357762758839, guid: 9fb6759901c70f74ca5d7b71246683c3, type: 3}
   - {fileID: 4178548119596189774, guid: 4f78e7402e35ea84ea4bdcb1b38f1789, type: 3}
@@ -3433,6 +3620,23 @@ MonoBehaviour:
   - {fileID: 1255808577136441329, guid: e96ae258c2624474eaf2b7cb4aa77523, type: 3}
   - {fileID: 4484664811016999427, guid: 2ad66afa257afee4b9e8a17c9223078a, type: 3}
   - {fileID: 4154224636406750366, guid: 1905b38ab5f09d342a16c09f5bce7f88, type: 3}
+  foodLoc:
+  - {fileID: 1150742001}
+  - {fileID: 1820462159}
+  - {fileID: 325218804}
+  - {fileID: 1924580023}
+  - {fileID: 1438621823}
+  - {fileID: 752515234}
+  - {fileID: 1270169612}
+  - {fileID: 2145062586}
+  - {fileID: 2119231878}
+  - {fileID: 2139292022}
+  - {fileID: 344198099}
+  - {fileID: 1469764101}
+  - {fileID: 1505430822}
+  - {fileID: 403598404}
+  - {fileID: 560748076}
+  spawnRate: 5
 --- !u!1 &1933302152
 GameObject:
   m_ObjectHideFlags: 0
@@ -9229,7 +9433,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 096aaea0a58785c43b6c59e81f9999a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  food:
+  treats:
   - {fileID: 5651011412211922094, guid: 5462ec42bb4328042a68ae17f4ed4998, type: 3}
   - {fileID: 3898556357762758839, guid: 9fb6759901c70f74ca5d7b71246683c3, type: 3}
   - {fileID: 4178548119596189774, guid: 4f78e7402e35ea84ea4bdcb1b38f1789, type: 3}
@@ -9247,6 +9451,23 @@ MonoBehaviour:
   - {fileID: 1255808577136441329, guid: e96ae258c2624474eaf2b7cb4aa77523, type: 3}
   - {fileID: 4484664811016999427, guid: 2ad66afa257afee4b9e8a17c9223078a, type: 3}
   - {fileID: 4154224636406750366, guid: 1905b38ab5f09d342a16c09f5bce7f88, type: 3}
+  foodLoc:
+  - {fileID: 1150742001}
+  - {fileID: 1820462159}
+  - {fileID: 325218804}
+  - {fileID: 1924580023}
+  - {fileID: 1438621823}
+  - {fileID: 752515234}
+  - {fileID: 1270169612}
+  - {fileID: 2145062586}
+  - {fileID: 2119231878}
+  - {fileID: 2139292022}
+  - {fileID: 344198099}
+  - {fileID: 1469764101}
+  - {fileID: 1505430822}
+  - {fileID: 403598404}
+  - {fileID: 560748076}
+  spawnRate: 5
 --- !u!1 &2139292021
 GameObject:
   m_ObjectHideFlags: 0
@@ -9291,7 +9512,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 096aaea0a58785c43b6c59e81f9999a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  food:
+  treats:
   - {fileID: 5651011412211922094, guid: 5462ec42bb4328042a68ae17f4ed4998, type: 3}
   - {fileID: 3898556357762758839, guid: 9fb6759901c70f74ca5d7b71246683c3, type: 3}
   - {fileID: 4178548119596189774, guid: 4f78e7402e35ea84ea4bdcb1b38f1789, type: 3}
@@ -9309,6 +9530,23 @@ MonoBehaviour:
   - {fileID: 1255808577136441329, guid: e96ae258c2624474eaf2b7cb4aa77523, type: 3}
   - {fileID: 4484664811016999427, guid: 2ad66afa257afee4b9e8a17c9223078a, type: 3}
   - {fileID: 4154224636406750366, guid: 1905b38ab5f09d342a16c09f5bce7f88, type: 3}
+  foodLoc:
+  - {fileID: 1150742001}
+  - {fileID: 1820462159}
+  - {fileID: 325218804}
+  - {fileID: 1924580023}
+  - {fileID: 1438621823}
+  - {fileID: 752515234}
+  - {fileID: 1270169612}
+  - {fileID: 2145062586}
+  - {fileID: 2119231878}
+  - {fileID: 2139292022}
+  - {fileID: 344198099}
+  - {fileID: 1469764101}
+  - {fileID: 1505430822}
+  - {fileID: 403598404}
+  - {fileID: 560748076}
+  spawnRate: 5
 --- !u!1 &2145062585
 GameObject:
   m_ObjectHideFlags: 0
@@ -9353,7 +9591,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 096aaea0a58785c43b6c59e81f9999a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  food:
+  treats:
   - {fileID: 5651011412211922094, guid: 5462ec42bb4328042a68ae17f4ed4998, type: 3}
   - {fileID: 3898556357762758839, guid: 9fb6759901c70f74ca5d7b71246683c3, type: 3}
   - {fileID: 4178548119596189774, guid: 4f78e7402e35ea84ea4bdcb1b38f1789, type: 3}
@@ -9371,6 +9609,23 @@ MonoBehaviour:
   - {fileID: 1255808577136441329, guid: e96ae258c2624474eaf2b7cb4aa77523, type: 3}
   - {fileID: 4484664811016999427, guid: 2ad66afa257afee4b9e8a17c9223078a, type: 3}
   - {fileID: 4154224636406750366, guid: 1905b38ab5f09d342a16c09f5bce7f88, type: 3}
+  foodLoc:
+  - {fileID: 1150742001}
+  - {fileID: 1820462159}
+  - {fileID: 325218804}
+  - {fileID: 1924580023}
+  - {fileID: 1438621823}
+  - {fileID: 752515234}
+  - {fileID: 1270169612}
+  - {fileID: 2145062586}
+  - {fileID: 2119231878}
+  - {fileID: 2139292022}
+  - {fileID: 344198099}
+  - {fileID: 1469764101}
+  - {fileID: 1505430822}
+  - {fileID: 403598404}
+  - {fileID: 560748076}
+  spawnRate: 5
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
