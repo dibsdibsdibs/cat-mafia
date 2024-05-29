@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 8699370994269326653}
   - component: {fileID: 783294374567426126}
   - component: {fileID: 5497126641266876511}
+  - component: {fileID: -4659238091003797734}
   m_Layer: 0
   m_Name: BottleTreasure
-  m_TagString: Untagged
+  m_TagString: Treasure
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -72,8 +73,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1098350269
+  m_SortingLayer: 9
   m_SortingOrder: 2
   m_Sprite: {fileID: -53701164, guid: d8ac7d07f8324ee43bda8a84dd288d2f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -158,3 +159,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &-4659238091003797734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7037079011289520094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b2685181f8f1e645918b428fd482f13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: 
+  isPlayerInRange: 0
+  pickedUpItem: 0
+  itemValue: 0

@@ -10,8 +10,9 @@ public class LevelManagerScript : MonoBehaviour
     [SerializeField] TextMeshProUGUI timeText;
     [SerializeField] float totalTime;
     [SerializeField] public GameObject foodBar;
+    [SerializeField] public GameObject treasure;
     [SerializeField] private FoodBarScript foodBarScript;
-    [SerializeField] public bool treasureCollected = false;
+    [SerializeField] private TreasureInteract treasureInteract;
     [SerializeField] public string nextScene;
     [SerializeField] public GameObject failedDialogue;
     [SerializeField] private FailedLevelScript failedManager;
@@ -19,11 +20,13 @@ public class LevelManagerScript : MonoBehaviour
     [Header("Owner")]
     [SerializeField] public GameObject ownerClone;
     [SerializeField] public Vector2 spawnPointOwner;
+    public bool treasureCollected;
 
     void Start()
     {
         foodBarScript = foodBar.GetComponent<FoodBarScript>();
         failedManager = failedDialogue.GetComponent<FailedLevelScript>();
+        treasureInteract = treasure.GetComponent<TreasureInteract>();
     }
 
     void Update()
@@ -44,10 +47,15 @@ public class LevelManagerScript : MonoBehaviour
         foodBarScript.UpdateBar(itemValue);
         Debug.Log("Food bar value updated");
     }
+    public void UpdateTreasure(bool ispick)
+    {
+        treasureCollected = ispick;
+    }
 
     void CheckScene()
     {
         bool finishedFoodCollection = foodBarScript.FinishedFoodCollection();
+        
 
         if(finishedFoodCollection || treasureCollected)
         {
