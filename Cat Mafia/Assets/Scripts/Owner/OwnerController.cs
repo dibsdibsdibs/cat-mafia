@@ -164,10 +164,12 @@ public class OwnerController : MonoBehaviour
             StartCoroutine(Move());
         }
     }
+
+    // charm
     public void Charm(){
         tempMovementSpeed = movementSpeed;
         movementSpeed = 0;
-        StartCoroutine(StopMovement(2));
+        StartCoroutine(StopMovement(3));
     }
 
     IEnumerator StopMovement(float time){

@@ -26,8 +26,8 @@ public class MainCharacterController : MonoBehaviour
     [SerializeField] private float dashCooldown = 7;
     private bool isDashing = false;
     private bool canDash = true;
-    // charm varaibles
 
+    // charm varaibles
     private Charm charm;
 
 
@@ -36,18 +36,19 @@ public class MainCharacterController : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
+        charm = GetComponent<Charm>();
         boxCollider = GetComponent<BoxCollider2D>();
         pauseManager = pauseScreen.GetComponent<PauseScript>();
-        charm = GetComponent<Charm>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        bool isPauseActive = pauseScreen.activeSelf;
-        bool isFailedActive = failedScreen.activeSelf;
+        // bool isPauseActive = pauseScreen.activeSelf;
+        // bool isFailedActive = failedScreen.activeSelf;
 
-        if(isPauseActive == false && isFailedActive == false)
+        // if(isPauseActive == false && isFailedActive == false)
+        if(true)
         {
         if(Input.GetKey(KeyCode.UpArrow)){
             MoveUp();
@@ -71,10 +72,18 @@ public class MainCharacterController : MonoBehaviour
             SetIsNotMoving();
         }
 
+        // dash
         if(Input.GetKeyDown(KeyCode.Space)){
             if(canDash){
                 isDashing = true;
                 StartCoroutine(PerformDash());
+            }
+        }
+
+        // charm
+        if(Input.GetKeyDown(KeyCode.A)){
+            if(charm){
+                charm.ActivateCharm();
             }
         }
 
