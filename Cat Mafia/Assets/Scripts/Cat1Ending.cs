@@ -38,7 +38,6 @@ public class Cat1Ending : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        string star  = PlayerPrefs.GetString ("star", "2");  
         if (!isInPosition)
         {
             animator.SetFloat("moveX", -1f);
@@ -66,25 +65,20 @@ public class Cat1Ending : MonoBehaviour
                 animator.SetFloat("moveY", 0);
                 OffIsMoving();
                 transform.position = finalTargetPosition;
-
                 Invoke("DisableMovement", 1.0f);
 
-                if (star == "1")
+                if (starRating == 1)
                 {
 
                     star1.SetActive(true);
                     StartCoroutine(Star1Finished());              
 
-                }
-
-                else if (star == "2" )
+                }else if (starRating == 2)
                 {
                     star2.SetActive(true);
                     StartCoroutine(Star2Finished()); 
 
-                }
-
-                else
+                }else
                 {
                     star3.SetActive(true);
                     StartCoroutine(Star3Finished());     
