@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class TreasureSpawner : MonoBehaviour
 {
-    public GameObject[] treasure;
+    public Transform[] treasureLoc; 
+    public GameObject treasures;
+    //public bool hasSpawned = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,6 +16,19 @@ public class TreasureSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //if (hasSpawned == false)
+        //{
+        Transform randomtreasureLoc = treasureLoc[Random.Range(0, treasureLoc.Length)];
+        Instantiate(treasures, randomtreasureLoc.position, Quaternion.identity);
+        //hasSpawned = true;
+        //}
+    }
+
+    public void SpawnTreasure()
+    {
         
     }
+         
+
+
 }
