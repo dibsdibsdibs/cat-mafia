@@ -878,8 +878,8 @@ MonoBehaviour:
   foodItem: {fileID: 1250285271}
   checkPauseTutorialFinished: 0
   audioClips:
-  - {fileID: 8300000, guid: 62d848a2eb92e894198819d25d79b5a4, type: 3}
-  - {fileID: 8300000, guid: 62d848a2eb92e894198819d25d79b5a4, type: 3}
+  - {fileID: 8300000, guid: 8db3bb9cae2088745a1d3084b03020fd, type: 3}
+  - {fileID: 8300000, guid: c646dee48713ea845af08246a4825865, type: 3}
   - {fileID: 8300000, guid: 62d848a2eb92e894198819d25d79b5a4, type: 3}
   currentAudioIndex: 0
   backgroundMusicSource: {fileID: 962443424}
@@ -2081,7 +2081,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 1.14
+  orthographic size: 1.5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
