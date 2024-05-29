@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -214,7 +214,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97930a0eef6bf964999182547ed19984, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  breakable:
+  breakables:
   - {fileID: 907659331751074651, guid: 2d00a32e8069c394ebc2ca2ddfaf39d8, type: 3}
   - {fileID: 3482628367890033872, guid: cc18eae6f3f0c864f8d1f3f1ef0ebbab, type: 3}
   - {fileID: 2786505594979947471, guid: e90a5b695e07d87439856e7e22aee347, type: 3}
@@ -222,6 +222,17 @@ MonoBehaviour:
   - {fileID: 2760823189386471387, guid: a1db8db10a9f0da4e8612c795de9ae4e, type: 3}
   - {fileID: 4994393488943512942, guid: 7a4eaeb33f3021b47b58a0ce002312f5, type: 3}
   - {fileID: 8430668093112651734, guid: 46efddbd67e282249a55343153e77e31, type: 3}
+  breakableLoc:
+  - {fileID: 1001845919}
+  - {fileID: 1385055279}
+  - {fileID: 1459164591}
+  - {fileID: 375544189}
+  - {fileID: 76393371}
+  - {fileID: 611586296}
+  - {fileID: 1588845852}
+  - {fileID: 537288553}
+  - {fileID: 1848233478}
+  - {fileID: 1093104450}
 --- !u!1 &127614118
 GameObject:
   m_ObjectHideFlags: 0
@@ -358,24 +369,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 096aaea0a58785c43b6c59e81f9999a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  food:
-  - {fileID: 5651011412211922094, guid: 5462ec42bb4328042a68ae17f4ed4998, type: 3}
-  - {fileID: 3898556357762758839, guid: 9fb6759901c70f74ca5d7b71246683c3, type: 3}
-  - {fileID: 4178548119596189774, guid: 4f78e7402e35ea84ea4bdcb1b38f1789, type: 3}
-  - {fileID: 6821666823914569798, guid: 21e59c87d365ad8459037c44ef298121, type: 3}
-  - {fileID: 7320273620673604068, guid: 34bb3d5a275874846b0bf22be46633ca, type: 3}
-  - {fileID: 6582207848106062671, guid: a8f87f7f1fb0d4c4486fa4f0ce82fe29, type: 3}
-  - {fileID: 5851178165493276646, guid: 4b73099b399941544a7858f46b9a4489, type: 3}
-  - {fileID: 853382601684717734, guid: 3619543606e9c864c8a366c961d8894a, type: 3}
-  - {fileID: 5815576139884890781, guid: 3d8cc2dd3680e6c4d864f429d2cb6693, type: 3}
-  - {fileID: 8496003529976344465, guid: aa7aa99c739bb674f856418c4d094da2, type: 3}
-  - {fileID: 1582905363669223844, guid: 6966cad72a0be0a409cfd631bb818a3b, type: 3}
-  - {fileID: 8448081308628344717, guid: aa6fc60a7b91e1b478a5d2e6b9f53184, type: 3}
-  - {fileID: 3738582911905855285, guid: b3dfdbf5d6cded445ab1559185e20f92, type: 3}
-  - {fileID: 8350016510529040427, guid: dad0fa19f4c57dd41bf16dd59a5dad9e, type: 3}
-  - {fileID: 1255808577136441329, guid: e96ae258c2624474eaf2b7cb4aa77523, type: 3}
-  - {fileID: 4484664811016999427, guid: 2ad66afa257afee4b9e8a17c9223078a, type: 3}
-  - {fileID: 4154224636406750366, guid: 1905b38ab5f09d342a16c09f5bce7f88, type: 3}
+  treats: []
+  foodLoc: []
+  spawnRate: 5
 --- !u!1 &375544188
 GameObject:
   m_ObjectHideFlags: 0
@@ -420,7 +416,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97930a0eef6bf964999182547ed19984, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  breakable:
+  breakables:
   - {fileID: 907659331751074651, guid: 2d00a32e8069c394ebc2ca2ddfaf39d8, type: 3}
   - {fileID: 3482628367890033872, guid: cc18eae6f3f0c864f8d1f3f1ef0ebbab, type: 3}
   - {fileID: 2786505594979947471, guid: e90a5b695e07d87439856e7e22aee347, type: 3}
@@ -428,6 +424,17 @@ MonoBehaviour:
   - {fileID: 2760823189386471387, guid: a1db8db10a9f0da4e8612c795de9ae4e, type: 3}
   - {fileID: 4994393488943512942, guid: 7a4eaeb33f3021b47b58a0ce002312f5, type: 3}
   - {fileID: 8430668093112651734, guid: 46efddbd67e282249a55343153e77e31, type: 3}
+  breakableLoc:
+  - {fileID: 1001845919}
+  - {fileID: 1385055279}
+  - {fileID: 1459164591}
+  - {fileID: 375544189}
+  - {fileID: 76393371}
+  - {fileID: 611586296}
+  - {fileID: 1588845852}
+  - {fileID: 537288553}
+  - {fileID: 1848233478}
+  - {fileID: 1093104450}
 --- !u!1 &390142077
 GameObject:
   m_ObjectHideFlags: 0
@@ -696,24 +703,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 096aaea0a58785c43b6c59e81f9999a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  food:
-  - {fileID: 5651011412211922094, guid: 5462ec42bb4328042a68ae17f4ed4998, type: 3}
-  - {fileID: 3898556357762758839, guid: 9fb6759901c70f74ca5d7b71246683c3, type: 3}
-  - {fileID: 4178548119596189774, guid: 4f78e7402e35ea84ea4bdcb1b38f1789, type: 3}
-  - {fileID: 6821666823914569798, guid: 21e59c87d365ad8459037c44ef298121, type: 3}
-  - {fileID: 7320273620673604068, guid: 34bb3d5a275874846b0bf22be46633ca, type: 3}
-  - {fileID: 6582207848106062671, guid: a8f87f7f1fb0d4c4486fa4f0ce82fe29, type: 3}
-  - {fileID: 5851178165493276646, guid: 4b73099b399941544a7858f46b9a4489, type: 3}
-  - {fileID: 853382601684717734, guid: 3619543606e9c864c8a366c961d8894a, type: 3}
-  - {fileID: 5815576139884890781, guid: 3d8cc2dd3680e6c4d864f429d2cb6693, type: 3}
-  - {fileID: 8496003529976344465, guid: aa7aa99c739bb674f856418c4d094da2, type: 3}
-  - {fileID: 1582905363669223844, guid: 6966cad72a0be0a409cfd631bb818a3b, type: 3}
-  - {fileID: 8448081308628344717, guid: aa6fc60a7b91e1b478a5d2e6b9f53184, type: 3}
-  - {fileID: 3738582911905855285, guid: b3dfdbf5d6cded445ab1559185e20f92, type: 3}
-  - {fileID: 8350016510529040427, guid: dad0fa19f4c57dd41bf16dd59a5dad9e, type: 3}
-  - {fileID: 1255808577136441329, guid: e96ae258c2624474eaf2b7cb4aa77523, type: 3}
-  - {fileID: 4484664811016999427, guid: 2ad66afa257afee4b9e8a17c9223078a, type: 3}
-  - {fileID: 4154224636406750366, guid: 1905b38ab5f09d342a16c09f5bce7f88, type: 3}
+  treats: []
+  foodLoc: []
+  spawnRate: 5
 --- !u!1 &488555409
 GameObject:
   m_ObjectHideFlags: 0
@@ -892,7 +884,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97930a0eef6bf964999182547ed19984, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  breakable:
+  breakables:
   - {fileID: 907659331751074651, guid: 2d00a32e8069c394ebc2ca2ddfaf39d8, type: 3}
   - {fileID: 3482628367890033872, guid: cc18eae6f3f0c864f8d1f3f1ef0ebbab, type: 3}
   - {fileID: 2786505594979947471, guid: e90a5b695e07d87439856e7e22aee347, type: 3}
@@ -900,6 +892,17 @@ MonoBehaviour:
   - {fileID: 2760823189386471387, guid: a1db8db10a9f0da4e8612c795de9ae4e, type: 3}
   - {fileID: 4994393488943512942, guid: 7a4eaeb33f3021b47b58a0ce002312f5, type: 3}
   - {fileID: 8430668093112651734, guid: 46efddbd67e282249a55343153e77e31, type: 3}
+  breakableLoc:
+  - {fileID: 1001845919}
+  - {fileID: 1385055279}
+  - {fileID: 1459164591}
+  - {fileID: 375544189}
+  - {fileID: 76393371}
+  - {fileID: 611586296}
+  - {fileID: 1588845852}
+  - {fileID: 537288553}
+  - {fileID: 1848233478}
+  - {fileID: 1093104450}
 --- !u!1 &539273502
 GameObject:
   m_ObjectHideFlags: 0
@@ -944,24 +947,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 096aaea0a58785c43b6c59e81f9999a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  food:
-  - {fileID: 5651011412211922094, guid: 5462ec42bb4328042a68ae17f4ed4998, type: 3}
-  - {fileID: 3898556357762758839, guid: 9fb6759901c70f74ca5d7b71246683c3, type: 3}
-  - {fileID: 4178548119596189774, guid: 4f78e7402e35ea84ea4bdcb1b38f1789, type: 3}
-  - {fileID: 6821666823914569798, guid: 21e59c87d365ad8459037c44ef298121, type: 3}
-  - {fileID: 7320273620673604068, guid: 34bb3d5a275874846b0bf22be46633ca, type: 3}
-  - {fileID: 6582207848106062671, guid: a8f87f7f1fb0d4c4486fa4f0ce82fe29, type: 3}
-  - {fileID: 5851178165493276646, guid: 4b73099b399941544a7858f46b9a4489, type: 3}
-  - {fileID: 853382601684717734, guid: 3619543606e9c864c8a366c961d8894a, type: 3}
-  - {fileID: 5815576139884890781, guid: 3d8cc2dd3680e6c4d864f429d2cb6693, type: 3}
-  - {fileID: 8496003529976344465, guid: aa7aa99c739bb674f856418c4d094da2, type: 3}
-  - {fileID: 1582905363669223844, guid: 6966cad72a0be0a409cfd631bb818a3b, type: 3}
-  - {fileID: 8448081308628344717, guid: aa6fc60a7b91e1b478a5d2e6b9f53184, type: 3}
-  - {fileID: 3738582911905855285, guid: b3dfdbf5d6cded445ab1559185e20f92, type: 3}
-  - {fileID: 8350016510529040427, guid: dad0fa19f4c57dd41bf16dd59a5dad9e, type: 3}
-  - {fileID: 1255808577136441329, guid: e96ae258c2624474eaf2b7cb4aa77523, type: 3}
-  - {fileID: 4484664811016999427, guid: 2ad66afa257afee4b9e8a17c9223078a, type: 3}
-  - {fileID: 4154224636406750366, guid: 1905b38ab5f09d342a16c09f5bce7f88, type: 3}
+  treats: []
+  foodLoc: []
+  spawnRate: 5
 --- !u!1 &568937361
 GameObject:
   m_ObjectHideFlags: 0
@@ -1139,7 +1127,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97930a0eef6bf964999182547ed19984, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  breakable:
+  breakables:
   - {fileID: 907659331751074651, guid: 2d00a32e8069c394ebc2ca2ddfaf39d8, type: 3}
   - {fileID: 3482628367890033872, guid: cc18eae6f3f0c864f8d1f3f1ef0ebbab, type: 3}
   - {fileID: 2786505594979947471, guid: e90a5b695e07d87439856e7e22aee347, type: 3}
@@ -1147,6 +1135,17 @@ MonoBehaviour:
   - {fileID: 2760823189386471387, guid: a1db8db10a9f0da4e8612c795de9ae4e, type: 3}
   - {fileID: 4994393488943512942, guid: 7a4eaeb33f3021b47b58a0ce002312f5, type: 3}
   - {fileID: 8430668093112651734, guid: 46efddbd67e282249a55343153e77e31, type: 3}
+  breakableLoc:
+  - {fileID: 1001845919}
+  - {fileID: 1385055279}
+  - {fileID: 1459164591}
+  - {fileID: 375544189}
+  - {fileID: 76393371}
+  - {fileID: 611586296}
+  - {fileID: 1588845852}
+  - {fileID: 537288553}
+  - {fileID: 1848233478}
+  - {fileID: 1093104450}
 --- !u!1 &616953530
 GameObject:
   m_ObjectHideFlags: 0
@@ -1191,24 +1190,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 096aaea0a58785c43b6c59e81f9999a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  food:
-  - {fileID: 5651011412211922094, guid: 5462ec42bb4328042a68ae17f4ed4998, type: 3}
-  - {fileID: 3898556357762758839, guid: 9fb6759901c70f74ca5d7b71246683c3, type: 3}
-  - {fileID: 4178548119596189774, guid: 4f78e7402e35ea84ea4bdcb1b38f1789, type: 3}
-  - {fileID: 6821666823914569798, guid: 21e59c87d365ad8459037c44ef298121, type: 3}
-  - {fileID: 7320273620673604068, guid: 34bb3d5a275874846b0bf22be46633ca, type: 3}
-  - {fileID: 6582207848106062671, guid: a8f87f7f1fb0d4c4486fa4f0ce82fe29, type: 3}
-  - {fileID: 5851178165493276646, guid: 4b73099b399941544a7858f46b9a4489, type: 3}
-  - {fileID: 853382601684717734, guid: 3619543606e9c864c8a366c961d8894a, type: 3}
-  - {fileID: 5815576139884890781, guid: 3d8cc2dd3680e6c4d864f429d2cb6693, type: 3}
-  - {fileID: 8496003529976344465, guid: aa7aa99c739bb674f856418c4d094da2, type: 3}
-  - {fileID: 1582905363669223844, guid: 6966cad72a0be0a409cfd631bb818a3b, type: 3}
-  - {fileID: 8448081308628344717, guid: aa6fc60a7b91e1b478a5d2e6b9f53184, type: 3}
-  - {fileID: 3738582911905855285, guid: b3dfdbf5d6cded445ab1559185e20f92, type: 3}
-  - {fileID: 8350016510529040427, guid: dad0fa19f4c57dd41bf16dd59a5dad9e, type: 3}
-  - {fileID: 1255808577136441329, guid: e96ae258c2624474eaf2b7cb4aa77523, type: 3}
-  - {fileID: 4484664811016999427, guid: 2ad66afa257afee4b9e8a17c9223078a, type: 3}
-  - {fileID: 4154224636406750366, guid: 1905b38ab5f09d342a16c09f5bce7f88, type: 3}
+  treats: []
+  foodLoc: []
+  spawnRate: 5
 --- !u!1 &623854033
 GameObject:
   m_ObjectHideFlags: 0
@@ -6162,24 +6146,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 096aaea0a58785c43b6c59e81f9999a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  food:
-  - {fileID: 5651011412211922094, guid: 5462ec42bb4328042a68ae17f4ed4998, type: 3}
-  - {fileID: 3898556357762758839, guid: 9fb6759901c70f74ca5d7b71246683c3, type: 3}
-  - {fileID: 4178548119596189774, guid: 4f78e7402e35ea84ea4bdcb1b38f1789, type: 3}
-  - {fileID: 6821666823914569798, guid: 21e59c87d365ad8459037c44ef298121, type: 3}
-  - {fileID: 7320273620673604068, guid: 34bb3d5a275874846b0bf22be46633ca, type: 3}
-  - {fileID: 6582207848106062671, guid: a8f87f7f1fb0d4c4486fa4f0ce82fe29, type: 3}
-  - {fileID: 5851178165493276646, guid: 4b73099b399941544a7858f46b9a4489, type: 3}
-  - {fileID: 853382601684717734, guid: 3619543606e9c864c8a366c961d8894a, type: 3}
-  - {fileID: 5815576139884890781, guid: 3d8cc2dd3680e6c4d864f429d2cb6693, type: 3}
-  - {fileID: 8496003529976344465, guid: aa7aa99c739bb674f856418c4d094da2, type: 3}
-  - {fileID: 1582905363669223844, guid: 6966cad72a0be0a409cfd631bb818a3b, type: 3}
-  - {fileID: 8448081308628344717, guid: aa6fc60a7b91e1b478a5d2e6b9f53184, type: 3}
-  - {fileID: 3738582911905855285, guid: b3dfdbf5d6cded445ab1559185e20f92, type: 3}
-  - {fileID: 8350016510529040427, guid: dad0fa19f4c57dd41bf16dd59a5dad9e, type: 3}
-  - {fileID: 1255808577136441329, guid: e96ae258c2624474eaf2b7cb4aa77523, type: 3}
-  - {fileID: 4484664811016999427, guid: 2ad66afa257afee4b9e8a17c9223078a, type: 3}
-  - {fileID: 4154224636406750366, guid: 1905b38ab5f09d342a16c09f5bce7f88, type: 3}
+  treats: []
+  foodLoc: []
+  spawnRate: 5
 --- !u!1 &919301651
 GameObject:
   m_ObjectHideFlags: 0
@@ -6224,24 +6193,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 096aaea0a58785c43b6c59e81f9999a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  food:
-  - {fileID: 5651011412211922094, guid: 5462ec42bb4328042a68ae17f4ed4998, type: 3}
-  - {fileID: 3898556357762758839, guid: 9fb6759901c70f74ca5d7b71246683c3, type: 3}
-  - {fileID: 4178548119596189774, guid: 4f78e7402e35ea84ea4bdcb1b38f1789, type: 3}
-  - {fileID: 6821666823914569798, guid: 21e59c87d365ad8459037c44ef298121, type: 3}
-  - {fileID: 7320273620673604068, guid: 34bb3d5a275874846b0bf22be46633ca, type: 3}
-  - {fileID: 6582207848106062671, guid: a8f87f7f1fb0d4c4486fa4f0ce82fe29, type: 3}
-  - {fileID: 5851178165493276646, guid: 4b73099b399941544a7858f46b9a4489, type: 3}
-  - {fileID: 853382601684717734, guid: 3619543606e9c864c8a366c961d8894a, type: 3}
-  - {fileID: 5815576139884890781, guid: 3d8cc2dd3680e6c4d864f429d2cb6693, type: 3}
-  - {fileID: 8496003529976344465, guid: aa7aa99c739bb674f856418c4d094da2, type: 3}
-  - {fileID: 1582905363669223844, guid: 6966cad72a0be0a409cfd631bb818a3b, type: 3}
-  - {fileID: 8448081308628344717, guid: aa6fc60a7b91e1b478a5d2e6b9f53184, type: 3}
-  - {fileID: 3738582911905855285, guid: b3dfdbf5d6cded445ab1559185e20f92, type: 3}
-  - {fileID: 8350016510529040427, guid: dad0fa19f4c57dd41bf16dd59a5dad9e, type: 3}
-  - {fileID: 1255808577136441329, guid: e96ae258c2624474eaf2b7cb4aa77523, type: 3}
-  - {fileID: 4484664811016999427, guid: 2ad66afa257afee4b9e8a17c9223078a, type: 3}
-  - {fileID: 4154224636406750366, guid: 1905b38ab5f09d342a16c09f5bce7f88, type: 3}
+  treats: []
+  foodLoc: []
+  spawnRate: 5
 --- !u!1 &938440839
 GameObject:
   m_ObjectHideFlags: 0
@@ -6286,24 +6240,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 096aaea0a58785c43b6c59e81f9999a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  food:
-  - {fileID: 5651011412211922094, guid: 5462ec42bb4328042a68ae17f4ed4998, type: 3}
-  - {fileID: 3898556357762758839, guid: 9fb6759901c70f74ca5d7b71246683c3, type: 3}
-  - {fileID: 4178548119596189774, guid: 4f78e7402e35ea84ea4bdcb1b38f1789, type: 3}
-  - {fileID: 6821666823914569798, guid: 21e59c87d365ad8459037c44ef298121, type: 3}
-  - {fileID: 7320273620673604068, guid: 34bb3d5a275874846b0bf22be46633ca, type: 3}
-  - {fileID: 6582207848106062671, guid: a8f87f7f1fb0d4c4486fa4f0ce82fe29, type: 3}
-  - {fileID: 5851178165493276646, guid: 4b73099b399941544a7858f46b9a4489, type: 3}
-  - {fileID: 853382601684717734, guid: 3619543606e9c864c8a366c961d8894a, type: 3}
-  - {fileID: 5815576139884890781, guid: 3d8cc2dd3680e6c4d864f429d2cb6693, type: 3}
-  - {fileID: 8496003529976344465, guid: aa7aa99c739bb674f856418c4d094da2, type: 3}
-  - {fileID: 1582905363669223844, guid: 6966cad72a0be0a409cfd631bb818a3b, type: 3}
-  - {fileID: 8448081308628344717, guid: aa6fc60a7b91e1b478a5d2e6b9f53184, type: 3}
-  - {fileID: 3738582911905855285, guid: b3dfdbf5d6cded445ab1559185e20f92, type: 3}
-  - {fileID: 8350016510529040427, guid: dad0fa19f4c57dd41bf16dd59a5dad9e, type: 3}
-  - {fileID: 1255808577136441329, guid: e96ae258c2624474eaf2b7cb4aa77523, type: 3}
-  - {fileID: 4484664811016999427, guid: 2ad66afa257afee4b9e8a17c9223078a, type: 3}
-  - {fileID: 4154224636406750366, guid: 1905b38ab5f09d342a16c09f5bce7f88, type: 3}
+  treats: []
+  foodLoc: []
+  spawnRate: 5
 --- !u!1 &983625355
 GameObject:
   m_ObjectHideFlags: 0
@@ -6348,24 +6287,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 096aaea0a58785c43b6c59e81f9999a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  food:
-  - {fileID: 5651011412211922094, guid: 5462ec42bb4328042a68ae17f4ed4998, type: 3}
-  - {fileID: 3898556357762758839, guid: 9fb6759901c70f74ca5d7b71246683c3, type: 3}
-  - {fileID: 4178548119596189774, guid: 4f78e7402e35ea84ea4bdcb1b38f1789, type: 3}
-  - {fileID: 6821666823914569798, guid: 21e59c87d365ad8459037c44ef298121, type: 3}
-  - {fileID: 7320273620673604068, guid: 34bb3d5a275874846b0bf22be46633ca, type: 3}
-  - {fileID: 6582207848106062671, guid: a8f87f7f1fb0d4c4486fa4f0ce82fe29, type: 3}
-  - {fileID: 5851178165493276646, guid: 4b73099b399941544a7858f46b9a4489, type: 3}
-  - {fileID: 853382601684717734, guid: 3619543606e9c864c8a366c961d8894a, type: 3}
-  - {fileID: 5815576139884890781, guid: 3d8cc2dd3680e6c4d864f429d2cb6693, type: 3}
-  - {fileID: 8496003529976344465, guid: aa7aa99c739bb674f856418c4d094da2, type: 3}
-  - {fileID: 1582905363669223844, guid: 6966cad72a0be0a409cfd631bb818a3b, type: 3}
-  - {fileID: 8448081308628344717, guid: aa6fc60a7b91e1b478a5d2e6b9f53184, type: 3}
-  - {fileID: 3738582911905855285, guid: b3dfdbf5d6cded445ab1559185e20f92, type: 3}
-  - {fileID: 8350016510529040427, guid: dad0fa19f4c57dd41bf16dd59a5dad9e, type: 3}
-  - {fileID: 1255808577136441329, guid: e96ae258c2624474eaf2b7cb4aa77523, type: 3}
-  - {fileID: 4484664811016999427, guid: 2ad66afa257afee4b9e8a17c9223078a, type: 3}
-  - {fileID: 4154224636406750366, guid: 1905b38ab5f09d342a16c09f5bce7f88, type: 3}
+  treats: []
+  foodLoc: []
+  spawnRate: 5
 --- !u!1 &1001845918
 GameObject:
   m_ObjectHideFlags: 0
@@ -6410,7 +6334,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97930a0eef6bf964999182547ed19984, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  breakable:
+  breakables:
   - {fileID: 907659331751074651, guid: 2d00a32e8069c394ebc2ca2ddfaf39d8, type: 3}
   - {fileID: 3482628367890033872, guid: cc18eae6f3f0c864f8d1f3f1ef0ebbab, type: 3}
   - {fileID: 2786505594979947471, guid: e90a5b695e07d87439856e7e22aee347, type: 3}
@@ -6418,6 +6342,17 @@ MonoBehaviour:
   - {fileID: 2760823189386471387, guid: a1db8db10a9f0da4e8612c795de9ae4e, type: 3}
   - {fileID: 4994393488943512942, guid: 7a4eaeb33f3021b47b58a0ce002312f5, type: 3}
   - {fileID: 8430668093112651734, guid: 46efddbd67e282249a55343153e77e31, type: 3}
+  breakableLoc:
+  - {fileID: 1001845919}
+  - {fileID: 1385055279}
+  - {fileID: 1459164591}
+  - {fileID: 375544189}
+  - {fileID: 76393371}
+  - {fileID: 611586296}
+  - {fileID: 1588845852}
+  - {fileID: 537288553}
+  - {fileID: 1848233478}
+  - {fileID: 1093104450}
 --- !u!1 &1093104449
 GameObject:
   m_ObjectHideFlags: 0
@@ -6462,7 +6397,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97930a0eef6bf964999182547ed19984, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  breakable:
+  breakables:
   - {fileID: 907659331751074651, guid: 2d00a32e8069c394ebc2ca2ddfaf39d8, type: 3}
   - {fileID: 3482628367890033872, guid: cc18eae6f3f0c864f8d1f3f1ef0ebbab, type: 3}
   - {fileID: 2786505594979947471, guid: e90a5b695e07d87439856e7e22aee347, type: 3}
@@ -6470,6 +6405,17 @@ MonoBehaviour:
   - {fileID: 2760823189386471387, guid: a1db8db10a9f0da4e8612c795de9ae4e, type: 3}
   - {fileID: 4994393488943512942, guid: 7a4eaeb33f3021b47b58a0ce002312f5, type: 3}
   - {fileID: 8430668093112651734, guid: 46efddbd67e282249a55343153e77e31, type: 3}
+  breakableLoc:
+  - {fileID: 1001845919}
+  - {fileID: 1385055279}
+  - {fileID: 1459164591}
+  - {fileID: 375544189}
+  - {fileID: 76393371}
+  - {fileID: 611586296}
+  - {fileID: 1588845852}
+  - {fileID: 537288553}
+  - {fileID: 1848233478}
+  - {fileID: 1093104450}
 --- !u!1 &1102752151
 GameObject:
   m_ObjectHideFlags: 0
@@ -6786,7 +6732,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97930a0eef6bf964999182547ed19984, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  breakable:
+  breakables:
   - {fileID: 907659331751074651, guid: 2d00a32e8069c394ebc2ca2ddfaf39d8, type: 3}
   - {fileID: 3482628367890033872, guid: cc18eae6f3f0c864f8d1f3f1ef0ebbab, type: 3}
   - {fileID: 2786505594979947471, guid: e90a5b695e07d87439856e7e22aee347, type: 3}
@@ -6794,6 +6740,17 @@ MonoBehaviour:
   - {fileID: 2760823189386471387, guid: a1db8db10a9f0da4e8612c795de9ae4e, type: 3}
   - {fileID: 4994393488943512942, guid: 7a4eaeb33f3021b47b58a0ce002312f5, type: 3}
   - {fileID: 8430668093112651734, guid: 46efddbd67e282249a55343153e77e31, type: 3}
+  breakableLoc:
+  - {fileID: 1001845919}
+  - {fileID: 1385055279}
+  - {fileID: 1459164591}
+  - {fileID: 375544189}
+  - {fileID: 76393371}
+  - {fileID: 611586296}
+  - {fileID: 1588845852}
+  - {fileID: 537288553}
+  - {fileID: 1848233478}
+  - {fileID: 1093104450}
 --- !u!1001 &1432982601
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6944,7 +6901,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97930a0eef6bf964999182547ed19984, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  breakable:
+  breakables:
   - {fileID: 907659331751074651, guid: 2d00a32e8069c394ebc2ca2ddfaf39d8, type: 3}
   - {fileID: 3482628367890033872, guid: cc18eae6f3f0c864f8d1f3f1ef0ebbab, type: 3}
   - {fileID: 2786505594979947471, guid: e90a5b695e07d87439856e7e22aee347, type: 3}
@@ -6952,6 +6909,17 @@ MonoBehaviour:
   - {fileID: 2760823189386471387, guid: a1db8db10a9f0da4e8612c795de9ae4e, type: 3}
   - {fileID: 4994393488943512942, guid: 7a4eaeb33f3021b47b58a0ce002312f5, type: 3}
   - {fileID: 8430668093112651734, guid: 46efddbd67e282249a55343153e77e31, type: 3}
+  breakableLoc:
+  - {fileID: 1001845919}
+  - {fileID: 1385055279}
+  - {fileID: 1459164591}
+  - {fileID: 375544189}
+  - {fileID: 76393371}
+  - {fileID: 611586296}
+  - {fileID: 1588845852}
+  - {fileID: 537288553}
+  - {fileID: 1848233478}
+  - {fileID: 1093104450}
 --- !u!1 &1465549530
 GameObject:
   m_ObjectHideFlags: 0
@@ -6996,24 +6964,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 096aaea0a58785c43b6c59e81f9999a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  food:
-  - {fileID: 5651011412211922094, guid: 5462ec42bb4328042a68ae17f4ed4998, type: 3}
-  - {fileID: 3898556357762758839, guid: 9fb6759901c70f74ca5d7b71246683c3, type: 3}
-  - {fileID: 4178548119596189774, guid: 4f78e7402e35ea84ea4bdcb1b38f1789, type: 3}
-  - {fileID: 6821666823914569798, guid: 21e59c87d365ad8459037c44ef298121, type: 3}
-  - {fileID: 7320273620673604068, guid: 34bb3d5a275874846b0bf22be46633ca, type: 3}
-  - {fileID: 6582207848106062671, guid: a8f87f7f1fb0d4c4486fa4f0ce82fe29, type: 3}
-  - {fileID: 5851178165493276646, guid: 4b73099b399941544a7858f46b9a4489, type: 3}
-  - {fileID: 853382601684717734, guid: 3619543606e9c864c8a366c961d8894a, type: 3}
-  - {fileID: 5815576139884890781, guid: 3d8cc2dd3680e6c4d864f429d2cb6693, type: 3}
-  - {fileID: 8496003529976344465, guid: aa7aa99c739bb674f856418c4d094da2, type: 3}
-  - {fileID: 1582905363669223844, guid: 6966cad72a0be0a409cfd631bb818a3b, type: 3}
-  - {fileID: 8448081308628344717, guid: aa6fc60a7b91e1b478a5d2e6b9f53184, type: 3}
-  - {fileID: 3738582911905855285, guid: b3dfdbf5d6cded445ab1559185e20f92, type: 3}
-  - {fileID: 8350016510529040427, guid: dad0fa19f4c57dd41bf16dd59a5dad9e, type: 3}
-  - {fileID: 1255808577136441329, guid: e96ae258c2624474eaf2b7cb4aa77523, type: 3}
-  - {fileID: 4484664811016999427, guid: 2ad66afa257afee4b9e8a17c9223078a, type: 3}
-  - {fileID: 4154224636406750366, guid: 1905b38ab5f09d342a16c09f5bce7f88, type: 3}
+  treats: []
+  foodLoc: []
+  spawnRate: 5
 --- !u!1 &1466446371
 GameObject:
   m_ObjectHideFlags: 0
@@ -8988,7 +8941,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97930a0eef6bf964999182547ed19984, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  breakable:
+  breakables:
   - {fileID: 907659331751074651, guid: 2d00a32e8069c394ebc2ca2ddfaf39d8, type: 3}
   - {fileID: 3482628367890033872, guid: cc18eae6f3f0c864f8d1f3f1ef0ebbab, type: 3}
   - {fileID: 2786505594979947471, guid: e90a5b695e07d87439856e7e22aee347, type: 3}
@@ -8996,6 +8949,17 @@ MonoBehaviour:
   - {fileID: 2760823189386471387, guid: a1db8db10a9f0da4e8612c795de9ae4e, type: 3}
   - {fileID: 4994393488943512942, guid: 7a4eaeb33f3021b47b58a0ce002312f5, type: 3}
   - {fileID: 8430668093112651734, guid: 46efddbd67e282249a55343153e77e31, type: 3}
+  breakableLoc:
+  - {fileID: 1001845919}
+  - {fileID: 1385055279}
+  - {fileID: 1459164591}
+  - {fileID: 375544189}
+  - {fileID: 76393371}
+  - {fileID: 611586296}
+  - {fileID: 1588845852}
+  - {fileID: 537288553}
+  - {fileID: 1848233478}
+  - {fileID: 1093104450}
 --- !u!1 &1614581898 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6686338838450816189, guid: 18cfb5c431e1f8b4a9252ac118c8cb2c, type: 3}
@@ -9228,24 +9192,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 096aaea0a58785c43b6c59e81f9999a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  food:
-  - {fileID: 5651011412211922094, guid: 5462ec42bb4328042a68ae17f4ed4998, type: 3}
-  - {fileID: 3898556357762758839, guid: 9fb6759901c70f74ca5d7b71246683c3, type: 3}
-  - {fileID: 4178548119596189774, guid: 4f78e7402e35ea84ea4bdcb1b38f1789, type: 3}
-  - {fileID: 6821666823914569798, guid: 21e59c87d365ad8459037c44ef298121, type: 3}
-  - {fileID: 7320273620673604068, guid: 34bb3d5a275874846b0bf22be46633ca, type: 3}
-  - {fileID: 6582207848106062671, guid: a8f87f7f1fb0d4c4486fa4f0ce82fe29, type: 3}
-  - {fileID: 5851178165493276646, guid: 4b73099b399941544a7858f46b9a4489, type: 3}
-  - {fileID: 853382601684717734, guid: 3619543606e9c864c8a366c961d8894a, type: 3}
-  - {fileID: 5815576139884890781, guid: 3d8cc2dd3680e6c4d864f429d2cb6693, type: 3}
-  - {fileID: 8496003529976344465, guid: aa7aa99c739bb674f856418c4d094da2, type: 3}
-  - {fileID: 1582905363669223844, guid: 6966cad72a0be0a409cfd631bb818a3b, type: 3}
-  - {fileID: 8448081308628344717, guid: aa6fc60a7b91e1b478a5d2e6b9f53184, type: 3}
-  - {fileID: 3738582911905855285, guid: b3dfdbf5d6cded445ab1559185e20f92, type: 3}
-  - {fileID: 8350016510529040427, guid: dad0fa19f4c57dd41bf16dd59a5dad9e, type: 3}
-  - {fileID: 1255808577136441329, guid: e96ae258c2624474eaf2b7cb4aa77523, type: 3}
-  - {fileID: 4484664811016999427, guid: 2ad66afa257afee4b9e8a17c9223078a, type: 3}
-  - {fileID: 4154224636406750366, guid: 1905b38ab5f09d342a16c09f5bce7f88, type: 3}
+  treats: []
+  foodLoc: []
+  spawnRate: 5
 --- !u!1 &1723905326
 GameObject:
   m_ObjectHideFlags: 0
@@ -9387,24 +9336,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 096aaea0a58785c43b6c59e81f9999a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  food:
-  - {fileID: 5651011412211922094, guid: 5462ec42bb4328042a68ae17f4ed4998, type: 3}
-  - {fileID: 3898556357762758839, guid: 9fb6759901c70f74ca5d7b71246683c3, type: 3}
-  - {fileID: 4178548119596189774, guid: 4f78e7402e35ea84ea4bdcb1b38f1789, type: 3}
-  - {fileID: 6821666823914569798, guid: 21e59c87d365ad8459037c44ef298121, type: 3}
-  - {fileID: 7320273620673604068, guid: 34bb3d5a275874846b0bf22be46633ca, type: 3}
-  - {fileID: 6582207848106062671, guid: a8f87f7f1fb0d4c4486fa4f0ce82fe29, type: 3}
-  - {fileID: 5851178165493276646, guid: 4b73099b399941544a7858f46b9a4489, type: 3}
-  - {fileID: 853382601684717734, guid: 3619543606e9c864c8a366c961d8894a, type: 3}
-  - {fileID: 5815576139884890781, guid: 3d8cc2dd3680e6c4d864f429d2cb6693, type: 3}
-  - {fileID: 8496003529976344465, guid: aa7aa99c739bb674f856418c4d094da2, type: 3}
-  - {fileID: 1582905363669223844, guid: 6966cad72a0be0a409cfd631bb818a3b, type: 3}
-  - {fileID: 8448081308628344717, guid: aa6fc60a7b91e1b478a5d2e6b9f53184, type: 3}
-  - {fileID: 3738582911905855285, guid: b3dfdbf5d6cded445ab1559185e20f92, type: 3}
-  - {fileID: 8350016510529040427, guid: dad0fa19f4c57dd41bf16dd59a5dad9e, type: 3}
-  - {fileID: 1255808577136441329, guid: e96ae258c2624474eaf2b7cb4aa77523, type: 3}
-  - {fileID: 4484664811016999427, guid: 2ad66afa257afee4b9e8a17c9223078a, type: 3}
-  - {fileID: 4154224636406750366, guid: 1905b38ab5f09d342a16c09f5bce7f88, type: 3}
+  treats: []
+  foodLoc: []
+  spawnRate: 5
 --- !u!1 &1797438782
 GameObject:
   m_ObjectHideFlags: 0
@@ -9420,7 +9354,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1797438783
 Transform:
   m_ObjectHideFlags: 0
@@ -9490,7 +9424,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97930a0eef6bf964999182547ed19984, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  breakable:
+  breakables:
   - {fileID: 907659331751074651, guid: 2d00a32e8069c394ebc2ca2ddfaf39d8, type: 3}
   - {fileID: 3482628367890033872, guid: cc18eae6f3f0c864f8d1f3f1ef0ebbab, type: 3}
   - {fileID: 2786505594979947471, guid: e90a5b695e07d87439856e7e22aee347, type: 3}
@@ -9498,6 +9432,17 @@ MonoBehaviour:
   - {fileID: 2760823189386471387, guid: a1db8db10a9f0da4e8612c795de9ae4e, type: 3}
   - {fileID: 4994393488943512942, guid: 7a4eaeb33f3021b47b58a0ce002312f5, type: 3}
   - {fileID: 8430668093112651734, guid: 46efddbd67e282249a55343153e77e31, type: 3}
+  breakableLoc:
+  - {fileID: 1001845919}
+  - {fileID: 1385055279}
+  - {fileID: 1459164591}
+  - {fileID: 375544189}
+  - {fileID: 76393371}
+  - {fileID: 611586296}
+  - {fileID: 1588845852}
+  - {fileID: 537288553}
+  - {fileID: 1848233478}
+  - {fileID: 1093104450}
 --- !u!1 &2011512037
 GameObject:
   m_ObjectHideFlags: 0
@@ -9542,24 +9487,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 096aaea0a58785c43b6c59e81f9999a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  food:
-  - {fileID: 5651011412211922094, guid: 5462ec42bb4328042a68ae17f4ed4998, type: 3}
-  - {fileID: 3898556357762758839, guid: 9fb6759901c70f74ca5d7b71246683c3, type: 3}
-  - {fileID: 4178548119596189774, guid: 4f78e7402e35ea84ea4bdcb1b38f1789, type: 3}
-  - {fileID: 6821666823914569798, guid: 21e59c87d365ad8459037c44ef298121, type: 3}
-  - {fileID: 7320273620673604068, guid: 34bb3d5a275874846b0bf22be46633ca, type: 3}
-  - {fileID: 6582207848106062671, guid: a8f87f7f1fb0d4c4486fa4f0ce82fe29, type: 3}
-  - {fileID: 5851178165493276646, guid: 4b73099b399941544a7858f46b9a4489, type: 3}
-  - {fileID: 853382601684717734, guid: 3619543606e9c864c8a366c961d8894a, type: 3}
-  - {fileID: 5815576139884890781, guid: 3d8cc2dd3680e6c4d864f429d2cb6693, type: 3}
-  - {fileID: 8496003529976344465, guid: aa7aa99c739bb674f856418c4d094da2, type: 3}
-  - {fileID: 1582905363669223844, guid: 6966cad72a0be0a409cfd631bb818a3b, type: 3}
-  - {fileID: 8448081308628344717, guid: aa6fc60a7b91e1b478a5d2e6b9f53184, type: 3}
-  - {fileID: 3738582911905855285, guid: b3dfdbf5d6cded445ab1559185e20f92, type: 3}
-  - {fileID: 8350016510529040427, guid: dad0fa19f4c57dd41bf16dd59a5dad9e, type: 3}
-  - {fileID: 1255808577136441329, guid: e96ae258c2624474eaf2b7cb4aa77523, type: 3}
-  - {fileID: 4484664811016999427, guid: 2ad66afa257afee4b9e8a17c9223078a, type: 3}
-  - {fileID: 4154224636406750366, guid: 1905b38ab5f09d342a16c09f5bce7f88, type: 3}
+  treats: []
+  foodLoc: []
+  spawnRate: 5
 --- !u!1 &2063531857
 GameObject:
   m_ObjectHideFlags: 0
@@ -9604,24 +9534,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 096aaea0a58785c43b6c59e81f9999a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  food:
-  - {fileID: 5651011412211922094, guid: 5462ec42bb4328042a68ae17f4ed4998, type: 3}
-  - {fileID: 3898556357762758839, guid: 9fb6759901c70f74ca5d7b71246683c3, type: 3}
-  - {fileID: 4178548119596189774, guid: 4f78e7402e35ea84ea4bdcb1b38f1789, type: 3}
-  - {fileID: 6821666823914569798, guid: 21e59c87d365ad8459037c44ef298121, type: 3}
-  - {fileID: 7320273620673604068, guid: 34bb3d5a275874846b0bf22be46633ca, type: 3}
-  - {fileID: 6582207848106062671, guid: a8f87f7f1fb0d4c4486fa4f0ce82fe29, type: 3}
-  - {fileID: 5851178165493276646, guid: 4b73099b399941544a7858f46b9a4489, type: 3}
-  - {fileID: 853382601684717734, guid: 3619543606e9c864c8a366c961d8894a, type: 3}
-  - {fileID: 5815576139884890781, guid: 3d8cc2dd3680e6c4d864f429d2cb6693, type: 3}
-  - {fileID: 8496003529976344465, guid: aa7aa99c739bb674f856418c4d094da2, type: 3}
-  - {fileID: 1582905363669223844, guid: 6966cad72a0be0a409cfd631bb818a3b, type: 3}
-  - {fileID: 8448081308628344717, guid: aa6fc60a7b91e1b478a5d2e6b9f53184, type: 3}
-  - {fileID: 3738582911905855285, guid: b3dfdbf5d6cded445ab1559185e20f92, type: 3}
-  - {fileID: 8350016510529040427, guid: dad0fa19f4c57dd41bf16dd59a5dad9e, type: 3}
-  - {fileID: 1255808577136441329, guid: e96ae258c2624474eaf2b7cb4aa77523, type: 3}
-  - {fileID: 4484664811016999427, guid: 2ad66afa257afee4b9e8a17c9223078a, type: 3}
-  - {fileID: 4154224636406750366, guid: 1905b38ab5f09d342a16c09f5bce7f88, type: 3}
+  treats: []
+  foodLoc: []
+  spawnRate: 5
 --- !u!1 &2073850202
 GameObject:
   m_ObjectHideFlags: 0
@@ -9760,24 +9675,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 096aaea0a58785c43b6c59e81f9999a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  food:
-  - {fileID: 5651011412211922094, guid: 5462ec42bb4328042a68ae17f4ed4998, type: 3}
-  - {fileID: 3898556357762758839, guid: 9fb6759901c70f74ca5d7b71246683c3, type: 3}
-  - {fileID: 4178548119596189774, guid: 4f78e7402e35ea84ea4bdcb1b38f1789, type: 3}
-  - {fileID: 6821666823914569798, guid: 21e59c87d365ad8459037c44ef298121, type: 3}
-  - {fileID: 7320273620673604068, guid: 34bb3d5a275874846b0bf22be46633ca, type: 3}
-  - {fileID: 6582207848106062671, guid: a8f87f7f1fb0d4c4486fa4f0ce82fe29, type: 3}
-  - {fileID: 5851178165493276646, guid: 4b73099b399941544a7858f46b9a4489, type: 3}
-  - {fileID: 853382601684717734, guid: 3619543606e9c864c8a366c961d8894a, type: 3}
-  - {fileID: 5815576139884890781, guid: 3d8cc2dd3680e6c4d864f429d2cb6693, type: 3}
-  - {fileID: 8496003529976344465, guid: aa7aa99c739bb674f856418c4d094da2, type: 3}
-  - {fileID: 1582905363669223844, guid: 6966cad72a0be0a409cfd631bb818a3b, type: 3}
-  - {fileID: 8448081308628344717, guid: aa6fc60a7b91e1b478a5d2e6b9f53184, type: 3}
-  - {fileID: 3738582911905855285, guid: b3dfdbf5d6cded445ab1559185e20f92, type: 3}
-  - {fileID: 8350016510529040427, guid: dad0fa19f4c57dd41bf16dd59a5dad9e, type: 3}
-  - {fileID: 1255808577136441329, guid: e96ae258c2624474eaf2b7cb4aa77523, type: 3}
-  - {fileID: 4484664811016999427, guid: 2ad66afa257afee4b9e8a17c9223078a, type: 3}
-  - {fileID: 4154224636406750366, guid: 1905b38ab5f09d342a16c09f5bce7f88, type: 3}
+  treats: []
+  foodLoc: []
+  spawnRate: 5
 --- !u!1 &2132268361
 GameObject:
   m_ObjectHideFlags: 0
@@ -9822,24 +9722,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 096aaea0a58785c43b6c59e81f9999a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  food:
-  - {fileID: 5651011412211922094, guid: 5462ec42bb4328042a68ae17f4ed4998, type: 3}
-  - {fileID: 3898556357762758839, guid: 9fb6759901c70f74ca5d7b71246683c3, type: 3}
-  - {fileID: 4178548119596189774, guid: 4f78e7402e35ea84ea4bdcb1b38f1789, type: 3}
-  - {fileID: 6821666823914569798, guid: 21e59c87d365ad8459037c44ef298121, type: 3}
-  - {fileID: 7320273620673604068, guid: 34bb3d5a275874846b0bf22be46633ca, type: 3}
-  - {fileID: 6582207848106062671, guid: a8f87f7f1fb0d4c4486fa4f0ce82fe29, type: 3}
-  - {fileID: 5851178165493276646, guid: 4b73099b399941544a7858f46b9a4489, type: 3}
-  - {fileID: 853382601684717734, guid: 3619543606e9c864c8a366c961d8894a, type: 3}
-  - {fileID: 5815576139884890781, guid: 3d8cc2dd3680e6c4d864f429d2cb6693, type: 3}
-  - {fileID: 8496003529976344465, guid: aa7aa99c739bb674f856418c4d094da2, type: 3}
-  - {fileID: 1582905363669223844, guid: 6966cad72a0be0a409cfd631bb818a3b, type: 3}
-  - {fileID: 8448081308628344717, guid: aa6fc60a7b91e1b478a5d2e6b9f53184, type: 3}
-  - {fileID: 3738582911905855285, guid: b3dfdbf5d6cded445ab1559185e20f92, type: 3}
-  - {fileID: 8350016510529040427, guid: dad0fa19f4c57dd41bf16dd59a5dad9e, type: 3}
-  - {fileID: 1255808577136441329, guid: e96ae258c2624474eaf2b7cb4aa77523, type: 3}
-  - {fileID: 4484664811016999427, guid: 2ad66afa257afee4b9e8a17c9223078a, type: 3}
-  - {fileID: 4154224636406750366, guid: 1905b38ab5f09d342a16c09f5bce7f88, type: 3}
+  treats: []
+  foodLoc: []
+  spawnRate: 5
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
