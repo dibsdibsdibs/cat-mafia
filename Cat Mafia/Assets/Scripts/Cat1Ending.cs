@@ -20,6 +20,8 @@ public class Cat1Ending : MonoBehaviour
     public bool isInPosition;
     public bool isDone = false;
     public float speed = 2f;
+    public AudioSource audioSource;
+    public AudioClip starDisp;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,8 +29,7 @@ public class Cat1Ending : MonoBehaviour
         isInPosition = false;
         star1.SetActive(false);
         star2.SetActive(false);
-        star3.SetActive(false);    
-
+        star3.SetActive(false);
     }
 
     // Update is called once per frame
@@ -46,6 +47,7 @@ public class Cat1Ending : MonoBehaviour
             {
                 transform.position = targetPosition;
                 isInPosition = true;
+                PlayAudio(starDisp);
             }
         }
         else
@@ -84,9 +86,10 @@ public class Cat1Ending : MonoBehaviour
                 }
             }
         }
+
         if (isDone)
         {
-            Invoke("NextScene", 1.0f);
+            Invoke("NextScene", starDisp.length + 2.0f);
         }
     }
     IEnumerator Star1Finished()
@@ -118,5 +121,11 @@ public class Cat1Ending : MonoBehaviour
     void DisableMovement()
     {
         animator.enabled = false;
+    }
+
+    void PlayAudio(AudioClip audio)
+    {
+        audioSource.clip = audio;
+        audioSource.Play();
     }
 }
