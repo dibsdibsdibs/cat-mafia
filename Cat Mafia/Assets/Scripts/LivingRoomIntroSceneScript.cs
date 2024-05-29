@@ -7,8 +7,10 @@ public class LivingRoomIntroSceneScript : MonoBehaviour
 {
     [SerializeField] public GameObject blackPanel;
     [SerializeField] public DialogueManager currDialogueManager;
+    [SerializeField] public AudioSource audioSource;
 
     [Header("First Dialogue")]
+    [SerializeField] public AudioClip doorOpen;
     [SerializeField] public bool firstDialogueFinished;
     [SerializeField] public GameObject firstDialogue;
 
@@ -20,7 +22,9 @@ public class LivingRoomIntroSceneScript : MonoBehaviour
     void Start()
     {
         currDialogueManager = firstDialogue.GetComponent<DialogueManager>();
-        FirstDialogue();
+        audioSource = GetComponent<AudioSource>();
+        PlayAudio(doorOpen);
+        Invoke("FirstDialogue", doorOpen.length);
     }
 
     void Update()
@@ -65,5 +69,11 @@ public class LivingRoomIntroSceneScript : MonoBehaviour
     private void NextScene()
     {
         SceneManager.LoadScene(nextScene);
+    }
+    
+    void PlayAudio(AudioClip audio)
+    {
+        audioSource.clip = audio;
+        audioSource.Play();
     }
 }
