@@ -12,7 +12,7 @@ public class OwnerController : MonoBehaviour
 
     // Start is called before the first frame update
     private Vector2 direction;
-    [SerializeField] private GameObject player;
+    public GameObject player;
     [SerializeField] private float movementSpeed = 5;
     private float tempMovementSpeed;
     [SerializeField] private LayerMask furnitures;
@@ -23,6 +23,7 @@ public class OwnerController : MonoBehaviour
     private Rigidbody2D rb;
     void Start()
     {
+        player = GameObject.FindWithTag("Player");
         animator = GetComponent<Animator>();   
         boxCollider = GetComponent<BoxCollider2D>();
         rb = GetComponent<Rigidbody2D>();
