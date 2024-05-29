@@ -56,6 +56,7 @@ public class CatFollower1Dialogue : MonoBehaviour
                 transform.position = finalTargetPosition;
                 
                 Cat1Dialogue.SetActive(true);
+                Invoke("DisableMovement", 1.0f);
             }
         }
         if (isDone)
@@ -65,5 +66,10 @@ public class CatFollower1Dialogue : MonoBehaviour
     }
     public void OffIsMoving(){
         animator.SetBool("isMoving", false);
+    }
+    
+    void DisableMovement()
+    {
+        animator.enabled = false;
     }
 }
