@@ -13,8 +13,9 @@ public class MainCharacterController : MonoBehaviour
     private PauseScript pauseManager;
     private Vector2 movement;
     private Vector2 direction;
-
     public GameObject failedScreen;
+    public GameObject levelManager;
+    public LevelManagerScript levelScript;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +24,7 @@ public class MainCharacterController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         boxCollider = GetComponent<BoxCollider2D>();
         pauseManager = pauseScreen.GetComponent<PauseScript>();
+        levelScript = levelManager.GetComponent<LevelManagerScript>();
     }
 
     // Update is called once per frame
@@ -111,5 +113,14 @@ public class MainCharacterController : MonoBehaviour
 
     private void Move(){
         rb.MovePosition(rb.position + movement * movementSpeed * Time.deltaTime);
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.CompareTag("Owner"))
+        {
+            Debug.Log("Entered here");
+            levelScript.FailedLevel();
+        }
     }
 }

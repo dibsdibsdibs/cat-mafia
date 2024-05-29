@@ -68,7 +68,7 @@ public class LevelManagerScript : MonoBehaviour
         SceneManager.LoadScene(nextScene);
     }
 
-    void FailedLevel()
+    public void FailedLevel()
     {
         failedDialogue.SetActive(true);
         failedManager.ToggleRestart();

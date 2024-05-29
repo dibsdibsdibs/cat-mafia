@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Food
   - treasure
+  - Owner
   layers:
   - Default
   - TransparentFX
