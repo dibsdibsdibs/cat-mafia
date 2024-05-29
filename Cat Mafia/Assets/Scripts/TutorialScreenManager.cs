@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 public class TutorialScreenManager : MonoBehaviour
 {
     [SerializeField] public GameObject catCharacter;
-    private MainCharacterController characterController;
+    private TutorialMovementScript characterController;
     [SerializeField] public AudioSource audioSource;
     [SerializeField] public string nextScene;
 
@@ -44,7 +44,7 @@ public class TutorialScreenManager : MonoBehaviour
 
     void Start()
     {
-        characterController = catCharacter.GetComponent<MainCharacterController>();
+        characterController = catCharacter.GetComponent<TutorialMovementScript>();
         audioSource = GetComponent<AudioSource>();
         checkDialogue = firstEventDialogue.GetComponent<DialogueManager>();
         pauseManager = pauseScreen.GetComponent<PauseScript>();
