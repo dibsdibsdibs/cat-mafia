@@ -66,12 +66,6 @@ public class LevelManagerScript : MonoBehaviour
         SceneManager.LoadScene(nextScene);
     }
 
-    private void RestartScene()
-    {
-        Scene currentScene = SceneManager.GetActiveScene();
-        SceneManager.LoadScene(currentScene.name);
-    }
-
     void FailedLevel()
     {
         failedDialogue.SetActive(true);
