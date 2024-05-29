@@ -16,6 +16,10 @@ public class LevelManagerScript : MonoBehaviour
     [SerializeField] public GameObject failedDialogue;
     [SerializeField] private FailedLevelScript failedManager;
 
+    [Header("Owner")]
+    [SerializeField] public GameObject ownerClone;
+    [SerializeField] public Vector2 spawnPointOwner;
+
     void Start()
     {
         foodBarScript = foodBar.GetComponent<FoodBarScript>();
@@ -72,5 +76,11 @@ public class LevelManagerScript : MonoBehaviour
     {
         failedDialogue.SetActive(true);
         failedManager.ToggleRestart();
+    }
+
+    public void SummonTheDemon()
+    {
+        GameObject instantiatedObject = Instantiate(ownerClone, spawnPointOwner, Quaternion.identity);
+        Destroy(instantiatedObject, 7f);
     }
 }
