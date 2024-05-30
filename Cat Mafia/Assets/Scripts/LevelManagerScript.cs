@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 public class LevelManagerScript : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI timeText;
-    [SerializeField] float totalTime;
+    [SerializeField] float totalTime = 60;
     [SerializeField] public GameObject foodBar;
     [SerializeField] public GameObject treasure;
     [SerializeField] private FoodBarScript foodBarScript;
@@ -16,6 +16,7 @@ public class LevelManagerScript : MonoBehaviour
     [SerializeField] public string nextScene;
     [SerializeField] public GameObject failedDialogue;
     [SerializeField] private FailedLevelScript failedManager;
+    [SerializeField] public GameObject pauseScreen;
 
     [Header("Owner")]
     [SerializeField] public GameObject ownerClone;
@@ -31,12 +32,15 @@ public class LevelManagerScript : MonoBehaviour
 
     void Update()
     {
-        if (totalTime > 0){
-            totalTime -= Time.deltaTime;
-        }
-        else if(totalTime < 0){
-            totalTime = 0;
-            CheckScene();
+        if(!pauseScreen.activeSelf)
+        {
+            if (totalTime > 0){
+                totalTime -= Time.deltaTime;
+            }
+            else if(totalTime < 0){
+                totalTime = 0;
+                CheckScene();
+            }
         }
   
         float seconds = Mathf.FloorToInt(totalTime % 60);
