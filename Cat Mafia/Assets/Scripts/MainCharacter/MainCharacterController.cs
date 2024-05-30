@@ -46,52 +46,48 @@ public class MainCharacterController : MonoBehaviour
         
         if(isPauseActive == false && isFailedActive == false)
         {
-        if(Input.GetKey(KeyCode.UpArrow)){
-            MoveUp();
-        }
-        if(Input.GetKey(KeyCode.DownArrow)){
-            MoveDown();
-        }
-        if(Input.GetKey(KeyCode.LeftArrow)){
-            MoveLeft();
-        }
-        if(Input.GetKey(KeyCode.RightArrow)){
-            MoveRight();
+            if(Input.GetKey(KeyCode.UpArrow)){
+                MoveUp();
+            }
+            if(Input.GetKey(KeyCode.DownArrow)){
+                MoveDown();
+            }
+            if(Input.GetKey(KeyCode.LeftArrow)){
+                MoveLeft();
+            }
+            if(Input.GetKey(KeyCode.RightArrow)){
+                MoveRight();
+            }
+
+            if(Input.GetKeyUp(KeyCode.LeftArrow)
+            ||Input.GetKeyUp(KeyCode.RightArrow)
+            ||Input.GetKeyUp(KeyCode.UpArrow)
+            ||Input.GetKeyUp(KeyCode.DownArrow)
+            ){
+                movement = Vector2.zero;
+                SetIsNotMoving();
+            }
+
+            if(Input.GetKeyDown(KeyCode.Space)){
+                if(canDash){
+                    isDashing = true;
+                    StartCoroutine(PerformDash());
+                }
+            }
+
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, boxCollider.bounds.extents.y + 0.1f, groundLayer);
+            if (hit.collider != null)
+            {
+                float distanceToGround = hit.distance - boxCollider.bounds.extents.y;
+                rb.position += Vector2.down * distanceToGround;
+                rb.velocity = new Vector2(rb.velocity.x, 0f);
+            }
+        
         }
 
         if(Input.GetKey(KeyCode.X))
         {
             pauseScreen.SetActive(true);
-        }
-
-        if(Input.GetKeyUp(KeyCode.LeftArrow)
-        ||Input.GetKeyUp(KeyCode.RightArrow)
-        ||Input.GetKeyUp(KeyCode.UpArrow)
-        ||Input.GetKeyUp(KeyCode.DownArrow)
-        ){
-            movement = Vector2.zero;
-            SetIsNotMoving();
-        }
-
-        if(Input.GetKeyDown(KeyCode.Space)){
-            if(canDash){
-                isDashing = true;
-                StartCoroutine(PerformDash());
-            }
-        }
-
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, boxCollider.bounds.extents.y + 0.1f, groundLayer);
-        if (hit.collider != null)
-        {
-            float distanceToGround = hit.distance - boxCollider.bounds.extents.y;
-            rb.position += Vector2.down * distanceToGround;
-            rb.velocity = new Vector2(rb.velocity.x, 0f);
-        }
-    
-        }
-
-        if (isPauseActive)
-        {
             pauseManager.TogglePause();
         }
     }
