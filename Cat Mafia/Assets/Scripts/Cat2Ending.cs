@@ -69,7 +69,7 @@ public class Cat2Ending : MonoBehaviour
         }
         if (isDone)
         {
-            Invoke("NextScene", starDisp.length + 2.0f);
+            Invoke("NextScene", starDisp.length);
         }
     }
            
@@ -94,7 +94,7 @@ public class Cat2Ending : MonoBehaviour
     }
     private void NextScene()
     {
-        SceneManager.LoadScene("Cat2Dialogue");
+        SceneManager.LoadScene("Cat3Dialogue");
     }
     public void OffIsMoving(){
         animator.SetBool("isMoving", false);

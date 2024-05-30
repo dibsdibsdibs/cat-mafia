@@ -54,7 +54,6 @@ public class Cat1Ending : MonoBehaviour
         }
         else
         {
-
             animator.SetFloat("moveX", 0);
             animator.SetFloat("moveY", 1f);
             animator.SetBool("isMoving", true);
@@ -88,14 +87,13 @@ public class Cat1Ending : MonoBehaviour
 
         if (isDone)
         {
-            Invoke("NextScene", starDisp.length + 2.0f);
+            Invoke("NextScene", starDisp.length);
         }
     }
     IEnumerator Star1Finished()
     {
         yield return new WaitUntil(() => star1Dialogue.IsDialogueFinished());
         isDone = true;
-     
     }
     IEnumerator Star2Finished()
     {
