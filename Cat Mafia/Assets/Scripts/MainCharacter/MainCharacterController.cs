@@ -18,6 +18,8 @@ public class MainCharacterController : MonoBehaviour
     public GameObject levelManager;
     public LevelManagerScript levelScript;
 
+    private ColliderBoxManager boxManager;
+
     // dash variables
     [SerializeField] private float dashSpeed = 20;
 
@@ -31,6 +33,7 @@ public class MainCharacterController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        boxManager = GetComponent<ColliderBoxManager>();
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         boxCollider = GetComponent<BoxCollider2D>();
@@ -48,15 +51,19 @@ public class MainCharacterController : MonoBehaviour
         {
         if(Input.GetKey(KeyCode.UpArrow)){
             MoveUp();
+            boxManager.UseUpCollider();
         }
         if(Input.GetKey(KeyCode.DownArrow)){
             MoveDown();
+            boxManager.UseDownCollider();
         }
         if(Input.GetKey(KeyCode.LeftArrow)){
             MoveLeft();
+            boxManager.UseLeftCollider();
         }
         if(Input.GetKey(KeyCode.RightArrow)){
             MoveRight();
+            boxManager.UseRightCollider();
         }
 
         if(Input.GetKeyUp(KeyCode.LeftArrow)
