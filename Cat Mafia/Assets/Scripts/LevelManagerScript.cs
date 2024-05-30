@@ -55,7 +55,6 @@ public class LevelManagerScript : MonoBehaviour
     void CheckScene()
     {
         bool finishedFoodCollection = foodBarScript.FinishedFoodCollection();
-        
 
         if(finishedFoodCollection || treasureCollected)
         {

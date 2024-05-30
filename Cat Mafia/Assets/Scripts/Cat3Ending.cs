@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class Cat3Ending : MonoBehaviour
 {
     private Animator animator;
-    public Vector3 targetPosition; 
+    public Vector3 targetPosition;
     public Vector3 startPosition; 
     public DialogueManager star3Dialogue;
     public DialogueManager star2Dialogue;
