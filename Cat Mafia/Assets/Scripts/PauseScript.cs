@@ -16,6 +16,7 @@ public class PauseScript : MonoBehaviour
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip selectionSound;
     [SerializeField] private AudioClip finalSelectionSound;
+    [SerializeField] public bool isActive = false;
 
     private Button[] buttons;
 
@@ -48,8 +49,7 @@ public class PauseScript : MonoBehaviour
 
     public void TogglePause()
     {
-        bool isActive = pauseScreen.activeSelf;
-        // pauseScreen.SetActive(isActive);
+        isActive = pauseScreen.activeSelf;
 
         if (isActive)
         {
@@ -73,6 +73,7 @@ public class PauseScript : MonoBehaviour
 
     void ExecuteOption()
     {
+        isActive = false;
         PlayFinalSelectionSound();
         if (selectedButtonIndex == 0)
         {
@@ -104,5 +105,10 @@ public class PauseScript : MonoBehaviour
         {
             audioSource.PlayOneShot(finalSelectionSound);
         }
+    }
+
+    public bool isPauseActivated()
+    {
+        return isActive;
     }
 }

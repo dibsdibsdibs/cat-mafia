@@ -558,6 +558,7 @@ MonoBehaviour:
   nextScene: Cat1Ending
   failedDialogue: {fileID: 677049168}
   failedManager: {fileID: 0}
+  pauseScreen: {fileID: 598834302}
   ownerClone: {fileID: 1160443310208243379, guid: 537b9eed3bf57d84fbf01b65987ac0a7, type: 3}
   spawnPointOwner: {x: 0, y: 0}
   treasureCollected: 0
@@ -1026,10 +1027,6 @@ PrefabInstance:
     - target: {fileID: 7217490705832390823, guid: 8210436b8bfbdb241a6b452a02427dec, type: 3}
       propertyPath: m_Name
       value: PauseScreen
-      objectReference: {fileID: 0}
-    - target: {fileID: 7217490705832390823, guid: 8210436b8bfbdb241a6b452a02427dec, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1667,7 +1664,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 419450449880681369, guid: 18cfb5c431e1f8b4a9252ac118c8cb2c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.65
+      value: 5.27
       objectReference: {fileID: 0}
     - target: {fileID: 419450449880681369, guid: 18cfb5c431e1f8b4a9252ac118c8cb2c, type: 3}
       propertyPath: m_LocalPosition.z

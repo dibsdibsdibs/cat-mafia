@@ -7948,6 +7948,9 @@ MonoBehaviour:
   nextScene: Cat2Ending
   failedDialogue: {fileID: 925720213}
   failedManager: {fileID: 0}
+  isPauseActive: 0
+  pauseScreen: {fileID: 1137063888}
+  pauseManager: {fileID: 0}
   ownerClone: {fileID: 1160443310208243379, guid: 537b9eed3bf57d84fbf01b65987ac0a7, type: 3}
   spawnPointOwner: {x: 0, y: 0}
   treasureCollected: 0
