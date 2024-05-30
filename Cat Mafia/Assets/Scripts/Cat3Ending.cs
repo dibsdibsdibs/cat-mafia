@@ -17,6 +17,9 @@ public class Cat3Ending : MonoBehaviour
     public bool isInPosition;
     public bool isDone = false;
     public float speed = 2f;
+    public AudioSource audioSource;
+    public AudioClip starDisp;
+    public int starRating;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,32 +34,36 @@ public class Cat3Ending : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        string star  = PlayerPrefs.GetString ("star", "3");
         if (!isInPosition)
         {
             animator.SetFloat("moveX", 1f);
             animator.SetFloat("moveY", 0);
             animator.SetBool("isMoving", true);
             transform.position = Vector3.MoveTowards(transform.position, targetPosition, speed * Time.deltaTime);
-            
+
             if (Vector3.Distance(transform.position, targetPosition) < 0.01f)
             {
+                Invoke("DisableMovement", 1.0f);
                 OffIsMoving();
                 transform.position = targetPosition;
-                if (star == "1")
+                
+                if (starRating == 1)
                 {
+                    Invoke("PlayAudio",0.0f);
                     star1.SetActive(true);
                     StartCoroutine(Star1Finished()); 
                 }
 
-                else if (star == "2" )
+                else if (starRating == 2)
                 {
+                    Invoke("PlayAudio",0.0f);
                     star2.SetActive(true);
                     StartCoroutine(Star2Finished()); 
                 }
 
                 else
                 {
+                    Invoke("PlayAudio",0.0f);
                     star3.SetActive(true); 
                     StartCoroutine(Star3Finished()); 
                 }
@@ -64,7 +71,7 @@ public class Cat3Ending : MonoBehaviour
         }
         if (isDone)
         {
-            SceneManager.LoadScene("Bathroom");
+            Invoke("NextScene", starDisp.length);
         }
     }
            
@@ -87,8 +94,17 @@ public class Cat3Ending : MonoBehaviour
         isDone = true;
      
     }
-
+    
     public void OffIsMoving(){
         animator.SetBool("isMoving", false);
     }
-}
+    private void NextScene()
+    {
+        SceneManager.LoadScene("End");
+    }
+    void PlayAudio()
+    {
+        audioSource.clip = starDisp;
+        audioSource.Play();
+    }
+} 
