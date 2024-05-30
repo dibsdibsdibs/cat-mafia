@@ -59,6 +59,11 @@ public class MainCharacterController : MonoBehaviour
             MoveRight();
         }
 
+        if(Input.GetKey(KeyCode.X))
+        {
+            pauseScreen.SetActive(true);
+        }
+
         if(Input.GetKeyUp(KeyCode.LeftArrow)
         ||Input.GetKeyUp(KeyCode.RightArrow)
         ||Input.GetKeyUp(KeyCode.UpArrow)
@@ -83,6 +88,11 @@ public class MainCharacterController : MonoBehaviour
             rb.velocity = new Vector2(rb.velocity.x, 0f);
         }
     
+        }
+
+        if (isPauseActive)
+        {
+            pauseManager.TogglePause();
         }
     }
 
