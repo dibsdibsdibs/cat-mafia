@@ -6520,7 +6520,7 @@ MonoBehaviour:
   isInPosition: 0
   checkDialogue: {fileID: 1412275667}
   speed: 2
-  nextScene: LivingRoomScene
+  nextScene: LivingRoomIntroScene
 --- !u!1 &1566296426
 GameObject:
   m_ObjectHideFlags: 0
