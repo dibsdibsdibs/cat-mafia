@@ -2816,6 +2816,9 @@ MonoBehaviour:
   quitButton: {fileID: 274570545}
   selectedButtonIndex: 0
   selectionIndicator: {fileID: 141894802}
+  audioSource: {fileID: 0}
+  selectionSound: {fileID: 0}
+  finalSelectionSound: {fileID: 0}
 --- !u!1 &712602586
 GameObject:
   m_ObjectHideFlags: 0
@@ -2948,6 +2951,7 @@ GameObject:
   - component: {fileID: 742919431}
   - component: {fileID: 742919430}
   - component: {fileID: 742919429}
+  - component: {fileID: 742919432}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -3029,6 +3033,102 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!82 &742919432
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 742919428}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: d05c276740f468641913c09740acd07d, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &752401656
 GameObject:
   m_ObjectHideFlags: 0
@@ -6217,6 +6317,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86f6ec0a89101a847954b1ad23720a08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   targetPosition: {x: 0, y: 0, z: 0}
   finalTargetPosition: {x: 0, y: 0, z: 0}
   startPosition: {x: 0, y: 0, z: 0}
@@ -6225,6 +6326,7 @@ MonoBehaviour:
   isInPosition: 0
   checkDialogue: {fileID: 0}
   speed: 1
+  nextScene: 
 --- !u!61 &1466947185
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6737,7 +6839,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   catCharacter: {fileID: 0}
-  movementSpeed: 5
   audioSource: {fileID: 1567894728}
   nextScene: Bathroom
   movementTutorialFinished: 0
@@ -6745,22 +6846,26 @@ MonoBehaviour:
   rightArrowPressed: 0
   upArrowPressed: 0
   downArrowPressed: 0
-  controlTutorialFinished: 0
+  pickupTutorialFinished: 0
   itemPickedUp: 0
   zButtonPressed: 0
   xButtonPressed: 0
   checkedPause: 0
   pauseScreen: {fileID: 0}
+  foodItem: {fileID: 0}
+  checkPauseTutorialFinished: 0
   audioClips:
   - {fileID: 8300000, guid: 8db3bb9cae2088745a1d3084b03020fd, type: 3}
   - {fileID: 8300000, guid: c646dee48713ea845af08246a4825865, type: 3}
   currentAudioIndex: 0
+  backgroundMusicSource: {fileID: 0}
   firstEventDialogue: {fileID: 0}
   checkDialogue: {fileID: 0}
   firstEventFinished: 0
   blackPanel: {fileID: 0}
   moveDialogue: {fileID: 0}
-  controlDialogue: {fileID: 0}
+  pickUpTutorialDialogue: {fileID: 0}
+  checkPauseDialogue: {fileID: 0}
   endTutorialDialogue: {fileID: 0}
 --- !u!4 &1567894730
 Transform:
@@ -7124,6 +7229,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86f6ec0a89101a847954b1ad23720a08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   targetPosition: {x: 0, y: 0, z: 0}
   finalTargetPosition: {x: 0, y: 0, z: 0}
   startPosition: {x: 0, y: 0, z: 0}
@@ -7132,6 +7238,7 @@ MonoBehaviour:
   isInPosition: 0
   checkDialogue: {fileID: 0}
   speed: 1
+  nextScene: 
 --- !u!1001 &1989139713
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7345,7 +7452,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1989139714}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b4be9f3ca2a5f554ea91d458d7e542c4, type: 3}
   m_Name: 
@@ -7355,6 +7462,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   pauseScreen: {fileID: 482842639}
+  failedScreen: {fileID: 0}
+  levelManager: {fileID: 0}
+  levelScript: {fileID: 0}
 --- !u!114 &1989139720
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7375,6 +7485,7 @@ MonoBehaviour:
   isInPosition: 0
   checkDialogue: {fileID: 1412275667}
   speed: 2
+  nextScene: Cat2Request
 --- !u!1 &2109854670
 GameObject:
   m_ObjectHideFlags: 0

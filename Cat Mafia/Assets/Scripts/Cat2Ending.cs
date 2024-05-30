@@ -17,11 +17,15 @@ public class Cat2Ending : MonoBehaviour
     public bool isInPosition;
     public bool isDone = false;
     public float speed = 2f;
+    public AudioSource audioSource;
+    public AudioClip starDisp;
+    public int starRating;
     // Start is called before the first frame update
     void Start()
     {
-        star3Dialogue = star3.GetComponent<DialogueManager>();
+    
         animator = GetComponent<Animator>();
+        starRating = StarRating.Rating;
         isInPosition = false;
         star1.SetActive(false);
         star2.SetActive(false);
@@ -31,7 +35,6 @@ public class Cat2Ending : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        string star  = PlayerPrefs.GetString ("star", "3");
         if (!isInPosition)
         {
             animator.SetFloat("moveX", 1f);
@@ -43,13 +46,15 @@ public class Cat2Ending : MonoBehaviour
             {
                 OffIsMoving();
                 transform.position = targetPosition;
-                if (star == "1")
+                PlayAudio(starDisp);
+                
+                if (starRating == 1)
                 {
                     star1.SetActive(true);
                     StartCoroutine(Star1Finished()); 
                 }
 
-                else if (star == "2" )
+                else if (starRating == 2)
                 {
                     star2.SetActive(true);
                     StartCoroutine(Star2Finished()); 
@@ -64,7 +69,7 @@ public class Cat2Ending : MonoBehaviour
         }
         if (isDone)
         {
-            SceneManager.LoadScene("Cat3Dialogue");
+            Invoke("NextScene", starDisp.length + 2.0f);
         }
     }
            
@@ -87,10 +92,17 @@ public class Cat2Ending : MonoBehaviour
         isDone = true;
      
     }
-
+    private void NextScene()
+    {
+        SceneManager.LoadScene("Cat2Dialogue");
+    }
     public void OffIsMoving(){
         animator.SetBool("isMoving", false);
     }
-
+    void PlayAudio(AudioClip audio)
+    {
+        audioSource.clip = audio;
+        audioSource.Play();
+    }
 }
 
