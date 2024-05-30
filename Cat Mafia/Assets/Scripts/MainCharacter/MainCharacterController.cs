@@ -27,15 +27,18 @@ public class MainCharacterController : MonoBehaviour
     private bool isDashing = false;
     private bool canDash = true;
 
+    // charm varaibles
+    private Charm charm;
+
 
     // Start is called before the first frame update
     void Start()
     {
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
+        charm = GetComponent<Charm>();
         boxCollider = GetComponent<BoxCollider2D>();
         pauseManager = pauseScreen.GetComponent<PauseScript>();
-        levelScript = levelManager.GetComponent<LevelManagerScript>();
     }
 
     // Update is called once per frame
@@ -68,10 +71,18 @@ public class MainCharacterController : MonoBehaviour
             SetIsNotMoving();
         }
 
+        // dash
         if(Input.GetKeyDown(KeyCode.Space)){
             if(canDash){
                 isDashing = true;
                 StartCoroutine(PerformDash());
+            }
+        }
+
+        // charm
+        if(Input.GetKeyDown(KeyCode.A)){
+            if(charm){
+                charm.ActivateCharm();
             }
         }
 
