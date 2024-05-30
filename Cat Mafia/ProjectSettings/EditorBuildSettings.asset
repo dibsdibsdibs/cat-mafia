@@ -45,12 +45,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Cat3Dialogue.unity
     guid: b455f29fc3c4e6c4787e7e8ccbeb6993
   - enabled: 1
-    path: Assets/Scenes/Cat3Request.unity
-    guid: adc0a39346a9e034c9b6dca34dbbe2fe
-  - enabled: 1
-    path: Assets/Scenes/KitchenDiningRoomIntroScene.unity
-    guid: 83870ffd53a7acf469bf1ef950101dd1
-  - enabled: 1
-    path: Assets/Scenes/KitchenDiningRoomScene.unity
-    guid: 9963c9e75f3afc94d8921d3fb52a16fc
+    path: Assets/Scenes/EndCredits.unity
+    guid: 1fd7750ae75b016479225333f987287a
   m_configObjects: {}
