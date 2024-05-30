@@ -69,7 +69,7 @@ public class Cat2Ending : MonoBehaviour
         }
         if (isDone)
         {
-            Invoke("NextScene", starDisp.length + 2.0f);
+            Invoke("NextScene", starDisp.length);
         }
     }
            
