@@ -2910,6 +2910,9 @@ MonoBehaviour:
   quitButton: {fileID: 274570545}
   selectedButtonIndex: 0
   selectionIndicator: {fileID: 141894802}
+  audioSource: {fileID: 0}
+  selectionSound: {fileID: 0}
+  finalSelectionSound: {fileID: 0}
 --- !u!1 &625568954
 GameObject:
   m_ObjectHideFlags: 0
@@ -6441,6 +6444,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86f6ec0a89101a847954b1ad23720a08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   targetPosition: {x: 0, y: 0, z: 0}
   finalTargetPosition: {x: 0, y: 0, z: 0}
   startPosition: {x: 0, y: 0, z: 0}
@@ -6449,6 +6453,7 @@ MonoBehaviour:
   isInPosition: 0
   checkDialogue: {fileID: 0}
   speed: 1
+  nextScene: 
 --- !u!61 &1466947185
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6980,6 +6985,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 8db3bb9cae2088745a1d3084b03020fd, type: 3}
   - {fileID: 8300000, guid: c646dee48713ea845af08246a4825865, type: 3}
   currentAudioIndex: 0
+  backgroundMusicSource: {fileID: 0}
   firstEventDialogue: {fileID: 0}
   checkDialogue: {fileID: 0}
   firstEventFinished: 0
@@ -7449,6 +7455,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86f6ec0a89101a847954b1ad23720a08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   targetPosition: {x: 0, y: 0, z: 0}
   finalTargetPosition: {x: 0, y: 0, z: 0}
   startPosition: {x: 0, y: 0, z: 0}
@@ -7457,6 +7464,7 @@ MonoBehaviour:
   isInPosition: 0
   checkDialogue: {fileID: 0}
   speed: 1
+  nextScene: 
 --- !u!114 &1929816334
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7481,6 +7489,9 @@ MonoBehaviour:
   isInPosition: 0
   isDone: 0
   speed: 2
+  audioSource: {fileID: 0}
+  starDisp: {fileID: 0}
+  starRating: 0
 --- !u!1001 &1989139713
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7713,6 +7724,12 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   pauseScreen: {fileID: 482842639}
+  failedScreen: {fileID: 0}
+  levelManager: {fileID: 0}
+  levelScript: {fileID: 0}
+  dashSpeed: 20
+  dashDuration: 0.1
+  dashCooldown: 7
 --- !u!114 &1989139720
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7757,6 +7774,9 @@ MonoBehaviour:
   isInPosition: 0
   isDone: 0
   speed: 2
+  audioSource: {fileID: 0}
+  starDisp: {fileID: 0}
+  starRating: 0
 --- !u!114 &1989139722
 MonoBehaviour:
   m_ObjectHideFlags: 0
