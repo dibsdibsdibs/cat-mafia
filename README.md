@@ -24,3 +24,6 @@ Credits to
 
 [Joao Studios](https://assetstore.unity.com/publishers/71675)
 - [Pixel Art Cats](https://assetstore.unity.com/packages/2d/characters/pixel-art-cats-265922)
+
+[Jakub Varga](https://assetstore.unity.com/publishers/47220)
+- [Simple Free Pixel art styled UI pack](https://assetstore.unity.com/packages/2d/gui/icons/simple-free-pixel-art-styled-ui-pack-165012)
